@@ -1,0 +1,3 @@
+C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\NewSpriteCreator-GUI\Release\NewSpriteCreator-GUI.vcxprojAssemblyReference.cache
+C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\NewSpriteCreator-GUI\Release\NewSpriteCreatorGUI.MyForm.resources
+C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\NewSpriteCreator-GUI\Release\NewSpriteCreator-GUI.vcxproj.GenerateResource.cache
