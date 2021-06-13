@@ -53,7 +53,7 @@ namespace NewSpriteCreatorGUI {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ fileToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ saveAsToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^ copyToClipboardToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ infoToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ helpToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ exampleToolStripMenuItem;
@@ -179,7 +179,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->copyToClipboardToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exampleToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->documentationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -375,9 +374,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// fileToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->newToolStripMenuItem,
-					this->saveAsToolStripMenuItem, this->copyToClipboardToolStripMenuItem
+					this->saveAsToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(62, 34);
@@ -386,23 +385,16 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(298, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(298, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->saveAsToolStripMenuItem->Text = L"Save As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
-			// 
-			// copyToClipboardToolStripMenuItem
-			// 
-			this->copyToClipboardToolStripMenuItem->Name = L"copyToClipboardToolStripMenuItem";
-			this->copyToClipboardToolStripMenuItem->Size = System::Drawing::Size(298, 40);
-			this->copyToClipboardToolStripMenuItem->Text = L"Copy to Clipboard";
-			this->copyToClipboardToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::copyToClipboardToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -1633,6 +1625,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	String^ executefunc;
 	String^ drawfunc;
 	String^ createfunc;
+	String^ updatemodelmatricesfunc;
 
 	array<char>^ binarycollision = gcnew array<char>(22);
 	unsigned int fullbinary = 0xFFC00000;
@@ -1855,10 +1848,12 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	if (checkBox23->Checked)
 	{
 		drawfunc = "	bodyModel.scheduleForDrawing();\n\n";
+		updatemodelmatricesfunc = "\nvoid " + classname + "::updateModelMatrices() {\n	matrix.translation(pos.x, pos.y, pos.z);\n	matrix.applyRotationYXZ(&rot.x, &rot.y, &rot.z);\n\n	bodyModel.setDrawMatrix(matrix);\n	bodyModel.setScale(&scale);\n	bodyModel.calcWorld(false);\n}\n";
 	}
 	else
 	{
 		drawfunc = "";
+		updatemodelmatricesfunc = "";
 	}
 
 
@@ -1918,10 +1913,10 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 
 	String^ wholecode;
 	if (radioButton1->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	else if (radioButton2->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	
 

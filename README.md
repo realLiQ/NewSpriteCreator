@@ -1,6 +1,6 @@
 # NewSpriteCreator
 
-A GUI that creates the required build functions for AboodXD's New Sprites mod.\
-**Please wait for v1.0, because this version isn't useful and not stable!**
+A tool that creates a codebase from different settings for sprites. Supported is the original Sprite Replacement System and AboodXD's New Sprites System.\
 
-<img src="nscnew.png" width="300" >
+
+<img src="nsclogo.png" width="300" >
