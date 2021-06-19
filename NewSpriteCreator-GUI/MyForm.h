@@ -385,14 +385,14 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(218, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(218, 40);
 			this->saveAsToolStripMenuItem->Text = L"Save As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
@@ -754,10 +754,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->radioButton1->Checked = true;
 			this->radioButton1->Location = System::Drawing::Point(684, 812);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(142, 29);
+			this->radioButton1->Size = System::Drawing::Size(148, 29);
 			this->radioButton1->TabIndex = 52;
 			this->radioButton1->TabStop = true;
-			this->radioButton1->Text = L"New Sprites";
+			this->radioButton1->Text = L"More Sprites";
 			this->radioButton1->UseVisualStyleBackColor = true;
 			this->radioButton1->CheckedChanged += gcnew System::EventHandler(this, &MyForm::radioButton1_CheckedChanged);
 			// 
@@ -1231,7 +1231,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
-			this->Text = L"NewSpriteCreator v1.0";
+			this->Text = L"NewSpriteCreator v1.1";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
@@ -1283,6 +1283,7 @@ private: System::ComponentModel::IContainer^ components;
 		String^ drawfunc;
 		String^ createfunc;
 		String^ updatemodelmatricesfunc;
+		String^ arc;
 
 		array<char>^ binarycollision = gcnew array<char>(22);
 		unsigned int fullbinary = 0xFFC00000;
@@ -1400,7 +1401,7 @@ private: System::ComponentModel::IContainer^ components;
 		fullbinary |= binarycollision[21] << 21;
 
 		String^ hexnum = fullbinary.ToString("X");
-		
+
 
 
 
@@ -1436,17 +1437,19 @@ private: System::ComponentModel::IContainer^ components;
 		if (checkBox23->Checked)
 		{
 			hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c chrAnimation;\n\n";
-			loadmodel = "	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
+			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	allocator.unlink();\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
+			arc = "const char* " + arcnamelistname + " [] = { " + textBox23 + ", NULL };\n\n";
 		}
 		else
 		{
 			hasmodelvar = "";
 			loadmodel = "";
+			arc = "";
 		}
 
 		String^ includes = "//#include <common.h>\n//#include <game.h>\n//#include <g3dhax.h>\n//#include <sfx.h>\n//#include <stage.h>\n//#include <profile.h>\n//#include \"boss.h\"\n\n//#include \"" + name + ".h" + "\"\n\n";
 
-		String^ arc = "const char* " + arcnamelistname + " [] = { NULL };\n\n";
+
 
 		if (radioButton1->Checked)
 		{
@@ -1626,6 +1629,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	String^ drawfunc;
 	String^ createfunc;
 	String^ updatemodelmatricesfunc;
+	String^ arc;
 
 	array<char>^ binarycollision = gcnew array<char>(22);
 	unsigned int fullbinary = 0xFFC00000;
@@ -1779,17 +1783,19 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	if (checkBox23->Checked)
 	{
 		hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c chrAnimation;\n\n";
-		loadmodel = "	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
+		loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	allocator.unlink();\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
+		arc = "const char* " + arcnamelistname + " [] = { " + textBox23 + ", NULL };\n\n";
 	}
 	else
 	{
 		hasmodelvar = "";
 		loadmodel = "";
+		arc = "";
 	}
 
 	String^ includes = "//#include <common.h>\n//#include <game.h>\n//#include <g3dhax.h>\n//#include <sfx.h>\n//#include <stage.h>\n//#include <profile.h>\n//#include \"boss.h\"\n\n//#include \"" + name + ".h" + "\"\n\n";
 
-	String^ arc = "const char* " + arcnamelistname + " [] = { NULL };\n\n";
+	
 
 	if (radioButton1->Checked)
 	{
@@ -2311,7 +2317,7 @@ private: System::Void exampleToolStripMenuItem_Click(System::Object^ sender, Sys
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
-	
+	MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR;
 
 }
 private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
