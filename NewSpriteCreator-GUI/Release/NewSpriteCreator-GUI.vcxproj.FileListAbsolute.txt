@@ -1,3 +1,0 @@
-E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\Release\NewSpriteCreator-GUI.vcxproj.AssemblyReference.cache
-E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\Release\NewSpriteCreatorGUI.MyForm.resources
-E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\Release\NewSpriteCreator-GUI.vcxproj.GenerateResource.cache
