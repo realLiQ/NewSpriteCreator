@@ -135,6 +135,8 @@ private: System::Windows::Forms::GroupBox^ groupBox1;
 private: System::Windows::Forms::GroupBox^ groupBox2;
 private: System::Windows::Forms::GroupBox^ groupBox3;
 private: System::Windows::Forms::GroupBox^ groupBox4;
+private: System::Windows::Forms::ToolStripMenuItem^ saveProjectAsToolStripMenuItem;
+private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
 
 
 private: System::ComponentModel::IContainer^ components;
@@ -178,7 +180,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->openToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveProjectAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exampleToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->documentationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -374,9 +378,9 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// fileToolStripMenuItem
 			// 
-			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->newToolStripMenuItem,
-					this->saveAsToolStripMenuItem
+					this->openToolStripMenuItem, this->saveAsToolStripMenuItem, this->saveProjectAsToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(62, 34);
@@ -385,16 +389,30 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(218, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
+			// 
+			// openToolStripMenuItem
+			// 
+			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
+			this->openToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->openToolStripMenuItem->Text = L"Open Project...";
+			this->openToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(218, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->saveAsToolStripMenuItem->Text = L"Save As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
+			// 
+			// saveProjectAsToolStripMenuItem
+			// 
+			this->saveProjectAsToolStripMenuItem->Name = L"saveProjectAsToolStripMenuItem";
+			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveProjectAsToolStripMenuItem->Text = L"Save Project As...";
+			this->saveProjectAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveProjectAsToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -1109,7 +1127,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox1->Size = System::Drawing::Size(415, 534);
 			this->groupBox1->TabIndex = 84;
 			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Only New Sprites";
+			this->groupBox1->Text = L"Only More Sprites";
 			// 
 			// groupBox2
 			// 
@@ -1438,7 +1456,7 @@ private: System::ComponentModel::IContainer^ components;
 		{
 			hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c chrAnimation;\n\n";
 			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	allocator.unlink();\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
-			arc = "const char* " + arcnamelistname + " [] = { " + textBox23 + ", NULL };\n\n";
+			arc = "const char* " + arcnamelistname + " [] = { " + textBox23->Text + ", NULL };\n\n";
 		}
 		else
 		{
@@ -2546,6 +2564,35 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 
 	radioButton1->Checked = true;
 	radioButton2->Checked = false;
+
+	checkBox23->Checked = false;
+	textBox23->Text = "";
+	textBox24->Text = "";
+	textBox25->Text = "";
+
+	checkBox1->Checked = true;
+	checkBox2->Checked = true;
+	checkBox3->Checked = true;
+	checkBox4->Checked = true;
+	checkBox5->Checked = true;
+	checkBox6->Checked = true;
+	checkBox7->Checked = true;
+	checkBox8->Checked = true;
+	checkBox9->Checked = true;
+	checkBox10->Checked = true;
+	checkBox11->Checked = true;
+	checkBox12->Checked = true;
+	checkBox13->Checked = true;
+	checkBox14->Checked = true;
+	checkBox15->Checked = true;
+	checkBox16->Checked = true;
+	checkBox17->Checked = true;
+	checkBox18->Checked = true;
+	checkBox19->Checked = true;
+	checkBox20->Checked = true;
+	checkBox21->Checked = true;
+	checkBox22->Checked = true;
+
 }
 private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -2555,6 +2602,8 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 	String^ content;
 	String^ ifnewsprites;
 	array<String^>^ collisions = gcnew array<String^>(22);
+	String^ hasmodelyesno;
+
 	for (int i; i < 22; i++)
 	{
 		collisions[i] = "no";
@@ -2611,14 +2660,23 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 		collisions[19] = "yes";
 	if (checkBox21->Checked)
 		collisions[20] = "yes";
-
+	
+	if (checkBox23->Checked)
+	{
+		hasmodelyesno = "yes";
+	}
+	else
+	{
+		hasmodelyesno = "no";
+	}
 
 
 	array<String^>^ data = { textBox5->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox6->Text, textBox7->Text,
 		textBox8->Text, textBox9->Text, textBox10->Text, textBox11->Text, textBox12->Text, textBox13->Text, textBox14->Text, textBox15->Text, textBox16->Text, textBox17->Text,
 		numericUpDown1->Text, textBox18->Text, textBox19->Text, textBox20->Text, textBox21->Text, textBox22->Text,  ifnewsprites, collisions[0], collisions[1], collisions[2],
 		collisions[3], collisions[4], collisions[5], collisions[6], collisions[7], collisions[8], collisions[9], collisions[10], collisions[11], collisions[12], collisions[13], 
-		collisions[14], collisions[15], collisions[16], collisions[17], collisions[18], collisions[19], collisions[20], collisions[21] };
+		collisions[14], collisions[15], collisions[16], collisions[17], collisions[18], collisions[19], collisions[20], collisions[21],
+		hasmodelyesno, textBox23->Text, textBox24->Text, textBox25->Text };
 
 
 
@@ -2668,8 +2726,8 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		System::IO::StreamReader^ sr;
 
 		sr = System::IO::File::OpenText(path);
-		array<String^>^ datas = gcnew array<String^>(46);
-		for (int count = 0; count < 46; count++)
+		array<String^>^ datas = gcnew array<String^>(50);
+		for (int count = 0; count < 50; count++)
 		{
 			datas[count] = sr->ReadLine();
 		}
@@ -2797,6 +2855,15 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 			checkBox22->Checked = true;
 		else
 			checkBox22->Checked = false;
+		if (datas[46] == "yes")
+			checkBox23->Checked = true;
+		else
+			checkBox23->Checked = false;
+		
+		
+		textBox23->Text = datas[47];
+		textBox24->Text = datas[48];
+		textBox25->Text = datas[49];
 	}
 }
 
@@ -2823,5 +2890,6 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		textBox25->Visible = false;
 	}
 }
+
 };
 }

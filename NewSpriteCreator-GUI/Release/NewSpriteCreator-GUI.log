@@ -1,5 +1,8 @@
 ﻿  MyForm.cpp
-C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\NewSpriteCreator-GUI\MyForm.h(561,10): warning C4101: "path": Unreferenzierte lokale Variable
-C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\NewSpriteCreator-GUI\MyForm.cpp(8,1): warning C4829: Möglicherweise falsche Parameter für Main-Funktion. Verwenden Sie eventuell "int main(Platform::Array<Platform::String^>^ args)".
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(1610,10): warning C4101: "path": Unreferenzierte lokale Variable
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(2602,10): warning C4101: "content": Unreferenzierte lokale Variable
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.cpp(8,1): warning C4829: Möglicherweise falsche Parameter für Main-Funktion. Verwenden Sie eventuell "int main(Platform::Array<Platform::String^>^ args)".
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Code wird generiert...
   MyForm.obj : MSIL-Modulgefunden; inkrementelles Verknüpfen wird für MSIL deaktiviert; vollständiger Link wird durchgeführt
-  NewSpriteCreator-GUI.vcxproj -> C:\Users\Megaport\source\repos\NewSpriteCreator-GUI\Release\NewSpriteCreator-GUI.exe
+  NewSpriteCreator-GUI.vcxproj -> E:\GitHub\NewSpriteCreator\Release\NewSpriteCreator-GUI.exe
