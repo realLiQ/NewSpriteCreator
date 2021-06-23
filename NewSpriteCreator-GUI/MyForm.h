@@ -2530,7 +2530,7 @@ private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System
 	}
 }
 private: System::Void documentationToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ target = "https://github.com/realLiQ/NewSpriteCreator/blob/main/README.md"; 
+	String^ target = "https://horizon.miraheze.org/wiki/Creating_Codebases_for_Sprites"; 
 	System::Diagnostics::Process::Start(target); //Open Website
 }
 private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
