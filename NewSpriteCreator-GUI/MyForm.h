@@ -1199,7 +1199,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox26->Name = L"textBox26";
 			this->textBox26->Size = System::Drawing::Size(153, 29);
 			this->textBox26->TabIndex = 0;
-			//this->textBox26->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox26_TextChanged);
 			// 
 			// groupBox3
 			// 

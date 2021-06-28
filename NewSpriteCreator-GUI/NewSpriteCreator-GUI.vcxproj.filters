@@ -39,5 +39,14 @@
     <Image Include="..\..\..\..\Downloads\nsc1x1.ico">
       <Filter>Ressourcendateien</Filter>
     </Image>
+    <Image Include="c:\users\megaport\downloads\icon2.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="C:\Users\Megaport\Downloads\nsc1x1.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
+    <Image Include="nsc1x1.ico">
+      <Filter>Ressourcendateien</Filter>
+    </Image>
   </ItemGroup>
 </Project>

@@ -145,6 +145,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\..\..\Downloads\nsc1x1.ico" />
+    <Image Include="c:\users\megaport\downloads\icon2.ico" />
+    <Image Include="C:\Users\Megaport\Downloads\nsc1x1.ico" />
+    <Image Include="nsc1x1.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
