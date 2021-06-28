@@ -5,3 +5,5 @@ Supported is the original Sprite Replacement System and AboodXD's More Sprites S
 
 
 <img src="nsclogo.png" width="300" >
+
+Logo by L-Dev
