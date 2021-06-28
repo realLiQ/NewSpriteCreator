@@ -2,6 +2,7 @@
 #include "version.h"
 #include <iostream>
 #include <sstream>
+#include <msclr\marshal_cppstd.h>
 
 namespace NewSpriteCreatorGUI {
 
@@ -140,6 +141,7 @@ private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
 private: System::Windows::Forms::Label^ label26;
 private: System::Windows::Forms::TextBox^ textBox26;
 private: System::Windows::Forms::Button^ button2;
+
 
 
 
@@ -381,7 +383,7 @@ private: System::ComponentModel::IContainer^ components;
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1479, 42);
+			this->menuStrip1->Size = System::Drawing::Size(1479, 38);
 			this->menuStrip1->TabIndex = 12;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -398,28 +400,28 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->openToolStripMenuItem->Text = L"Open Project...";
 			this->openToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->saveAsToolStripMenuItem->Text = L"Save As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
 			// saveProjectAsToolStripMenuItem
 			// 
 			this->saveProjectAsToolStripMenuItem->Name = L"saveProjectAsToolStripMenuItem";
-			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->saveProjectAsToolStripMenuItem->Text = L"Save Project As...";
 			this->saveProjectAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveProjectAsToolStripMenuItem_Click);
 			// 
@@ -436,14 +438,14 @@ private: System::ComponentModel::IContainer^ components;
 			// exampleToolStripMenuItem
 			// 
 			this->exampleToolStripMenuItem->Name = L"exampleToolStripMenuItem";
-			this->exampleToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->exampleToolStripMenuItem->Size = System::Drawing::Size(275, 40);
 			this->exampleToolStripMenuItem->Text = L"Example";
 			this->exampleToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::exampleToolStripMenuItem_Click);
 			// 
 			// documentationToolStripMenuItem
 			// 
 			this->documentationToolStripMenuItem->Name = L"documentationToolStripMenuItem";
-			this->documentationToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->documentationToolStripMenuItem->Size = System::Drawing::Size(275, 40);
 			this->documentationToolStripMenuItem->Text = L"Documentation";
 			this->documentationToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::documentationToolStripMenuItem_Click);
 			// 
@@ -1197,6 +1199,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox26->Name = L"textBox26";
 			this->textBox26->Size = System::Drawing::Size(153, 29);
 			this->textBox26->TabIndex = 0;
+			//this->textBox26->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox26_TextChanged);
 			// 
 			// groupBox3
 			// 
@@ -5791,6 +5794,38 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 
 	System::Windows::Forms::Clipboard::SetText(textBox26->Text);
 }
+/*
+private: System::Void textBox26_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
+	//To Int
+	std::string test = msclr::interop::marshal_as<std::string>(textBox26->Text);
+	//unsigned int x = Int32::Parse(test);
+	unsigned int x = std::stoi(test);
+
+
+	checkBox22->Checked = (bool)(x >> 0 & 1);
+	checkBox1->Checked = (bool)(x >> 1 & 1);
+	checkBox2->Checked = (bool)(x >> 2 & 1);
+	checkBox3->Checked = (bool)(x >> 3 & 1);
+	checkBox4->Checked = (bool)(x >> 4 & 1);
+	checkBox5->Checked = (bool)(x >> 5 & 1);
+	checkBox6->Checked = (bool)(x >> 6 & 1);
+	checkBox7->Checked = (bool)(x >> 7 & 1);
+	checkBox8->Checked = (bool)(x >> 8 & 1);
+	checkBox9->Checked = (bool)(x >> 9 & 1);
+	checkBox10->Checked = (bool)(x >> 10 & 1);
+	checkBox11->Checked = (bool)(x >> 11 & 1);
+	checkBox12->Checked = (bool)(x >> 12 & 1);
+	checkBox13->Checked = (bool)(x >> 13 & 1);
+	checkBox14->Checked = (bool)(x >> 14 & 1);
+	checkBox15->Checked = (bool)(x >> 15 & 1);
+	checkBox16->Checked = (bool)(x >> 16 & 1);
+	checkBox17->Checked = (bool)(x >> 17 & 1);
+	checkBox18->Checked = (bool)(x >> 18 & 1);
+	checkBox19->Checked = (bool)(x >> 19 & 1);
+	checkBox20->Checked = (bool)(x >> 20 & 1);
+	checkBox21->Checked = (bool)(x >> 21 & 1);
+}
+*/
 };
 }
