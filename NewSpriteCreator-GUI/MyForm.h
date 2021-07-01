@@ -141,6 +141,36 @@ private: System::Windows::Forms::ToolStripMenuItem^ openToolStripMenuItem;
 private: System::Windows::Forms::Label^ label26;
 private: System::Windows::Forms::TextBox^ textBox26;
 private: System::Windows::Forms::Button^ button2;
+private: System::Windows::Forms::ComboBox^ comboBox1;
+private: System::Windows::Forms::Label^ label31;
+private: System::Windows::Forms::GroupBox^ groupBox5;
+private: System::Windows::Forms::TextBox^ textBox27;
+private: System::Windows::Forms::Label^ label30;
+private: System::Windows::Forms::CheckBox^ checkBox24;
+private: System::Windows::Forms::ComboBox^ comboBox2;
+private: System::Windows::Forms::Label^ label32;
+private: System::Windows::Forms::TextBox^ textBox31;
+private: System::Windows::Forms::TextBox^ textBox30;
+private: System::Windows::Forms::TextBox^ textBox29;
+private: System::Windows::Forms::TextBox^ textBox28;
+private: System::Windows::Forms::Label^ label36;
+private: System::Windows::Forms::Label^ label35;
+private: System::Windows::Forms::Label^ label34;
+private: System::Windows::Forms::Label^ label33;
+private: System::Windows::Forms::Label^ label37;
+private: System::Windows::Forms::Label^ label38;
+private: System::Windows::Forms::Label^ label39;
+private: System::Windows::Forms::TextBox^ textBox32;
+private: System::Windows::Forms::TextBox^ textBox33;
+private: System::Windows::Forms::TextBox^ textBox34;
+private: System::Windows::Forms::GroupBox^ groupBox6;
+private: System::Windows::Forms::CheckBox^ checkBox32;
+private: System::Windows::Forms::CheckBox^ checkBox31;
+private: System::Windows::Forms::CheckBox^ checkBox29;
+private: System::Windows::Forms::CheckBox^ checkBox28;
+private: System::Windows::Forms::CheckBox^ checkBox27;
+private: System::Windows::Forms::CheckBox^ checkBox26;
+private: System::Windows::Forms::CheckBox^ checkBox25;
 
 
 
@@ -269,14 +299,47 @@ private: System::ComponentModel::IContainer^ components;
 			this->textBox26 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox3 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox4 = (gcnew System::Windows::Forms::GroupBox());
+			this->label37 = (gcnew System::Windows::Forms::Label());
+			this->label38 = (gcnew System::Windows::Forms::Label());
+			this->label39 = (gcnew System::Windows::Forms::Label());
+			this->textBox32 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox33 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox34 = (gcnew System::Windows::Forms::TextBox());
+			this->label36 = (gcnew System::Windows::Forms::Label());
+			this->label35 = (gcnew System::Windows::Forms::Label());
+			this->label34 = (gcnew System::Windows::Forms::Label());
+			this->label33 = (gcnew System::Windows::Forms::Label());
+			this->textBox31 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox30 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox29 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox28 = (gcnew System::Windows::Forms::TextBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
+			this->label32 = (gcnew System::Windows::Forms::Label());
+			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
+			this->label31 = (gcnew System::Windows::Forms::Label());
+			this->groupBox5 = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox27 = (gcnew System::Windows::Forms::TextBox());
+			this->label30 = (gcnew System::Windows::Forms::Label());
+			this->checkBox24 = (gcnew System::Windows::Forms::CheckBox());
+			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->checkBox32 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox31 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox29 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox28 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox27 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox26 = (gcnew System::Windows::Forms::CheckBox());
+			this->checkBox25 = (gcnew System::Windows::Forms::CheckBox());
 			this->menuStrip1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->BeginInit();
 			this->groupBox2->SuspendLayout();
+			this->groupBox4->SuspendLayout();
+			this->groupBox5->SuspendLayout();
+			this->groupBox6->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(645, 688);
+			this->button1->Location = System::Drawing::Point(492, 664);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(234, 75);
 			this->button1->TabIndex = 0;
@@ -367,7 +430,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(655, 766);
+			this->label7->Location = System::Drawing::Point(502, 742);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(215, 25);
 			this->label7->TabIndex = 11;
@@ -663,7 +726,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(175, 676);
+			this->numericUpDown1->Location = System::Drawing::Point(103, 53);
 			this->numericUpDown1->Name = L"numericUpDown1";
 			this->numericUpDown1->Size = System::Drawing::Size(62, 29);
 			this->numericUpDown1->TabIndex = 39;
@@ -672,7 +735,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(131, 648);
+			this->label19->Location = System::Drawing::Point(59, 25);
 			this->label19->Name = L"label19";
 			this->label19->Size = System::Drawing::Size(68, 25);
 			this->label19->TabIndex = 40;
@@ -681,7 +744,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(88, 676);
+			this->label20->Location = System::Drawing::Point(16, 53);
 			this->label20->Name = L"label20";
 			this->label20->Size = System::Drawing::Size(81, 25);
 			this->label20->TabIndex = 41;
@@ -689,7 +752,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox18
 			// 
-			this->textBox18->Location = System::Drawing::Point(118, 711);
+			this->textBox18->Location = System::Drawing::Point(46, 88);
 			this->textBox18->Name = L"textBox18";
 			this->textBox18->Size = System::Drawing::Size(119, 29);
 			this->textBox18->TabIndex = 42;
@@ -698,7 +761,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(91, 714);
+			this->label21->Location = System::Drawing::Point(19, 91);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(23, 25);
 			this->label21->TabIndex = 43;
@@ -708,7 +771,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(91, 749);
+			this->label22->Location = System::Drawing::Point(19, 126);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(23, 25);
 			this->label22->TabIndex = 45;
@@ -717,7 +780,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox19
 			// 
-			this->textBox19->Location = System::Drawing::Point(118, 746);
+			this->textBox19->Location = System::Drawing::Point(46, 123);
 			this->textBox19->Name = L"textBox19";
 			this->textBox19->Size = System::Drawing::Size(119, 29);
 			this->textBox19->TabIndex = 44;
@@ -726,7 +789,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(91, 784);
+			this->label23->Location = System::Drawing::Point(19, 161);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(23, 25);
 			this->label23->TabIndex = 47;
@@ -735,7 +798,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox20
 			// 
-			this->textBox20->Location = System::Drawing::Point(118, 781);
+			this->textBox20->Location = System::Drawing::Point(46, 158);
 			this->textBox20->Name = L"textBox20";
 			this->textBox20->Size = System::Drawing::Size(119, 29);
 			this->textBox20->TabIndex = 46;
@@ -744,7 +807,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label24
 			// 
 			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(91, 819);
+			this->label24->Location = System::Drawing::Point(19, 196);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(23, 25);
 			this->label24->TabIndex = 49;
@@ -753,7 +816,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox21
 			// 
-			this->textBox21->Location = System::Drawing::Point(118, 816);
+			this->textBox21->Location = System::Drawing::Point(46, 193);
 			this->textBox21->Name = L"textBox21";
 			this->textBox21->Size = System::Drawing::Size(119, 29);
 			this->textBox21->TabIndex = 48;
@@ -762,7 +825,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label25
 			// 
 			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(91, 854);
+			this->label25->Location = System::Drawing::Point(19, 231);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(23, 25);
 			this->label25->TabIndex = 51;
@@ -771,7 +834,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox22
 			// 
-			this->textBox22->Location = System::Drawing::Point(118, 851);
+			this->textBox22->Location = System::Drawing::Point(46, 228);
 			this->textBox22->Name = L"textBox22";
 			this->textBox22->Size = System::Drawing::Size(119, 29);
 			this->textBox22->TabIndex = 50;
@@ -781,7 +844,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Checked = true;
-			this->radioButton1->Location = System::Drawing::Point(684, 812);
+			this->radioButton1->Location = System::Drawing::Point(531, 788);
 			this->radioButton1->Name = L"radioButton1";
 			this->radioButton1->Size = System::Drawing::Size(148, 29);
 			this->radioButton1->TabIndex = 52;
@@ -793,7 +856,7 @@ private: System::ComponentModel::IContainer^ components;
 			// radioButton2
 			// 
 			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(684, 857);
+			this->radioButton2->Location = System::Drawing::Point(531, 833);
 			this->radioButton2->Name = L"radioButton2";
 			this->radioButton2->Size = System::Drawing::Size(174, 29);
 			this->radioButton2->TabIndex = 53;
@@ -1090,7 +1153,7 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox23
 			// 
 			this->checkBox23->AutoSize = true;
-			this->checkBox23->Location = System::Drawing::Point(390, 675);
+			this->checkBox23->Location = System::Drawing::Point(25, 43);
 			this->checkBox23->Name = L"checkBox23";
 			this->checkBox23->Size = System::Drawing::Size(132, 29);
 			this->checkBox23->TabIndex = 77;
@@ -1100,7 +1163,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox23
 			// 
-			this->textBox23->Location = System::Drawing::Point(390, 710);
+			this->textBox23->Location = System::Drawing::Point(157, 79);
 			this->textBox23->Name = L"textBox23";
 			this->textBox23->Size = System::Drawing::Size(121, 29);
 			this->textBox23->TabIndex = 78;
@@ -1108,7 +1171,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox24
 			// 
-			this->textBox24->Location = System::Drawing::Point(390, 745);
+			this->textBox24->Location = System::Drawing::Point(157, 114);
 			this->textBox24->Name = L"textBox24";
 			this->textBox24->Size = System::Drawing::Size(121, 29);
 			this->textBox24->TabIndex = 79;
@@ -1117,7 +1180,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label27
 			// 
 			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(271, 713);
+			this->label27->Location = System::Drawing::Point(38, 82);
 			this->label27->Name = L"label27";
 			this->label27->Size = System::Drawing::Size(113, 25);
 			this->label27->TabIndex = 80;
@@ -1127,7 +1190,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(247, 748);
+			this->label28->Location = System::Drawing::Point(14, 117);
 			this->label28->Name = L"label28";
 			this->label28->Size = System::Drawing::Size(137, 25);
 			this->label28->TabIndex = 81;
@@ -1137,7 +1200,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(260, 783);
+			this->label29->Location = System::Drawing::Point(27, 152);
 			this->label29->Name = L"label29";
 			this->label29->Size = System::Drawing::Size(124, 25);
 			this->label29->TabIndex = 82;
@@ -1146,7 +1209,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox25
 			// 
-			this->textBox25->Location = System::Drawing::Point(390, 780);
+			this->textBox25->Location = System::Drawing::Point(157, 149);
 			this->textBox25->Name = L"textBox25";
 			this->textBox25->Size = System::Drawing::Size(121, 29);
 			this->textBox25->TabIndex = 83;
@@ -1169,14 +1232,14 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox2->Controls->Add(this->textBox26);
 			this->groupBox2->Location = System::Drawing::Point(981, 58);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(421, 615);
+			this->groupBox2->Size = System::Drawing::Size(421, 534);
 			this->groupBox2->TabIndex = 85;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Collisions";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(170, 550);
+			this->button2->Location = System::Drawing::Point(171, 483);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 40);
 			this->button2->TabIndex = 2;
@@ -1187,7 +1250,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(165, 477);
+			this->label26->Location = System::Drawing::Point(166, 414);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(80, 25);
 			this->label26->TabIndex = 1;
@@ -1195,7 +1258,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox26
 			// 
-			this->textBox26->Location = System::Drawing::Point(131, 505);
+			this->textBox26->Location = System::Drawing::Point(132, 442);
 			this->textBox26->Name = L"textBox26";
 			this->textBox26->Size = System::Drawing::Size(153, 29);
 			this->textBox26->TabIndex = 0;
@@ -1211,25 +1274,348 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// groupBox4
 			// 
+			this->groupBox4->Controls->Add(this->label37);
+			this->groupBox4->Controls->Add(this->label38);
+			this->groupBox4->Controls->Add(this->label39);
+			this->groupBox4->Controls->Add(this->textBox32);
+			this->groupBox4->Controls->Add(this->textBox33);
+			this->groupBox4->Controls->Add(this->textBox34);
+			this->groupBox4->Controls->Add(this->label36);
+			this->groupBox4->Controls->Add(this->label35);
+			this->groupBox4->Controls->Add(this->label34);
+			this->groupBox4->Controls->Add(this->label33);
+			this->groupBox4->Controls->Add(this->textBox31);
+			this->groupBox4->Controls->Add(this->textBox30);
+			this->groupBox4->Controls->Add(this->textBox29);
+			this->groupBox4->Controls->Add(this->textBox28);
+			this->groupBox4->Controls->Add(this->comboBox2);
+			this->groupBox4->Controls->Add(this->label32);
+			this->groupBox4->Controls->Add(this->comboBox1);
+			this->groupBox4->Controls->Add(this->label31);
+			this->groupBox4->Controls->Add(this->label19);
+			this->groupBox4->Controls->Add(this->numericUpDown1);
+			this->groupBox4->Controls->Add(this->label20);
+			this->groupBox4->Controls->Add(this->textBox18);
+			this->groupBox4->Controls->Add(this->label21);
+			this->groupBox4->Controls->Add(this->textBox19);
+			this->groupBox4->Controls->Add(this->label22);
+			this->groupBox4->Controls->Add(this->textBox20);
+			this->groupBox4->Controls->Add(this->label23);
+			this->groupBox4->Controls->Add(this->textBox21);
+			this->groupBox4->Controls->Add(this->label24);
+			this->groupBox4->Controls->Add(this->textBox22);
+			this->groupBox4->Controls->Add(this->label25);
 			this->groupBox4->Location = System::Drawing::Point(69, 608);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(473, 291);
+			this->groupBox4->Size = System::Drawing::Size(417, 291);
 			this->groupBox4->TabIndex = 87;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Extra Settings";
+			// 
+			// label37
+			// 
+			this->label37->AutoSize = true;
+			this->label37->Location = System::Drawing::Point(332, 218);
+			this->label37->Name = L"label37";
+			this->label37->Size = System::Drawing::Size(74, 25);
+			this->label37->TabIndex = 57;
+			this->label37->Text = L"ScaleZ";
+			// 
+			// label38
+			// 
+			this->label38->AutoSize = true;
+			this->label38->Location = System::Drawing::Point(256, 218);
+			this->label38->Name = L"label38";
+			this->label38->Size = System::Drawing::Size(75, 25);
+			this->label38->TabIndex = 56;
+			this->label38->Text = L"ScaleY";
+			// 
+			// label39
+			// 
+			this->label39->AutoSize = true;
+			this->label39->Location = System::Drawing::Point(185, 218);
+			this->label39->Name = L"label39";
+			this->label39->Size = System::Drawing::Size(76, 25);
+			this->label39->TabIndex = 55;
+			this->label39->Text = L"ScaleX";
+			// 
+			// textBox32
+			// 
+			this->textBox32->Location = System::Drawing::Point(337, 246);
+			this->textBox32->Name = L"textBox32";
+			this->textBox32->Size = System::Drawing::Size(69, 29);
+			this->textBox32->TabIndex = 54;
+			this->textBox32->Text = L"0.0";
+			// 
+			// textBox33
+			// 
+			this->textBox33->Location = System::Drawing::Point(261, 246);
+			this->textBox33->Name = L"textBox33";
+			this->textBox33->Size = System::Drawing::Size(70, 29);
+			this->textBox33->TabIndex = 53;
+			this->textBox33->Text = L"0.0";
+			// 
+			// textBox34
+			// 
+			this->textBox34->Location = System::Drawing::Point(190, 246);
+			this->textBox34->Name = L"textBox34";
+			this->textBox34->Size = System::Drawing::Size(66, 29);
+			this->textBox34->TabIndex = 52;
+			this->textBox34->Text = L"0.0";
+			// 
+			// label36
+			// 
+			this->label36->AutoSize = true;
+			this->label36->Location = System::Drawing::Point(356, 155);
+			this->label36->Name = L"label36";
+			this->label36->Size = System::Drawing::Size(54, 25);
+			this->label36->TabIndex = 11;
+			this->label36->Text = L"yDtE";
+			// 
+			// label35
+			// 
+			this->label35->AutoSize = true;
+			this->label35->Location = System::Drawing::Point(296, 155);
+			this->label35->Name = L"label35";
+			this->label35->Size = System::Drawing::Size(54, 25);
+			this->label35->TabIndex = 10;
+			this->label35->Text = L"xDtE";
+			// 
+			// label34
+			// 
+			this->label34->AutoSize = true;
+			this->label34->Location = System::Drawing::Point(239, 155);
+			this->label34->Name = L"label34";
+			this->label34->Size = System::Drawing::Size(56, 25);
+			this->label34->TabIndex = 9;
+			this->label34->Text = L"yDtC";
+			// 
+			// label33
+			// 
+			this->label33->AutoSize = true;
+			this->label33->Location = System::Drawing::Point(185, 155);
+			this->label33->Name = L"label33";
+			this->label33->Size = System::Drawing::Size(56, 25);
+			this->label33->TabIndex = 8;
+			this->label33->Text = L"xDtC";
+			// 
+			// textBox31
+			// 
+			this->textBox31->Location = System::Drawing::Point(361, 183);
+			this->textBox31->Name = L"textBox31";
+			this->textBox31->Size = System::Drawing::Size(50, 29);
+			this->textBox31->TabIndex = 7;
+			this->textBox31->Text = L"0.0";
+			// 
+			// textBox30
+			// 
+			this->textBox30->Location = System::Drawing::Point(301, 183);
+			this->textBox30->Name = L"textBox30";
+			this->textBox30->Size = System::Drawing::Size(50, 29);
+			this->textBox30->TabIndex = 6;
+			this->textBox30->Text = L"0.0";
+			// 
+			// textBox29
+			// 
+			this->textBox29->Location = System::Drawing::Point(244, 183);
+			this->textBox29->Name = L"textBox29";
+			this->textBox29->Size = System::Drawing::Size(50, 29);
+			this->textBox29->TabIndex = 5;
+			this->textBox29->Text = L"0.0";
+			// 
+			// textBox28
+			// 
+			this->textBox28->Location = System::Drawing::Point(188, 183);
+			this->textBox28->Name = L"textBox28";
+			this->textBox28->Size = System::Drawing::Size(50, 29);
+			this->textBox28->TabIndex = 4;
+			this->textBox28->Text = L"0.0";
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
+				L"Enemy", L"Boss", L"Player", L"Item", L"Map",
+					L"MapOBJ"
+			});
+			this->comboBox2->Location = System::Drawing::Point(190, 114);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(216, 32);
+			this->comboBox2->TabIndex = 3;
+			this->comboBox2->Text = L"Player";
+			// 
+			// label32
+			// 
+			this->label32->AutoSize = true;
+			this->label32->Location = System::Drawing::Point(245, 86);
+			this->label32->Name = L"label32";
+			this->label32->Size = System::Drawing::Size(93, 25);
+			this->label32->TabIndex = 2;
+			this->label32->Text = L"LightMap";
+			// 
+			// comboBox1
+			// 
+			this->comboBox1->FormattingEnabled = true;
+			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
+				L"Player/Yoshi A", L"Player/Yoshi B", L"Most general sprites",
+					L"Balloons", L"Collectibles/Coins", L"Player fireballs", L"Player iceballs"
+			});
+			this->comboBox1->Location = System::Drawing::Point(190, 46);
+			this->comboBox1->Name = L"comboBox1";
+			this->comboBox1->Size = System::Drawing::Size(216, 32);
+			this->comboBox1->TabIndex = 1;
+			this->comboBox1->Text = L"Most general sprites";
+			// 
+			// label31
+			// 
+			this->label31->AutoSize = true;
+			this->label31->Location = System::Drawing::Point(221, 19);
+			this->label31->Name = L"label31";
+			this->label31->Size = System::Drawing::Size(143, 25);
+			this->label31->TabIndex = 0;
+			this->label31->Text = L"SpriteCategory";
+			// 
+			// groupBox5
+			// 
+			this->groupBox5->Controls->Add(this->textBox27);
+			this->groupBox5->Controls->Add(this->label30);
+			this->groupBox5->Controls->Add(this->checkBox24);
+			this->groupBox5->Controls->Add(this->textBox25);
+			this->groupBox5->Controls->Add(this->checkBox23);
+			this->groupBox5->Controls->Add(this->label29);
+			this->groupBox5->Controls->Add(this->textBox23);
+			this->groupBox5->Controls->Add(this->label28);
+			this->groupBox5->Controls->Add(this->textBox24);
+			this->groupBox5->Controls->Add(this->label27);
+			this->groupBox5->Location = System::Drawing::Point(732, 608);
+			this->groupBox5->Name = L"groupBox5";
+			this->groupBox5->Size = System::Drawing::Size(300, 291);
+			this->groupBox5->TabIndex = 88;
+			this->groupBox5->TabStop = false;
+			this->groupBox5->Text = L"Model Settings";
+			// 
+			// textBox27
+			// 
+			this->textBox27->Location = System::Drawing::Point(156, 246);
+			this->textBox27->Name = L"textBox27";
+			this->textBox27->Size = System::Drawing::Size(121, 29);
+			this->textBox27->TabIndex = 86;
+			this->textBox27->Visible = false;
+			// 
+			// label30
+			// 
+			this->label30->AutoSize = true;
+			this->label30->Location = System::Drawing::Point(20, 246);
+			this->label30->Name = L"label30";
+			this->label30->Size = System::Drawing::Size(130, 25);
+			this->label30->TabIndex = 85;
+			this->label30->Text = L"1st Animation";
+			this->label30->Visible = false;
+			// 
+			// checkBox24
+			// 
+			this->checkBox24->AutoSize = true;
+			this->checkBox24->Location = System::Drawing::Point(25, 210);
+			this->checkBox24->Name = L"checkBox24";
+			this->checkBox24->Size = System::Drawing::Size(223, 29);
+			this->checkBox24->TabIndex = 84;
+			this->checkBox24->Text = L"Has CHR0 Animation";
+			this->checkBox24->UseVisualStyleBackColor = true;
+			this->checkBox24->Visible = false;
+			this->checkBox24->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox24_CheckedChanged);
+			// 
+			// groupBox6
+			// 
+			this->groupBox6->Controls->Add(this->checkBox32);
+			this->groupBox6->Controls->Add(this->checkBox31);
+			this->groupBox6->Controls->Add(this->checkBox29);
+			this->groupBox6->Controls->Add(this->checkBox28);
+			this->groupBox6->Controls->Add(this->checkBox27);
+			this->groupBox6->Controls->Add(this->checkBox26);
+			this->groupBox6->Controls->Add(this->checkBox25);
+			this->groupBox6->Location = System::Drawing::Point(1055, 608);
+			this->groupBox6->Name = L"groupBox6";
+			this->groupBox6->Size = System::Drawing::Size(347, 291);
+			this->groupBox6->TabIndex = 89;
+			this->groupBox6->TabStop = false;
+			this->groupBox6->Text = L"Headers";
+			// 
+			// checkBox32
+			// 
+			this->checkBox32->AutoSize = true;
+			this->checkBox32->Location = System::Drawing::Point(25, 196);
+			this->checkBox32->Name = L"checkBox32";
+			this->checkBox32->Size = System::Drawing::Size(231, 29);
+			this->checkBox32->TabIndex = 7;
+			this->checkBox32->Text = L"Custom Sprite Header";
+			this->checkBox32->UseVisualStyleBackColor = true;
+			// 
+			// checkBox31
+			// 
+			this->checkBox31->AutoSize = true;
+			this->checkBox31->Location = System::Drawing::Point(176, 113);
+			this->checkBox31->Name = L"checkBox31";
+			this->checkBox31->Size = System::Drawing::Size(96, 29);
+			this->checkBox31->TabIndex = 6;
+			this->checkBox31->Text = L"boss.h";
+			this->checkBox31->UseVisualStyleBackColor = true;
+			// 
+			// checkBox29
+			// 
+			this->checkBox29->AutoSize = true;
+			this->checkBox29->Location = System::Drawing::Point(176, 78);
+			this->checkBox29->Name = L"checkBox29";
+			this->checkBox29->Size = System::Drawing::Size(102, 29);
+			this->checkBox29->TabIndex = 4;
+			this->checkBox29->Text = L"stage.h";
+			this->checkBox29->UseVisualStyleBackColor = true;
+			// 
+			// checkBox28
+			// 
+			this->checkBox28->AutoSize = true;
+			this->checkBox28->Location = System::Drawing::Point(176, 43);
+			this->checkBox28->Name = L"checkBox28";
+			this->checkBox28->Size = System::Drawing::Size(79, 29);
+			this->checkBox28->TabIndex = 3;
+			this->checkBox28->Text = L"sfx.h";
+			this->checkBox28->UseVisualStyleBackColor = true;
+			// 
+			// checkBox27
+			// 
+			this->checkBox27->AutoSize = true;
+			this->checkBox27->Location = System::Drawing::Point(25, 113);
+			this->checkBox27->Name = L"checkBox27";
+			this->checkBox27->Size = System::Drawing::Size(119, 29);
+			this->checkBox27->TabIndex = 2;
+			this->checkBox27->Text = L"g3dhax.h";
+			this->checkBox27->UseVisualStyleBackColor = true;
+			// 
+			// checkBox26
+			// 
+			this->checkBox26->AutoSize = true;
+			this->checkBox26->Location = System::Drawing::Point(25, 78);
+			this->checkBox26->Name = L"checkBox26";
+			this->checkBox26->Size = System::Drawing::Size(103, 29);
+			this->checkBox26->TabIndex = 1;
+			this->checkBox26->Text = L"game.h";
+			this->checkBox26->UseVisualStyleBackColor = true;
+			// 
+			// checkBox25
+			// 
+			this->checkBox25->AutoSize = true;
+			this->checkBox25->Location = System::Drawing::Point(25, 43);
+			this->checkBox25->Name = L"checkBox25";
+			this->checkBox25->Size = System::Drawing::Size(129, 29);
+			this->checkBox25->TabIndex = 0;
+			this->checkBox25->Text = L"common.h";
+			this->checkBox25->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(1479, 946);
-			this->Controls->Add(this->textBox25);
-			this->Controls->Add(this->label29);
-			this->Controls->Add(this->label28);
-			this->Controls->Add(this->label27);
-			this->Controls->Add(this->textBox24);
-			this->Controls->Add(this->textBox23);
-			this->Controls->Add(this->checkBox23);
+			this->Controls->Add(this->groupBox6);
 			this->Controls->Add(this->checkBox22);
 			this->Controls->Add(this->checkBox15);
 			this->Controls->Add(this->checkBox16);
@@ -1254,19 +1640,6 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->checkBox1);
 			this->Controls->Add(this->radioButton2);
 			this->Controls->Add(this->radioButton1);
-			this->Controls->Add(this->label25);
-			this->Controls->Add(this->textBox22);
-			this->Controls->Add(this->label24);
-			this->Controls->Add(this->textBox21);
-			this->Controls->Add(this->label23);
-			this->Controls->Add(this->textBox20);
-			this->Controls->Add(this->label22);
-			this->Controls->Add(this->textBox19);
-			this->Controls->Add(this->label21);
-			this->Controls->Add(this->textBox18);
-			this->Controls->Add(this->label20);
-			this->Controls->Add(this->label19);
-			this->Controls->Add(this->numericUpDown1);
 			this->Controls->Add(this->textBox17);
 			this->Controls->Add(this->label18);
 			this->Controls->Add(this->textBox16);
@@ -1306,8 +1679,9 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->groupBox3);
-			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->groupBox2);
+			this->Controls->Add(this->groupBox5);
+			this->Controls->Add(this->groupBox4);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"MyForm";
@@ -1318,12 +1692,19 @@ private: System::ComponentModel::IContainer^ components;
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown1))->EndInit();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			this->groupBox4->ResumeLayout(false);
+			this->groupBox4->PerformLayout();
+			this->groupBox5->ResumeLayout(false);
+			this->groupBox5->PerformLayout();
+			this->groupBox6->ResumeLayout(false);
+			this->groupBox6->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
 		}
-#pragma endregion
 
+	
+#pragma endregion
 
 
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1366,6 +1747,85 @@ private: System::ComponentModel::IContainer^ components;
 		String^ createfunc;
 		String^ updatemodelmatricesfunc;
 		String^ arc;
+		String^ chrload;
+
+		String^ APxDtC = textBox28->Text;
+		String^ APyDtC = textBox29->Text;
+		String^ APxDtE = textBox30->Text;
+		String^ APyDtE = textBox31->Text;
+
+		String^ ScX = textBox34->Text;
+		String^ ScY = textBox33->Text;
+		String^ ScZ = textBox32->Text;
+
+
+
+		String^ commonh = "";
+		String^ gameh = "";
+		String^ g3dhaxh = "";
+		String^ sfxh = "";
+		String^ stageh = "";
+		String^ bossh = "";
+		String^ customspriteh = "";
+
+		if (checkBox25->Checked)
+		{
+			commonh = "#include <common.h>\n";
+		}
+		if (checkBox26->Checked)
+		{
+			gameh = "#include <game.h>\n";
+		}
+		if (checkBox27->Checked)
+		{
+			g3dhaxh = "#include <g3dhax.h>\n";
+		}
+		if (checkBox28->Checked)
+		{
+			sfxh = "#include <sfx.h>\n";
+		}
+		if (checkBox29->Checked)
+		{
+			stageh = "#include <stage.h>\n";
+		}
+		if (checkBox31->Checked)
+		{
+			bossh = "#include \"boss.h\"\n";
+		}
+		if (checkBox32->Checked)
+		{
+			customspriteh = "#include \"" + name + ".h\"\n";
+		}
+
+			
+
+
+
+
+
+		String^ category1 = "0";
+		String^ category2 = "0";
+
+		if (comboBox1->Text == "Player/Yoshi A")
+			category1 = "0";
+		else if (comboBox1->Text == "Player/Yoshi B")
+			category1 = "1";
+		else if (comboBox1->Text == "Most general sprites")
+			category1 = "3";
+		else if (comboBox1->Text == "Balloons")
+			category1 = "4";
+		else if (comboBox1->Text == "Collectibles/Coins")
+			category1 = "5";
+		else if (comboBox1->Text == "Player fireballs")
+		{
+			category1 = "6";
+			category2 = "1";
+		}
+		else if (comboBox1->Text == "Player iceballs")
+		{
+			category1 = "6";
+			category2 = "2";
+		}
 
 		array<char>^ binarycollision = gcnew array<char>(22);
 		unsigned int fullbinary = 0xFFC00000;
@@ -1516,11 +1976,18 @@ private: System::ComponentModel::IContainer^ components;
 			}
 		}
 
+
+		if (checkBox24->Checked)
+		{
+			chrload = "\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(\"" + textBox27->Text + "\");\n	this->animationChr.setup(mdl, anmChr, &this->allocator, 0);";
+		}
+
+
 		if (checkBox23->Checked)
 		{
-			hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c chrAnimation;\n\n";
-			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	allocator.unlink();\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
-			arc = "const char* " + arcnamelistname + " [] = { " + textBox23->Text + ", NULL };\n\n";
+			hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c animationChr;\n	nw4r::g3d::ResFile resFile;\n\n";
+			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.xDistToEdge = " + APyDtE + "; \n	HitMeBaby.yDistToEdge = 0.0; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList();\n\n	this->scale.x = " + ScX + ";\n	this->scale.y = " + ScY + ";\n	this->scale.z = " + ScZ + ";\n\n";
+			arc = "const char* " + arcnamelistname + " [] = { \"" + textBox23->Text + "\", NULL };\n\n";
 		}
 		else
 		{
@@ -1529,14 +1996,27 @@ private: System::ComponentModel::IContainer^ components;
 			arc = "";
 		}
 
-		String^ includes = "//#include <common.h>\n//#include <game.h>\n//#include <g3dhax.h>\n//#include <sfx.h>\n//#include <stage.h>\n//#include <profile.h>\n//#include \"boss.h\"\n\n//#include \"" + name + ".h" + "\"\n\n";
+		String^ includes = commonh + gameh + g3dhaxh + sfxh + stageh + bossh + customspriteh;
 
+		String^ umminbaseicclas = "";
+		if (checkBox23->Checked)
+		{
+			umminbaseicclas = "void updateModelMatrices();";
+		}
 
+		String^ baasurinbasicclass = "";
+		String^ baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
+		if (checkBox24->Checked)
+		{
+			baasurinbasicclass = "void bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate);";
+		}
+
+		
 
 		if (radioButton1->Checked)
 		{
 			basicclass = "class " + classname + " : public " + inheritanceclass +
-				" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	static dActor_c* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
+				" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static dActor_c* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
 				"//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 				"//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 				"//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
@@ -1554,7 +2034,7 @@ private: System::ComponentModel::IContainer^ components;
 		else
 		{
 			basicclass = "class " + classname + " : public " + inheritanceclass +
-				" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	static " + classname + "* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
+				" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static " + classname + "* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
 				"//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 				"//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 				"//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
@@ -1575,7 +2055,10 @@ private: System::ComponentModel::IContainer^ components;
 			createfunc = "	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
 			if (checkBox23->Checked)
 			{
-				executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
+				if (checkBox24->Checked)
+					executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n	if (this->animationChr.isAnimationDone()) {\n		this->animationChr.setCurrentFrame(0.0);\n	}\n\n";
+				else
+					executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
 			}
 			else
 			{
@@ -1584,7 +2067,19 @@ private: System::ComponentModel::IContainer^ components;
 		}
 		else
 		{
-			executefunc = "";
+			if (checkBox23->Checked)
+			{
+				if (checkBox24->Checked)
+					executefunc = "	updateModelMatrices();\n	bodyModel._vf1C();\n\n	if (this->animationChr.isAnimationDone()) {\n		this->animationChr.setCurrentFrame(0.0);\n	}\n\n";
+				else
+					executefunc = "	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
+			}
+			else
+			{
+				executefunc = "";
+			}
+
+
 			createfunc = "";
 		}
 		if (checkBox23->Checked)
@@ -1655,10 +2150,10 @@ private: System::ComponentModel::IContainer^ components;
 
 		String^ wholecode;
 		if (radioButton1->Checked == true)
-			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 		else if (radioButton2->Checked == true)
-			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 		System::Windows::Forms::Clipboard::SetText(wholecode);
 
@@ -1666,7 +2161,15 @@ private: System::ComponentModel::IContainer^ components;
 		label7->Text = "Code copied to clipboard!";
 	}
 private: System::Void infoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
+	
+	String^ betatext = "";
+
+	if (beta)
+	{
+		betatext = " DEVDEBUG";
+	}
+	
+	String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
 	MessageBox::Show(msg, "About");
 }
 
@@ -1712,6 +2215,85 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	String^ createfunc;
 	String^ updatemodelmatricesfunc;
 	String^ arc;
+	String^ chrload;
+
+	String^ APxDtC = textBox28->Text;
+	String^ APyDtC = textBox29->Text;
+	String^ APxDtE = textBox30->Text;
+	String^ APyDtE = textBox31->Text;
+
+	String^ ScX = textBox34->Text;
+	String^ ScY = textBox33->Text;
+	String^ ScZ = textBox32->Text;
+
+
+
+	String^ commonh = "";
+	String^ gameh = "";
+	String^ g3dhaxh = "";
+	String^ sfxh = "";
+	String^ stageh = "";
+	String^ bossh = "";
+	String^ customspriteh = "";
+
+	if (checkBox25->Checked)
+	{
+		commonh = "#include <common.h>\n";
+	}
+	if (checkBox26->Checked)
+	{
+		gameh = "#include <game.h>\n";
+	}
+	if (checkBox27->Checked)
+	{
+		g3dhaxh = "#include <g3dhax.h>\n";
+	}
+	if (checkBox28->Checked)
+	{
+		sfxh = "#include <sfx.h>\n";
+	}
+	if (checkBox29->Checked)
+	{
+		stageh = "#include <stage.h>\n";
+	}
+	if (checkBox31->Checked)
+	{
+		bossh = "#include \"boss.h\"\n";
+	}
+	if (checkBox32->Checked)
+	{
+		customspriteh = "#include \"" + name + ".h\"\n";
+	}
+
+
+
+
+
+
+
+	String^ category1 = "0";
+	String^ category2 = "0";
+
+	if (comboBox1->Text == "Player/Yoshi A")
+		category1 = "0";
+	else if (comboBox1->Text == "Player/Yoshi B")
+		category1 = "1";
+	else if (comboBox1->Text == "Most general sprites")
+		category1 = "3";
+	else if (comboBox1->Text == "Balloons")
+		category1 = "4";
+	else if (comboBox1->Text == "Collectibles/Coins")
+		category1 = "5";
+	else if (comboBox1->Text == "Player fireballs")
+	{
+		category1 = "6";
+		category2 = "1";
+	}
+	else if (comboBox1->Text == "Player iceballs")
+	{
+		category1 = "6";
+		category2 = "2";
+	}
 
 	array<char>^ binarycollision = gcnew array<char>(22);
 	unsigned int fullbinary = 0xFFC00000;
@@ -1862,11 +2444,18 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 		}
 	}
 
+
+	if (checkBox24->Checked)
+	{
+		chrload = "\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(\"" + textBox27->Text + "\");\n	this->animationChr.setup(mdl, anmChr, &this->allocator, 0);";
+	}
+
+
 	if (checkBox23->Checked)
 	{
-		hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c chrAnimation;\n\n";
-		loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	nw4r::g3d::ResFile rf(getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\"));\n	bodyModel.setup(rf.GetResMdl(\"" + mdlname + "\"), &allocator, 0x224, 1, 0);" + "this->chrAnimation.setup(mdl, anmChr, &this->allocator, 0);\n\n	allocator.unlink();\n\n	ActivePhysics::Info HitMeBaby;\n	HitMeBaby.xDistToCenter = 0.0;\n	HitMeBaby.yDistToCenter = 0.0;\n	HitMeBaby.xDistToEdge = 12.0;\n	HitMeBaby.xDistToEdge = 0.0;\n	HitMeBaby.yDistToEdge = 15.0;\n	HitMeBaby.category1 = 0x5;\n	HitMeBaby.category2 = 0x0;\n	HitMeBaby.bitfield1 = 0x4F;\n	HitMeBaby.bitfield2 = 0x" + hexnum + ";\n	HitMeBaby.unkShort1C = 0;\n	HitMeBaby.callback = &dEn_c::collisionCallback;\n	this->aPhysics.initWithStruct(this, &HitMeBaby);\n	this->aPhysics.addToList();\n\n";
-		arc = "const char* " + arcnamelistname + " [] = { " + textBox23->Text + ", NULL };\n\n";
+		hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c animationChr;\n	nw4r::g3d::ResFile resFile;\n\n";
+		loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.xDistToEdge = " + APyDtE + "; \n	HitMeBaby.yDistToEdge = 0.0; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList();\n\n	this->scale.x = " + ScX + ";\n	this->scale.y = " + ScY + ";\n	this->scale.z = " + ScZ + ";\n\n";
+		arc = "const char* " + arcnamelistname + " [] = { \"" + textBox23->Text + "\", NULL };\n\n";
 	}
 	else
 	{
@@ -1875,14 +2464,27 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 		arc = "";
 	}
 
-	String^ includes = "//#include <common.h>\n//#include <game.h>\n//#include <g3dhax.h>\n//#include <sfx.h>\n//#include <stage.h>\n//#include <profile.h>\n//#include \"boss.h\"\n\n//#include \"" + name + ".h" + "\"\n\n";
+	String^ includes = commonh + gameh + g3dhaxh + sfxh + stageh + bossh + customspriteh;
 
-	
+	String^ umminbaseicclas = "";
+	if (checkBox23->Checked)
+	{
+		umminbaseicclas = "void updateModelMatrices();";
+	}
+
+	String^ baasurinbasicclass = "";
+	String^ baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
+	if (checkBox24->Checked)
+	{
+		baasurinbasicclass = "void bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate);";
+	}
+
+
 
 	if (radioButton1->Checked)
 	{
 		basicclass = "class " + classname + " : public " + inheritanceclass +
-			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	static dActor_c* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
+			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static dActor_c* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
 			"//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 			"//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 			"//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
@@ -1900,7 +2502,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	else
 	{
 		basicclass = "class " + classname + " : public " + inheritanceclass +
-			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	static " + classname + "* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
+			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static " + classname + "* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
 			"//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 			"//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
 			"//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
@@ -1921,7 +2523,10 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 		createfunc = "	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
 		if (checkBox23->Checked)
 		{
-			executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
+			if (checkBox24->Checked)
+				executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n	if (this->animationChr.isAnimationDone()) {\n		this->animationChr.setCurrentFrame(0.0);\n	}\n\n";
+			else
+				executefunc = "	acState.execute();\n\n	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
 		}
 		else
 		{
@@ -1930,7 +2535,19 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	}
 	else
 	{
-		executefunc = "";
+		if (checkBox23->Checked)
+		{
+			if (checkBox24->Checked)
+				executefunc = "	updateModelMatrices();\n	bodyModel._vf1C();\n\n	if (this->animationChr.isAnimationDone()) {\n		this->animationChr.setCurrentFrame(0.0);\n	}\n\n";
+			else
+				executefunc = "	updateModelMatrices();\n	bodyModel._vf1C();\n\n";
+		}
+		else
+		{
+			executefunc = "";
+		}
+
+
 		createfunc = "";
 	}
 	if (checkBox23->Checked)
@@ -2001,10 +2618,10 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 
 	String^ wholecode;
 	if (radioButton1->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	else if (radioButton2->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	
 
@@ -2399,7 +3016,15 @@ private: System::Void exampleToolStripMenuItem_Click(System::Object^ sender, Sys
 }
 private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
-	MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR;
+	String^ betatext = "";
+
+	if (beta)
+	{
+		betatext = " DEVDEBUG";
+	}
+
+
+	MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext;
 	textBox26->Text = "0xFFFFFFFF";
 
 }
@@ -2512,6 +3137,13 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 		textBox14->Visible = false;
 		textBox15->Visible = false;
 		textBox16->Visible = false;
+
+		label2->Visible = false;
+		label3->Visible = false;
+		textBox1->Visible = false;
+		textBox2->Visible = false;
+
+		checkBox26->Checked = true;
 	}
 	else
 	{
@@ -2538,6 +3170,13 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 		textBox14->Visible = true;
 		textBox15->Visible = true;
 		textBox16->Visible = true;
+
+		label2->Visible = true;
+		label3->Visible = true;
+		textBox1->Visible = true;
+		textBox2->Visible = true;
+
+		checkBox26->Checked = false;
 	}
 }
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -2565,7 +3204,15 @@ private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System
 		textBox13->Visible = false;
 		textBox14->Visible = false;
 		textBox15->Visible = false;
-		textBox16->Visible = false;
+		textBox16->Visible = true;
+
+
+		label2->Visible = false;
+		label3->Visible = false;
+		textBox1->Visible = false;
+		textBox2->Visible = false;
+
+		checkBox26->Checked = false;
 	}
 	else
 	{
@@ -2592,6 +3239,13 @@ private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System
 		textBox14->Visible = true;
 		textBox15->Visible = true;
 		textBox16->Visible = true;
+
+		label2->Visible = true;
+		label3->Visible = true;
+		textBox1->Visible = true;
+		textBox2->Visible = true;
+
+		checkBox26->Checked = false;
 	}
 }
 private: System::Void documentationToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2660,6 +3314,29 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 
 	textBox26->Text = "0xFFFFFFFF";
 
+	comboBox1->Text = "Most general sprites";
+	comboBox2->Text = "Player";
+	checkBox24->Checked = false;
+	label30->Visible = false;
+	textBox27->Visible = false;
+	textBox27->Text = "";
+
+	textBox28->Text = "0.0";
+	textBox29->Text = "0.0";
+	textBox30->Text = "0.0";
+	textBox31->Text = "0.0";
+	textBox32->Text = "0.0";
+	textBox33->Text = "0.0";
+	textBox34->Text = "0.0";
+
+	checkBox25->Checked = false;
+	checkBox26->Checked = false;
+	checkBox27->Checked = false;
+	checkBox28->Checked = false;
+	checkBox29->Checked = false;
+	checkBox31->Checked = false;
+	checkBox32->Checked = false;
+
 }
 private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	
@@ -2670,6 +3347,49 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 	String^ ifnewsprites;
 	array<String^>^ collisions = gcnew array<String^>(22);
 	String^ hasmodelyesno;
+	String^ haschryesno;
+
+	//Includes
+	String^ ch = "";
+	String^ gh = "";
+	String^ g3dh = "";
+	String^ sfxh = "";
+	String^ sh = "";
+	String^ bh = "";
+	String^ csh = "";
+
+	
+	if (checkBox25->Checked)
+	{
+		ch = "yes";
+	}
+	if (checkBox26->Checked)
+	{
+		gh = "yes";
+	}
+	if (checkBox27->Checked)
+	{
+		g3dh = "yes";
+	}
+	if (checkBox28->Checked)
+	{
+		sfxh = "yes";
+	}
+	if (checkBox29->Checked)
+	{
+		sh = "yes";
+	}
+	if (checkBox31->Checked)
+	{
+		bh = "yes";
+	}
+	if (checkBox32->Checked)
+	{
+		csh = "yes";
+	}
+
+
+
 
 	for (int i; i < 22; i++)
 	{
@@ -2737,13 +3457,23 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 		hasmodelyesno = "no";
 	}
 
+	if (checkBox24->Checked)
+	{
+		haschryesno = "yes";
+	}
+	else
+	{
+		haschryesno = "no";
+	}
+
 
 	array<String^>^ data = { textBox5->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox6->Text, textBox7->Text,
 		textBox8->Text, textBox9->Text, textBox10->Text, textBox11->Text, textBox12->Text, textBox13->Text, textBox14->Text, textBox15->Text, textBox16->Text, textBox17->Text,
 		numericUpDown1->Text, textBox18->Text, textBox19->Text, textBox20->Text, textBox21->Text, textBox22->Text,  ifnewsprites, collisions[0], collisions[1], collisions[2],
 		collisions[3], collisions[4], collisions[5], collisions[6], collisions[7], collisions[8], collisions[9], collisions[10], collisions[11], collisions[12], collisions[13], 
 		collisions[14], collisions[15], collisions[16], collisions[17], collisions[18], collisions[19], collisions[20], collisions[21],
-		hasmodelyesno, textBox23->Text, textBox24->Text, textBox25->Text };
+		hasmodelyesno, textBox23->Text, textBox24->Text, textBox25->Text, comboBox1->Text, comboBox2->Text, haschryesno, textBox27->Text,
+		ch, gh, g3dh, sfxh, sh, bh, csh, textBox28->Text, textBox29->Text, textBox30->Text, textBox31->Text, textBox32->Text, textBox33->Text, textBox34->Text };
 	
 
 	System::IO::StreamWriter^ sw;
@@ -2792,8 +3522,8 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		System::IO::StreamReader^ sr;
 
 		sr = System::IO::File::OpenText(path);
-		array<String^>^ datas = gcnew array<String^>(50);
-		for (int count = 0; count < 50; count++)
+		array<String^>^ datas = gcnew array<String^>(68);
+		for (int count = 0; count < 68; count++)
 		{
 			datas[count] = sr->ReadLine();
 		}
@@ -2858,6 +3588,13 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		checkBox20->Checked = true;
 		checkBox21->Checked = true;
 		checkBox22->Checked = true;
+
+		checkBox24->Checked = false;
+		label30->Visible = false;
+		textBox27->Visible = false;
+		textBox27->Text = "";
+
+
 
 
 		//Values from nsc file
@@ -3113,6 +3850,62 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		String^ hexnum = fullbinary.ToString("X");
 
 		textBox26->Text = "0x" + hexnum;
+
+
+		comboBox1->Text = datas[50];
+		comboBox2->Text = datas[51];
+
+		if (datas[52] == "yes")
+		{
+			checkBox24->Checked = true;
+		}
+		else
+		{
+			checkBox24->Checked = false;
+		}
+
+		textBox27->Text = datas[53];
+
+		if (datas[54] == "yes")
+			checkBox25->Checked = true;
+		else
+			checkBox25->Checked = false;
+		if (datas[55] == "yes")
+			checkBox26->Checked = true;
+		else
+			checkBox26->Checked = false;
+		if (datas[56] == "yes")
+			checkBox27->Checked = true;
+		else
+			checkBox27->Checked = false;
+		if (datas[57] == "yes")
+			checkBox28->Checked = true;
+		else
+			checkBox28->Checked = false;
+		if (datas[58] == "yes")
+			checkBox29->Checked = true;
+		else
+			checkBox29->Checked = false;
+		if (datas[59] == "yes")
+			checkBox31->Checked = true;
+		else
+			checkBox31->Checked = false;
+		if (datas[60] == "yes")
+			checkBox32->Checked = true;
+		else
+			checkBox32->Checked = false;
+
+
+		//textBox28->Text, textBox29->Text, textBox30->Text, textBox31->Text, textBox32->Text, textBox33->Text, textBox34->Text
+
+		textBox28->Text = datas[61];
+		textBox29->Text = datas[62];
+		textBox30->Text = datas[63];
+		textBox31->Text = datas[64];
+		textBox32->Text = datas[65];
+		textBox33->Text = datas[66];
+		textBox34->Text = datas[67];
+
 	}
 }
 
@@ -3127,6 +3920,14 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		textBox23->Visible = true;
 		textBox24->Visible = true;
 		textBox25->Visible = true;
+
+		checkBox24->Visible = true;
+
+		if (checkBox24->Checked)
+		{
+			label30->Visible = true;
+			textBox27->Visible = true;
+		}
 	}
 	else if (checkBox23->Checked == false)
 	{
@@ -3137,6 +3938,10 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		textBox23->Visible = false;
 		textBox24->Visible = false;
 		textBox25->Visible = false;
+
+		checkBox24->Visible = false;
+		label30->Visible = false;
+		textBox27->Visible = false;
 	}
 }
 
@@ -5826,5 +6631,19 @@ private: System::Void textBox26_TextChanged(System::Object^ sender, System::Even
 	checkBox21->Checked = (bool)(x >> 21 & 1);
 }
 */
+private: System::Void checkBox24_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+
+	if (checkBox24->Checked)
+	{
+		label30->Visible = true;
+		textBox27->Visible = true;
+	}
+	else
+	{
+		label30->Visible = false;
+		textBox27->Visible = false;
+	}
+
+}
 };
 }
