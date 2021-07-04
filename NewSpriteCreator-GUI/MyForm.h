@@ -2005,10 +2005,13 @@ private: System::ComponentModel::IContainer^ components;
 		}
 
 		String^ baasurinbasicclass = "";
-		String^ baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
+		String^ baasurset = "";
+		String^ baasurfunction = "";
 		if (checkBox24->Checked)
 		{
 			baasurinbasicclass = "void bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate);";
+			baasurset = "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);";
+			baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
 		}
 
 		
@@ -2150,10 +2153,10 @@ private: System::ComponentModel::IContainer^ components;
 
 		String^ wholecode;
 		if (radioButton1->Checked == true)
-			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 		else if (radioButton2->Checked == true)
-			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 		System::Windows::Forms::Clipboard::SetText(wholecode);
 
@@ -2168,9 +2171,16 @@ private: System::Void infoToolStripMenuItem_Click(System::Object^ sender, System
 	{
 		betatext = " DEVDEBUG";
 	}
-	
-	String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
-	MessageBox::Show(msg, "About");
+	if (useminor2)
+	{
+		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_MINOR2 + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
+		MessageBox::Show(msg, "About");
+	}
+	else
+	{
+		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
+		MessageBox::Show(msg, "About");
+	}
 }
 
 private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -2473,10 +2483,13 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	}
 
 	String^ baasurinbasicclass = "";
-	String^ baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
+	String^ baasurset = "";
+	String^ baasurfunction = "";
 	if (checkBox24->Checked)
 	{
 		baasurinbasicclass = "void bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate);";
+		baasurset = "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);";
+		baasurfunction = "\n\nvoid " + classname + "::bindAnimChr_and_setUpdateRate(const char* name, int unk, float unk2, float rate) {\n	nw4r::g3d::ResAnmChr anmChr = this->resFile.GetResAnmChr(name);\n	this->animationChr.bind(&this->bodyModel, anmChr, unk);\n	this->bodyModel.bindAnim(&this->animationChr, unk2);\n	this->animationChr.setUpdateRate(rate);\n}\n";
 	}
 
 
@@ -2618,10 +2631,10 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 
 	String^ wholecode;
 	if (radioButton1->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	else if (radioButton2->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + createfunc + "	bindAnimChr_and_setUpdateRate(\"" + textBox27->Text + "\", 1, 0.0, 1.0);\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	
 
@@ -3022,9 +3035,13 @@ private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e)
 	{
 		betatext = " DEVDEBUG";
 	}
-
-
-	MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext;
+	if (useminor2)
+	{
+		MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_MINOR2 + betatext;
+	}
+	else
+		MyForm::Text = "NewSpriteCreator v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext;
+	
 	textBox26->Text = "0xFFFFFFFF";
 
 }
