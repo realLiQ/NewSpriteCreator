@@ -1,0 +1,2 @@
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\Debug\NewSpriteCreatorGUI.MyForm.resources
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\Debug\NewSpriteCreator-GUI.vcxproj.GenerateResource.cache

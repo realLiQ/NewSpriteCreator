@@ -1,1 +1,8 @@
-﻿cl : befehlszeile error D8016: Die Befehlszeilenoptionen /clr und /MT sind inkompatibel.
+﻿  MyForm.cpp
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(2187,10): warning C4101: "path": Unreferenzierte lokale Variable
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(3363,10): warning C4101: "content": Unreferenzierte lokale Variable
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(6498,15): error C2374: "binarycollision": Neudefinition; Mehrfachinitialisierung
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(6495): message : Siehe Deklaration von "binarycollision"
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(6499,15): error C2374: "fullbinary": Neudefinition; Mehrfachinitialisierung
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.h(6496): message : Siehe Deklaration von "fullbinary"
+E:\GitHub\NewSpriteCreator\NewSpriteCreator-GUI\MyForm.cpp(8,1): warning C4829: Möglicherweise falsche Parameter für Main-Funktion. Verwenden Sie eventuell "int main(Platform::Array<Platform::String^>^ args)".
