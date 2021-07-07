@@ -1436,7 +1436,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
 				L"Enemy", L"Boss", L"Player", L"Item", L"Map",
-					L"MapOBJ"
+					L"MapObj"
 			});
 			this->comboBox2->Location = System::Drawing::Point(190, 114);
 			this->comboBox2->Name = L"comboBox2";
@@ -1986,7 +1986,7 @@ private: System::ComponentModel::IContainer^ components;
 		if (checkBox23->Checked)
 		{
 			hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c animationChr;\n	nw4r::g3d::ResFile resFile;\n\n";
-			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.xDistToEdge = " + APyDtE + "; \n	HitMeBaby.yDistToEdge = 0.0; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList();\n\n	this->scale.x = " + ScX + ";\n	this->scale.y = " + ScY + ";\n	this->scale.z = " + ScZ + ";\n\n";
+			loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.yDistToEdge = " + APyDtE + "; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList(); \n\n	this->scale.x = " + ScX + "; \n	this->scale.y = " + ScY + "; \n	this->scale.z = " + ScZ + "; \n\n";
 			arc = "const char* " + arcnamelistname + " [] = { \"" + textBox23->Text + "\", NULL };\n\n";
 		}
 		else
@@ -2308,94 +2308,94 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	array<char>^ binarycollision = gcnew array<char>(22);
 	unsigned int fullbinary = 0xFFC00000;
 
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
+	if (checkBox22->Checked)
+		binarycollision[0] = 1;
+	else
+		binarycollision[0] = 0;
+	if (checkBox1->Checked)
+		binarycollision[1] = 1;
+	else
+		binarycollision[1] = 0;
+	if (checkBox2->Checked)
+		binarycollision[2] = 1;
+	else
+		binarycollision[2] = 0;
+	if (checkBox3->Checked)
+		binarycollision[3] = 1;
+	else
+		binarycollision[3] = 0;
+	if (checkBox4->Checked)
+		binarycollision[4] = 1;
+	else
+		binarycollision[4] = 0;
+	if (checkBox5->Checked)
+		binarycollision[5] = 1;
+	else
+		binarycollision[5] = 0;
+	if (checkBox6->Checked)
+		binarycollision[6] = 1;
+	else
+		binarycollision[6] = 0;
+	if (checkBox7->Checked)
+		binarycollision[7] = 1;
+	else
+		binarycollision[7] = 0;
+	if (checkBox8->Checked)
+		binarycollision[8] = 1;
+	else
+		binarycollision[8] = 0;
+	if (checkBox9->Checked)
+		binarycollision[9] = 1;
+	else
+		binarycollision[9] = 0;
+	if (checkBox10->Checked)
+		binarycollision[10] = 1;
+	else
+		binarycollision[10] = 0;
+	if (checkBox11->Checked)
+		binarycollision[11] = 1;
+	else
+		binarycollision[11] = 0;
+	if (checkBox12->Checked)
+		binarycollision[12] = 1;
+	else
+		binarycollision[12] = 0;
+	if (checkBox13->Checked)
+		binarycollision[13] = 1;
+	else
+		binarycollision[13] = 0;
+	if (checkBox14->Checked)
+		binarycollision[14] = 1;
+	else
+		binarycollision[14] = 0;
+	if (checkBox15->Checked)
+		binarycollision[15] = 1;
+	else
+		binarycollision[15] = 0;
+	if (checkBox16->Checked)
+		binarycollision[16] = 1;
+	else
+		binarycollision[16] = 0;
+	if (checkBox17->Checked)
+		binarycollision[17] = 1;
+	else
+		binarycollision[17] = 0;
+	if (checkBox18->Checked)
+		binarycollision[18] = 1;
+	else
+		binarycollision[18] = 0;
+	if (checkBox19->Checked)
+		binarycollision[19] = 1;
+	else
+		binarycollision[19] = 0;
+	if (checkBox20->Checked)
+		binarycollision[20] = 1;
+	else
+		binarycollision[20] = 0;
+	if (checkBox21->Checked)
+		binarycollision[21] = 1;
+	else
+		binarycollision[21] = 0;
 
 	fullbinary |= binarycollision[0];
 	fullbinary |= binarycollision[1] << 1;
@@ -2464,7 +2464,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	if (checkBox23->Checked)
 	{
 		hasmodelvar = "\n	mHeapAllocator_c allocator;\n	m3d::mdl_c bodyModel;\n	m3d::anmChr_c animationChr;\n	nw4r::g3d::ResFile resFile;\n\n";
-		loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.xDistToEdge = " + APyDtE + "; \n	HitMeBaby.yDistToEdge = 0.0; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList();\n\n	this->scale.x = " + ScX + ";\n	this->scale.y = " + ScY + ";\n	this->scale.z = " + ScZ + ";\n\n";
+		loadmodel = "	allocator.link(-1, GameHeaps[0], 0, 0x20);\n\n	resFile.data = getResource(\"" + arcname + "\", \"g3d/" + brresname + ".brres\");\n	nw4r::g3d::ResMdl mdl = this->resFile.GetResMdl(\"" + mdlname + "\");\n	bodyModel.setup(mdl, &allocator, 0x224, 1, 0);" + "\n	SetupTextures_" + comboBox2->Text + "(&bodyModel, 0);" + chrload + "\n\n	allocator.unlink(); \n\n	ActivePhysics::Info HitMeBaby; \n	HitMeBaby.xDistToCenter = " + APxDtC + "; \n	HitMeBaby.yDistToCenter = " + APyDtC + "; \n	HitMeBaby.xDistToEdge = " + APxDtE + "; \n	HitMeBaby.yDistToEdge = " + APyDtE + "; \n	HitMeBaby.category1 = 0x" + category1 + "; \n	HitMeBaby.category2 = 0x" + category2 + "; \n	HitMeBaby.bitfield1 = 0x4F; \n	HitMeBaby.bitfield2 = 0x" + hexnum + "; \n	HitMeBaby.unkShort1C = 0; \n	HitMeBaby.callback = &dEn_c::collisionCallback; \n	this->aPhysics.initWithStruct(this, &HitMeBaby); \n	this->aPhysics.addToList(); \n\n	this->scale.x = " + ScX + "; \n	this->scale.y = " + ScY + "; \n	this->scale.z = " + ScZ + "; \n\n";
 		arc = "const char* " + arcnamelistname + " [] = { \"" + textBox23->Text + "\", NULL };\n\n";
 	}
 	else
