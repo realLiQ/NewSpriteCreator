@@ -218,8 +218,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->fileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->newToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->openToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->saveProjectAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exampleToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->documentationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -454,7 +454,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->fileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(4) {
 				this->newToolStripMenuItem,
-					this->openToolStripMenuItem, this->saveAsToolStripMenuItem, this->saveProjectAsToolStripMenuItem
+					this->openToolStripMenuItem, this->saveProjectAsToolStripMenuItem, this->saveAsToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
 			this->fileToolStripMenuItem->Size = System::Drawing::Size(62, 34);
@@ -463,30 +463,30 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->openToolStripMenuItem->Text = L"Open Project...";
 			this->openToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openToolStripMenuItem_Click);
-			// 
-			// saveAsToolStripMenuItem
-			// 
-			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
-			this->saveAsToolStripMenuItem->Text = L"Save As...";
-			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
 			// saveProjectAsToolStripMenuItem
 			// 
 			this->saveProjectAsToolStripMenuItem->Name = L"saveProjectAsToolStripMenuItem";
-			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
 			this->saveProjectAsToolStripMenuItem->Text = L"Save Project As...";
 			this->saveProjectAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveProjectAsToolStripMenuItem_Click);
+			// 
+			// saveAsToolStripMenuItem
+			// 
+			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveAsToolStripMenuItem->Text = L"Save Code As...";
+			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
 			// helpToolStripMenuItem
 			// 
@@ -1366,7 +1366,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label36
 			// 
 			this->label36->AutoSize = true;
-			this->label36->Location = System::Drawing::Point(356, 155);
+			this->label36->Location = System::Drawing::Point(356, 151);
 			this->label36->Name = L"label36";
 			this->label36->Size = System::Drawing::Size(54, 25);
 			this->label36->TabIndex = 11;
@@ -1375,7 +1375,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label35
 			// 
 			this->label35->AutoSize = true;
-			this->label35->Location = System::Drawing::Point(296, 155);
+			this->label35->Location = System::Drawing::Point(296, 151);
 			this->label35->Name = L"label35";
 			this->label35->Size = System::Drawing::Size(54, 25);
 			this->label35->TabIndex = 10;
@@ -1384,7 +1384,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label34
 			// 
 			this->label34->AutoSize = true;
-			this->label34->Location = System::Drawing::Point(239, 155);
+			this->label34->Location = System::Drawing::Point(239, 151);
 			this->label34->Name = L"label34";
 			this->label34->Size = System::Drawing::Size(56, 25);
 			this->label34->TabIndex = 9;
@@ -1393,7 +1393,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label33
 			// 
 			this->label33->AutoSize = true;
-			this->label33->Location = System::Drawing::Point(185, 155);
+			this->label33->Location = System::Drawing::Point(185, 151);
 			this->label33->Name = L"label33";
 			this->label33->Size = System::Drawing::Size(56, 25);
 			this->label33->TabIndex = 8;
@@ -1401,7 +1401,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox31
 			// 
-			this->textBox31->Location = System::Drawing::Point(361, 183);
+			this->textBox31->Location = System::Drawing::Point(361, 179);
 			this->textBox31->Name = L"textBox31";
 			this->textBox31->Size = System::Drawing::Size(50, 29);
 			this->textBox31->TabIndex = 7;
@@ -1409,7 +1409,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox30
 			// 
-			this->textBox30->Location = System::Drawing::Point(301, 183);
+			this->textBox30->Location = System::Drawing::Point(301, 179);
 			this->textBox30->Name = L"textBox30";
 			this->textBox30->Size = System::Drawing::Size(50, 29);
 			this->textBox30->TabIndex = 6;
@@ -1417,7 +1417,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox29
 			// 
-			this->textBox29->Location = System::Drawing::Point(244, 183);
+			this->textBox29->Location = System::Drawing::Point(244, 179);
 			this->textBox29->Name = L"textBox29";
 			this->textBox29->Size = System::Drawing::Size(50, 29);
 			this->textBox29->TabIndex = 5;
@@ -1425,7 +1425,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox28
 			// 
-			this->textBox28->Location = System::Drawing::Point(188, 183);
+			this->textBox28->Location = System::Drawing::Point(188, 179);
 			this->textBox28->Name = L"textBox28";
 			this->textBox28->Size = System::Drawing::Size(50, 29);
 			this->textBox28->TabIndex = 4;
@@ -1438,7 +1438,7 @@ private: System::ComponentModel::IContainer^ components;
 				L"Enemy", L"Boss", L"Player", L"Item", L"Map",
 					L"MapObj"
 			});
-			this->comboBox2->Location = System::Drawing::Point(190, 114);
+			this->comboBox2->Location = System::Drawing::Point(190, 110);
 			this->comboBox2->Name = L"comboBox2";
 			this->comboBox2->Size = System::Drawing::Size(216, 32);
 			this->comboBox2->TabIndex = 3;
@@ -1447,7 +1447,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(245, 86);
+			this->label32->Location = System::Drawing::Point(245, 82);
 			this->label32->Name = L"label32";
 			this->label32->Size = System::Drawing::Size(93, 25);
 			this->label32->TabIndex = 2;
@@ -1460,7 +1460,7 @@ private: System::ComponentModel::IContainer^ components;
 				L"Player/Yoshi A", L"Player/Yoshi B", L"Most general sprites",
 					L"Balloons", L"Collectibles/Coins", L"Player fireballs", L"Player iceballs"
 			});
-			this->comboBox1->Location = System::Drawing::Point(190, 46);
+			this->comboBox1->Location = System::Drawing::Point(188, 41);
 			this->comboBox1->Name = L"comboBox1";
 			this->comboBox1->Size = System::Drawing::Size(216, 32);
 			this->comboBox1->TabIndex = 1;
@@ -1469,7 +1469,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label31
 			// 
 			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(221, 19);
+			this->label31->Location = System::Drawing::Point(219, 14);
 			this->label31->Name = L"label31";
 			this->label31->Size = System::Drawing::Size(143, 25);
 			this->label31->TabIndex = 0;
@@ -2055,7 +2055,7 @@ private: System::ComponentModel::IContainer^ components;
 
 		if (numericUpDown1->Text == "1" || numericUpDown1->Text == "2" || numericUpDown1->Text == "3" || numericUpDown1->Text == "4" || numericUpDown1->Text == "5")
 		{
-			createfunc = "	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
+			createfunc = "\n\n	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
 			if (checkBox23->Checked)
 			{
 				if (checkBox24->Checked)
@@ -2533,7 +2533,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 
 	if (numericUpDown1->Text == "1" || numericUpDown1->Text == "2" || numericUpDown1->Text == "3" || numericUpDown1->Text == "4" || numericUpDown1->Text == "5")
 	{
-		createfunc = "	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
+		createfunc = "\n\n	doStateChange(&StateID_" + textBox18->Text + ");\n\n";
 		if (checkBox23->Checked)
 		{
 			if (checkBox24->Checked)
@@ -2643,7 +2643,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	try
 	{
 		sfd->Filter = "C++ Source Files|*.cpp|C++ Header Files|*.h|Text Files|*.txt|All Files|*.*";
-		sfd->Title = "Save As...";
+		sfd->Title = "Save Code As...";
 		if (sfd->ShowDialog() == System::Windows::Forms::DialogResult::OK)
 		{
 			String^ path = sfd->FileName;
