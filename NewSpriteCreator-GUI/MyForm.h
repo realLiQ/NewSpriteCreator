@@ -463,28 +463,28 @@ private: System::ComponentModel::IContainer^ components;
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->openToolStripMenuItem->Text = L"Open Project...";
 			this->openToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openToolStripMenuItem_Click);
 			// 
 			// saveProjectAsToolStripMenuItem
 			// 
 			this->saveProjectAsToolStripMenuItem->Name = L"saveProjectAsToolStripMenuItem";
-			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->saveProjectAsToolStripMenuItem->Text = L"Save Project As...";
 			this->saveProjectAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveProjectAsToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(315, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
 			this->saveAsToolStripMenuItem->Text = L"Save Code As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
@@ -1684,6 +1684,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->groupBox4);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"NewSpriteCreator";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
@@ -2846,67 +2847,42 @@ private: System::Void numericUpDown1_ValueChanged(System::Object^ sender, System
 private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (radioButton2->Checked)
 	{
-		groupBox1->Visible = false;
-		label6->Visible = false;
-		label8->Visible = false;
-		label9->Visible = false;
-		label10->Visible = false;
-		label11->Visible = false;
-		label12->Visible = false;
-		label13->Visible = false;
-		label14->Visible = false;
-		label15->Visible = false;
-		label16->Visible = false;
-		label17->Visible = false;
-		textBox6->Visible = false;
-		textBox7->Visible = false;
-		textBox8->Visible = false;
-		textBox9->Visible = false;
-		textBox10->Visible = false;
-		textBox11->Visible = false;
-		textBox12->Visible = false;
-		textBox13->Visible = false;
-		textBox14->Visible = false;
-		textBox15->Visible = false;
-		textBox16->Visible = false;
+		textBox6->Enabled = false;
+		textBox7->Enabled = false;
+		textBox8->Enabled = false;
+		textBox9->Enabled = false;
+		textBox10->Enabled = false;
+		textBox11->Enabled = false;
+		textBox12->Enabled = false;
+		textBox13->Enabled = false;
+		textBox14->Enabled = false;
+		textBox15->Enabled = false;
+		textBox16->Enabled = false;
 
-		label2->Visible = false;
-		label3->Visible = false;
-		textBox1->Visible = false;
-		textBox2->Visible = false;
+
+		textBox1->Enabled = false;
+		textBox2->Enabled = false;
 
 		checkBox26->Checked = true;
 	}
 	else
 	{
-		groupBox1->Visible = true;
-		label6->Visible = true;
-		label8->Visible = true;
-		label9->Visible = true;
-		label10->Visible = true;
-		label11->Visible = true;
-		label12->Visible = true;
-		label13->Visible = true;
-		label14->Visible = true;
-		label15->Visible = true;
-		label16->Visible = true;
-		label17->Visible = true;
-		textBox6->Visible = true;
-		textBox7->Visible = true;
-		textBox8->Visible = true;
-		textBox9->Visible = true;
-		textBox10->Visible = true;
-		textBox11->Visible = true;
-		textBox12->Visible = true;
-		textBox13->Visible = true;
-		textBox14->Visible = true;
-		textBox15->Visible = true;
-		textBox16->Visible = true;
+		textBox6->Enabled = true;
+		textBox7->Enabled = true;
+		textBox8->Enabled = true;
+		textBox9->Enabled = true;
+		textBox10->Enabled = true;
+		textBox11->Enabled = true;
+		textBox12->Enabled = true;
+		textBox13->Enabled = true;
+		textBox14->Enabled = true;
+		textBox15->Enabled = true;
+		textBox16->Enabled = true;
 
-		label2->Visible = true;
-		label3->Visible = true;
-		textBox1->Visible = true;
-		textBox2->Visible = true;
+
+		textBox1->Enabled = true;
+		textBox2->Enabled = true;
+
 
 		checkBox26->Checked = false;
 	}
@@ -2914,68 +2890,42 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
 	if (radioButton2->Checked)
 	{
-		groupBox1->Visible = false;
-		label6->Visible = false;
-		label8->Visible = false;
-		label9->Visible = false;
-		label10->Visible = false;
-		label11->Visible = false;
-		label12->Visible = false;
-		label13->Visible = false;
-		label14->Visible = false;
-		label15->Visible = false;
-		label16->Visible = false;
-		label17->Visible = false;
-		textBox6->Visible = false;
-		textBox7->Visible = false;
-		textBox8->Visible = false;
-		textBox9->Visible = false;
-		textBox10->Visible = false;
-		textBox11->Visible = false;
-		textBox12->Visible = false;
-		textBox13->Visible = false;
-		textBox14->Visible = false;
-		textBox15->Visible = false;
-		textBox16->Visible = true;
+		textBox6->Enabled = false;
+		textBox7->Enabled = false;
+		textBox8->Enabled = false;
+		textBox9->Enabled = false;
+		textBox10->Enabled = false;
+		textBox11->Enabled = false;
+		textBox12->Enabled = false;
+		textBox13->Enabled = false;
+		textBox14->Enabled = false;
+		textBox15->Enabled = false;
+		textBox16->Enabled = false;
 
 
-		label2->Visible = false;
-		label3->Visible = false;
-		textBox1->Visible = false;
-		textBox2->Visible = false;
+		textBox1->Enabled = false;
+		textBox2->Enabled = false;
 
 		checkBox26->Checked = false;
 	}
 	else
 	{
-		groupBox1->Visible = true;
-		label6->Visible = true;
-		label8->Visible = true;
-		label9->Visible = true;
-		label10->Visible = true;
-		label11->Visible = true;
-		label12->Visible = true;
-		label13->Visible = true;
-		label14->Visible = true;
-		label15->Visible = true;
-		label16->Visible = true;
-		label17->Visible = true;
-		textBox6->Visible = true;
-		textBox7->Visible = true;
-		textBox8->Visible = true;
-		textBox9->Visible = true;
-		textBox10->Visible = true;
-		textBox11->Visible = true;
-		textBox12->Visible = true;
-		textBox13->Visible = true;
-		textBox14->Visible = true;
-		textBox15->Visible = true;
-		textBox16->Visible = true;
+		textBox6->Enabled = true;
+		textBox7->Enabled = true;
+		textBox8->Enabled = true;
+		textBox9->Enabled = true;
+		textBox10->Enabled = true;
+		textBox11->Enabled = true;
+		textBox12->Enabled = true;
+		textBox13->Enabled = true;
+		textBox14->Enabled = true;
+		textBox15->Enabled = true;
+		textBox16->Enabled = true;
 
-		label2->Visible = true;
-		label3->Visible = true;
-		textBox1->Visible = true;
-		textBox2->Visible = true;
+
+		textBox1->Enabled = true;
+		textBox2->Enabled = true;
+
 
 		checkBox26->Checked = false;
 	}
