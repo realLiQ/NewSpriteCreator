@@ -1341,27 +1341,30 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox32
 			// 
+			this->textBox32->Enabled = false;
 			this->textBox32->Location = System::Drawing::Point(337, 246);
 			this->textBox32->Name = L"textBox32";
 			this->textBox32->Size = System::Drawing::Size(69, 29);
 			this->textBox32->TabIndex = 54;
-			this->textBox32->Text = L"0.0";
+			this->textBox32->Text = L"1.0";
 			// 
 			// textBox33
 			// 
-			this->textBox33->Location = System::Drawing::Point(261, 246);
+			this->textBox33->Enabled = false;
+			this->textBox33->Location = System::Drawing::Point(262, 246);
 			this->textBox33->Name = L"textBox33";
 			this->textBox33->Size = System::Drawing::Size(70, 29);
 			this->textBox33->TabIndex = 53;
-			this->textBox33->Text = L"0.0";
+			this->textBox33->Text = L"1.0";
 			// 
 			// textBox34
 			// 
+			this->textBox34->Enabled = false;
 			this->textBox34->Location = System::Drawing::Point(190, 246);
 			this->textBox34->Name = L"textBox34";
 			this->textBox34->Size = System::Drawing::Size(66, 29);
 			this->textBox34->TabIndex = 52;
-			this->textBox34->Text = L"0.0";
+			this->textBox34->Text = L"1.0";
 			// 
 			// label36
 			// 
@@ -1401,6 +1404,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox31
 			// 
+			this->textBox31->Enabled = false;
 			this->textBox31->Location = System::Drawing::Point(361, 179);
 			this->textBox31->Name = L"textBox31";
 			this->textBox31->Size = System::Drawing::Size(50, 29);
@@ -1409,6 +1413,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox30
 			// 
+			this->textBox30->Enabled = false;
 			this->textBox30->Location = System::Drawing::Point(301, 179);
 			this->textBox30->Name = L"textBox30";
 			this->textBox30->Size = System::Drawing::Size(50, 29);
@@ -1417,6 +1422,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox29
 			// 
+			this->textBox29->Enabled = false;
 			this->textBox29->Location = System::Drawing::Point(244, 179);
 			this->textBox29->Name = L"textBox29";
 			this->textBox29->Size = System::Drawing::Size(50, 29);
@@ -1425,6 +1431,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox28
 			// 
+			this->textBox28->Enabled = false;
 			this->textBox28->Location = System::Drawing::Point(188, 179);
 			this->textBox28->Name = L"textBox28";
 			this->textBox28->Size = System::Drawing::Size(50, 29);
@@ -3605,6 +3612,16 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 
 		checkBox24->Visible = true;
 
+		textBox32->Enabled = true;
+		textBox33->Enabled = true;
+		textBox34->Enabled = true;
+
+		textBox28->Enabled = true;
+		textBox29->Enabled = true;
+		textBox30->Enabled = true;
+		textBox31->Enabled = true;
+
+
 		if (checkBox24->Checked)
 		{
 			label30->Visible = true;
@@ -3624,6 +3641,19 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		checkBox24->Visible = false;
 		label30->Visible = false;
 		textBox27->Visible = false;
+
+
+		textBox32->Enabled = false;
+		textBox33->Enabled = false;
+		textBox34->Enabled = false;
+
+
+		textBox28->Enabled = false;
+		textBox29->Enabled = false;
+		textBox30->Enabled = false;
+		textBox31->Enabled = false;
+
+		checkBox24->Checked = false;
 	}
 }
 
