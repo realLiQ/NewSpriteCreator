@@ -430,7 +430,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(502, 742);
+			this->label7->Location = System::Drawing::Point(496, 742);
 			this->label7->Name = L"label7";
 			this->label7->Size = System::Drawing::Size(215, 25);
 			this->label7->TabIndex = 11;
@@ -1440,6 +1440,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// comboBox2
 			// 
+			this->comboBox2->Enabled = false;
 			this->comboBox2->FormattingEnabled = true;
 			this->comboBox2->Items->AddRange(gcnew cli::array< System::Object^  >(6) {
 				L"Enemy", L"Boss", L"Player", L"Item", L"Map",
@@ -1462,6 +1463,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// comboBox1
 			// 
+			this->comboBox1->Enabled = false;
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(7) {
 				L"Player/Yoshi A", L"Player/Yoshi B", L"Most general sprites",
@@ -3014,9 +3016,9 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 	textBox29->Text = "0.0";
 	textBox30->Text = "0.0";
 	textBox31->Text = "0.0";
-	textBox32->Text = "0.0";
-	textBox33->Text = "0.0";
-	textBox34->Text = "0.0";
+	textBox32->Text = "1.0";
+	textBox33->Text = "1.0";
+	textBox34->Text = "1.0";
 
 	checkBox25->Checked = false;
 	checkBox26->Checked = false;
@@ -3025,6 +3027,8 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 	checkBox29->Checked = false;
 	checkBox31->Checked = false;
 	checkBox32->Checked = false;
+
+	label7->Text = "No code generated yet!";
 
 }
 private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3621,6 +3625,9 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		textBox30->Enabled = true;
 		textBox31->Enabled = true;
 
+		comboBox1->Enabled = true;
+		comboBox2->Enabled = true;
+
 
 		if (checkBox24->Checked)
 		{
@@ -3654,6 +3661,9 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		textBox31->Enabled = false;
 
 		checkBox24->Checked = false;
+
+		comboBox1->Enabled = false;
+		comboBox2->Enabled = false;
 	}
 }
 
