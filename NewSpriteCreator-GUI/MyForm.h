@@ -171,6 +171,8 @@ private: System::Windows::Forms::CheckBox^ checkBox28;
 private: System::Windows::Forms::CheckBox^ checkBox27;
 private: System::Windows::Forms::CheckBox^ checkBox26;
 private: System::Windows::Forms::CheckBox^ checkBox25;
+private: System::Windows::Forms::Label^ label40;
+private: System::Windows::Forms::TextBox^ textBox35;
 
 
 
@@ -322,6 +324,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->label30 = (gcnew System::Windows::Forms::Label());
 			this->checkBox24 = (gcnew System::Windows::Forms::CheckBox());
 			this->groupBox6 = (gcnew System::Windows::Forms::GroupBox());
+			this->label40 = (gcnew System::Windows::Forms::Label());
+			this->textBox35 = (gcnew System::Windows::Forms::TextBox());
 			this->checkBox32 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox31 = (gcnew System::Windows::Forms::CheckBox());
 			this->checkBox29 = (gcnew System::Windows::Forms::CheckBox());
@@ -339,9 +343,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(492, 664);
+			this->button1->Location = System::Drawing::Point(403, 553);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(234, 75);
+			this->button1->Size = System::Drawing::Size(191, 62);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Generate";
 			this->button1->UseVisualStyleBackColor = true;
@@ -349,90 +354,101 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(89, 202);
+			this->textBox1->Location = System::Drawing::Point(73, 168);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(234, 29);
+			this->textBox1->Size = System::Drawing::Size(192, 26);
 			this->textBox1->TabIndex = 1;
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(89, 286);
+			this->textBox2->Location = System::Drawing::Point(73, 238);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(234, 29);
+			this->textBox2->Size = System::Drawing::Size(192, 26);
 			this->textBox2->TabIndex = 2;
 			// 
 			// textBox3
 			// 
-			this->textBox3->Location = System::Drawing::Point(89, 370);
+			this->textBox3->Location = System::Drawing::Point(73, 308);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2);
 			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(234, 29);
+			this->textBox3->Size = System::Drawing::Size(192, 26);
 			this->textBox3->TabIndex = 3;
 			// 
 			// textBox4
 			// 
-			this->textBox4->Location = System::Drawing::Point(89, 538);
+			this->textBox4->Location = System::Drawing::Point(73, 448);
+			this->textBox4->Margin = System::Windows::Forms::Padding(2);
 			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(234, 29);
+			this->textBox4->Size = System::Drawing::Size(192, 26);
 			this->textBox4->TabIndex = 4;
 			// 
 			// textBox5
 			// 
-			this->textBox5->Location = System::Drawing::Point(89, 118);
+			this->textBox5->Location = System::Drawing::Point(73, 98);
+			this->textBox5->Margin = System::Windows::Forms::Padding(2);
 			this->textBox5->Name = L"textBox5";
-			this->textBox5->Size = System::Drawing::Size(234, 29);
+			this->textBox5->Size = System::Drawing::Size(192, 26);
 			this->textBox5->TabIndex = 5;
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(84, 90);
+			this->label1->Location = System::Drawing::Point(69, 75);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(64, 25);
+			this->label1->Size = System::Drawing::Size(51, 20);
 			this->label1->TabIndex = 6;
 			this->label1->Text = L"Name";
 			// 
 			// label2
 			// 
 			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(84, 174);
+			this->label2->Location = System::Drawing::Point(69, 145);
+			this->label2->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(85, 25);
+			this->label2->Size = System::Drawing::Size(70, 20);
 			this->label2->TabIndex = 7;
 			this->label2->Text = L"ProfileID";
 			// 
 			// label3
 			// 
 			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(87, 258);
+			this->label3->Location = System::Drawing::Point(71, 215);
+			this->label3->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(82, 25);
+			this->label3->Size = System::Drawing::Size(68, 20);
 			this->label3->TabIndex = 8;
 			this->label3->Text = L"SpriteID";
 			// 
 			// label4
 			// 
 			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(84, 342);
+			this->label4->Location = System::Drawing::Point(69, 285);
+			this->label4->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(111, 25);
+			this->label4->Size = System::Drawing::Size(88, 20);
 			this->label4->TabIndex = 9;
 			this->label4->Text = L"Classname";
 			// 
 			// label5
 			// 
 			this->label5->AutoSize = true;
-			this->label5->Location = System::Drawing::Point(84, 510);
+			this->label5->Location = System::Drawing::Point(69, 425);
+			this->label5->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label5->Name = L"label5";
-			this->label5->Size = System::Drawing::Size(124, 25);
+			this->label5->Size = System::Drawing::Size(100, 20);
 			this->label5->TabIndex = 10;
 			this->label5->Text = L"ArcNameList";
 			// 
 			// label7
 			// 
 			this->label7->AutoSize = true;
-			this->label7->Location = System::Drawing::Point(496, 742);
+			this->label7->Location = System::Drawing::Point(406, 618);
+			this->label7->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(215, 25);
+			this->label7->Size = System::Drawing::Size(174, 20);
 			this->label7->TabIndex = 11;
 			this->label7->Text = L"No code generated yet!";
 			// 
@@ -446,7 +462,8 @@ private: System::ComponentModel::IContainer^ components;
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1479, 38);
+			this->menuStrip1->Padding = System::Windows::Forms::Padding(5, 2, 0, 2);
+			this->menuStrip1->Size = System::Drawing::Size(1210, 33);
 			this->menuStrip1->TabIndex = 12;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -457,34 +474,34 @@ private: System::ComponentModel::IContainer^ components;
 					this->openToolStripMenuItem, this->saveProjectAsToolStripMenuItem, this->saveAsToolStripMenuItem
 			});
 			this->fileToolStripMenuItem->Name = L"fileToolStripMenuItem";
-			this->fileToolStripMenuItem->Size = System::Drawing::Size(62, 34);
+			this->fileToolStripMenuItem->Size = System::Drawing::Size(54, 29);
 			this->fileToolStripMenuItem->Text = L"File";
 			// 
 			// newToolStripMenuItem
 			// 
 			this->newToolStripMenuItem->Name = L"newToolStripMenuItem";
-			this->newToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->newToolStripMenuItem->Size = System::Drawing::Size(247, 34);
 			this->newToolStripMenuItem->Text = L"New";
 			this->newToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::newToolStripMenuItem_Click);
 			// 
 			// openToolStripMenuItem
 			// 
 			this->openToolStripMenuItem->Name = L"openToolStripMenuItem";
-			this->openToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->openToolStripMenuItem->Size = System::Drawing::Size(247, 34);
 			this->openToolStripMenuItem->Text = L"Open Project...";
 			this->openToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::openToolStripMenuItem_Click);
 			// 
 			// saveProjectAsToolStripMenuItem
 			// 
 			this->saveProjectAsToolStripMenuItem->Name = L"saveProjectAsToolStripMenuItem";
-			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->saveProjectAsToolStripMenuItem->Size = System::Drawing::Size(247, 34);
 			this->saveProjectAsToolStripMenuItem->Text = L"Save Project As...";
 			this->saveProjectAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveProjectAsToolStripMenuItem_Click);
 			// 
 			// saveAsToolStripMenuItem
 			// 
 			this->saveAsToolStripMenuItem->Name = L"saveAsToolStripMenuItem";
-			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(288, 40);
+			this->saveAsToolStripMenuItem->Size = System::Drawing::Size(247, 34);
 			this->saveAsToolStripMenuItem->Text = L"Save Code As...";
 			this->saveAsToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveAsToolStripMenuItem_Click);
 			// 
@@ -495,275 +512,304 @@ private: System::ComponentModel::IContainer^ components;
 					this->documentationToolStripMenuItem
 			});
 			this->helpToolStripMenuItem->Name = L"helpToolStripMenuItem";
-			this->helpToolStripMenuItem->Size = System::Drawing::Size(74, 34);
+			this->helpToolStripMenuItem->Size = System::Drawing::Size(65, 29);
 			this->helpToolStripMenuItem->Text = L"Help";
 			// 
 			// exampleToolStripMenuItem
 			// 
 			this->exampleToolStripMenuItem->Name = L"exampleToolStripMenuItem";
-			this->exampleToolStripMenuItem->Size = System::Drawing::Size(275, 40);
+			this->exampleToolStripMenuItem->Size = System::Drawing::Size(237, 34);
 			this->exampleToolStripMenuItem->Text = L"Example";
 			this->exampleToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::exampleToolStripMenuItem_Click);
 			// 
 			// documentationToolStripMenuItem
 			// 
 			this->documentationToolStripMenuItem->Name = L"documentationToolStripMenuItem";
-			this->documentationToolStripMenuItem->Size = System::Drawing::Size(275, 40);
+			this->documentationToolStripMenuItem->Size = System::Drawing::Size(237, 34);
 			this->documentationToolStripMenuItem->Text = L"Documentation";
 			this->documentationToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::documentationToolStripMenuItem_Click);
 			// 
 			// infoToolStripMenuItem
 			// 
 			this->infoToolStripMenuItem->Name = L"infoToolStripMenuItem";
-			this->infoToolStripMenuItem->Size = System::Drawing::Size(88, 34);
+			this->infoToolStripMenuItem->Size = System::Drawing::Size(78, 29);
 			this->infoToolStripMenuItem->Text = L"About";
 			this->infoToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::infoToolStripMenuItem_Click);
 			// 
 			// label6
 			// 
 			this->label6->AutoSize = true;
-			this->label6->Location = System::Drawing::Point(495, 90);
+			this->label6->Location = System::Drawing::Point(405, 75);
+			this->label6->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label6->Name = L"label6";
-			this->label6->Size = System::Drawing::Size(85, 25);
+			this->label6->Size = System::Drawing::Size(69, 20);
 			this->label6->TabIndex = 13;
 			this->label6->Text = L"X-Offset";
 			// 
 			// label8
 			// 
 			this->label8->AutoSize = true;
-			this->label8->Location = System::Drawing::Point(495, 174);
+			this->label8->Location = System::Drawing::Point(405, 145);
+			this->label8->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(84, 25);
+			this->label8->Size = System::Drawing::Size(69, 20);
 			this->label8->TabIndex = 15;
 			this->label8->Text = L"Y-Offset";
 			// 
 			// textBox6
 			// 
-			this->textBox6->Location = System::Drawing::Point(500, 118);
+			this->textBox6->Location = System::Drawing::Point(409, 98);
+			this->textBox6->Margin = System::Windows::Forms::Padding(2);
 			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(79, 29);
+			this->textBox6->Size = System::Drawing::Size(65, 26);
 			this->textBox6->TabIndex = 16;
 			this->textBox6->Text = L"0";
 			// 
 			// textBox7
 			// 
-			this->textBox7->Location = System::Drawing::Point(500, 202);
+			this->textBox7->Location = System::Drawing::Point(409, 168);
+			this->textBox7->Margin = System::Windows::Forms::Padding(2);
 			this->textBox7->Name = L"textBox7";
-			this->textBox7->Size = System::Drawing::Size(80, 29);
+			this->textBox7->Size = System::Drawing::Size(66, 26);
 			this->textBox7->TabIndex = 17;
 			this->textBox7->Text = L"0";
 			// 
 			// label9
 			// 
 			this->label9->AutoSize = true;
-			this->label9->Location = System::Drawing::Point(495, 258);
+			this->label9->Location = System::Drawing::Point(405, 215);
+			this->label9->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(198, 25);
+			this->label9->Size = System::Drawing::Size(159, 20);
 			this->label9->TabIndex = 18;
 			this->label9->Text = L"Spawn Range (xDtC)";
 			// 
 			// textBox8
 			// 
-			this->textBox8->Location = System::Drawing::Point(500, 286);
+			this->textBox8->Location = System::Drawing::Point(409, 238);
+			this->textBox8->Margin = System::Windows::Forms::Padding(2);
 			this->textBox8->Name = L"textBox8";
-			this->textBox8->Size = System::Drawing::Size(80, 29);
+			this->textBox8->Size = System::Drawing::Size(66, 26);
 			this->textBox8->TabIndex = 19;
 			this->textBox8->Text = L"0";
 			// 
 			// label10
 			// 
 			this->label10->AutoSize = true;
-			this->label10->Location = System::Drawing::Point(495, 342);
+			this->label10->Location = System::Drawing::Point(405, 285);
+			this->label10->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(198, 25);
+			this->label10->Size = System::Drawing::Size(159, 20);
 			this->label10->TabIndex = 20;
 			this->label10->Text = L"Spawn Range (yDtC)";
 			// 
 			// label11
 			// 
 			this->label11->AutoSize = true;
-			this->label11->Location = System::Drawing::Point(495, 426);
+			this->label11->Location = System::Drawing::Point(405, 355);
+			this->label11->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(196, 25);
+			this->label11->Size = System::Drawing::Size(159, 20);
 			this->label11->TabIndex = 21;
 			this->label11->Text = L"Spawn Range (xDtE)";
 			// 
 			// textBox9
 			// 
-			this->textBox9->Location = System::Drawing::Point(500, 370);
+			this->textBox9->Location = System::Drawing::Point(409, 308);
+			this->textBox9->Margin = System::Windows::Forms::Padding(2);
 			this->textBox9->Name = L"textBox9";
-			this->textBox9->Size = System::Drawing::Size(80, 29);
+			this->textBox9->Size = System::Drawing::Size(66, 26);
 			this->textBox9->TabIndex = 22;
 			this->textBox9->Text = L"0";
 			// 
 			// textBox10
 			// 
-			this->textBox10->Location = System::Drawing::Point(500, 454);
+			this->textBox10->Location = System::Drawing::Point(409, 378);
+			this->textBox10->Margin = System::Windows::Forms::Padding(2);
 			this->textBox10->Name = L"textBox10";
-			this->textBox10->Size = System::Drawing::Size(80, 29);
+			this->textBox10->Size = System::Drawing::Size(66, 26);
 			this->textBox10->TabIndex = 23;
 			this->textBox10->Text = L"0x100";
 			// 
 			// textBox11
 			// 
-			this->textBox11->Location = System::Drawing::Point(500, 538);
+			this->textBox11->Location = System::Drawing::Point(409, 448);
+			this->textBox11->Margin = System::Windows::Forms::Padding(2);
 			this->textBox11->Name = L"textBox11";
-			this->textBox11->Size = System::Drawing::Size(79, 29);
+			this->textBox11->Size = System::Drawing::Size(65, 26);
 			this->textBox11->TabIndex = 24;
 			this->textBox11->Text = L"0x100";
 			// 
 			// textBox12
 			// 
-			this->textBox12->Location = System::Drawing::Point(757, 118);
+			this->textBox12->Location = System::Drawing::Point(619, 98);
+			this->textBox12->Margin = System::Windows::Forms::Padding(2);
 			this->textBox12->Name = L"textBox12";
-			this->textBox12->Size = System::Drawing::Size(79, 29);
+			this->textBox12->Size = System::Drawing::Size(65, 26);
 			this->textBox12->TabIndex = 25;
 			this->textBox12->Text = L"0";
 			// 
 			// textBox13
 			// 
-			this->textBox13->Location = System::Drawing::Point(757, 202);
+			this->textBox13->Location = System::Drawing::Point(619, 168);
+			this->textBox13->Margin = System::Windows::Forms::Padding(2);
 			this->textBox13->Name = L"textBox13";
-			this->textBox13->Size = System::Drawing::Size(79, 29);
+			this->textBox13->Size = System::Drawing::Size(65, 26);
 			this->textBox13->TabIndex = 26;
 			this->textBox13->Text = L"0";
 			// 
 			// label12
 			// 
 			this->label12->AutoSize = true;
-			this->label12->Location = System::Drawing::Point(496, 510);
+			this->label12->Location = System::Drawing::Point(406, 425);
+			this->label12->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label12->Name = L"label12";
-			this->label12->Size = System::Drawing::Size(196, 25);
+			this->label12->Size = System::Drawing::Size(159, 20);
 			this->label12->TabIndex = 28;
 			this->label12->Text = L"Spawn Range (yDtE)";
 			// 
 			// label13
 			// 
 			this->label13->AutoSize = true;
-			this->label13->Location = System::Drawing::Point(752, 90);
+			this->label13->Location = System::Drawing::Point(615, 75);
+			this->label13->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label13->Name = L"label13";
-			this->label13->Size = System::Drawing::Size(49, 25);
+			this->label13->Size = System::Drawing::Size(38, 20);
 			this->label13->TabIndex = 29;
 			this->label13->Text = L"_1C";
 			// 
 			// label14
 			// 
 			this->label14->AutoSize = true;
-			this->label14->Location = System::Drawing::Point(752, 174);
+			this->label14->Location = System::Drawing::Point(615, 145);
+			this->label14->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label14->Name = L"label14";
-			this->label14->Size = System::Drawing::Size(47, 25);
+			this->label14->Size = System::Drawing::Size(38, 20);
 			this->label14->TabIndex = 30;
 			this->label14->Text = L"_1E";
 			// 
 			// label15
 			// 
 			this->label15->AutoSize = true;
-			this->label15->Location = System::Drawing::Point(752, 258);
+			this->label15->Location = System::Drawing::Point(615, 215);
+			this->label15->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(45, 25);
+			this->label15->Size = System::Drawing::Size(36, 20);
 			this->label15->TabIndex = 31;
 			this->label15->Text = L"_20";
 			// 
 			// label16
 			// 
 			this->label16->AutoSize = true;
-			this->label16->Location = System::Drawing::Point(752, 342);
+			this->label16->Location = System::Drawing::Point(615, 285);
+			this->label16->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(45, 25);
+			this->label16->Size = System::Drawing::Size(36, 20);
 			this->label16->TabIndex = 32;
 			this->label16->Text = L"_22";
 			// 
 			// textBox14
 			// 
-			this->textBox14->Location = System::Drawing::Point(757, 286);
+			this->textBox14->Location = System::Drawing::Point(619, 238);
+			this->textBox14->Margin = System::Windows::Forms::Padding(2);
 			this->textBox14->Name = L"textBox14";
-			this->textBox14->Size = System::Drawing::Size(79, 29);
+			this->textBox14->Size = System::Drawing::Size(65, 26);
 			this->textBox14->TabIndex = 33;
 			this->textBox14->Text = L"0";
 			// 
 			// textBox15
 			// 
-			this->textBox15->Location = System::Drawing::Point(757, 370);
+			this->textBox15->Location = System::Drawing::Point(619, 308);
+			this->textBox15->Margin = System::Windows::Forms::Padding(2);
 			this->textBox15->Name = L"textBox15";
-			this->textBox15->Size = System::Drawing::Size(79, 29);
+			this->textBox15->Size = System::Drawing::Size(65, 26);
 			this->textBox15->TabIndex = 34;
 			this->textBox15->Text = L"0";
 			// 
 			// label17
 			// 
 			this->label17->AutoSize = true;
-			this->label17->Location = System::Drawing::Point(752, 426);
+			this->label17->Location = System::Drawing::Point(615, 355);
+			this->label17->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label17->Name = L"label17";
-			this->label17->Size = System::Drawing::Size(60, 25);
+			this->label17->Size = System::Drawing::Size(48, 20);
 			this->label17->TabIndex = 35;
 			this->label17->Text = L"Flags";
 			// 
 			// textBox16
 			// 
 			this->textBox16->BackColor = System::Drawing::SystemColors::Window;
-			this->textBox16->Location = System::Drawing::Point(757, 454);
+			this->textBox16->Location = System::Drawing::Point(619, 378);
+			this->textBox16->Margin = System::Windows::Forms::Padding(2);
 			this->textBox16->Name = L"textBox16";
-			this->textBox16->Size = System::Drawing::Size(79, 29);
+			this->textBox16->Size = System::Drawing::Size(65, 26);
 			this->textBox16->TabIndex = 36;
 			this->textBox16->Text = L"0";
 			// 
 			// label18
 			// 
 			this->label18->AutoSize = true;
-			this->label18->Location = System::Drawing::Point(84, 426);
+			this->label18->Location = System::Drawing::Point(69, 355);
+			this->label18->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label18->Name = L"label18";
-			this->label18->Size = System::Drawing::Size(112, 25);
+			this->label18->Size = System::Drawing::Size(89, 20);
 			this->label18->TabIndex = 37;
 			this->label18->Text = L"Base Class";
 			// 
 			// textBox17
 			// 
-			this->textBox17->Location = System::Drawing::Point(89, 454);
+			this->textBox17->Location = System::Drawing::Point(73, 378);
+			this->textBox17->Margin = System::Windows::Forms::Padding(2);
 			this->textBox17->Name = L"textBox17";
-			this->textBox17->Size = System::Drawing::Size(234, 29);
+			this->textBox17->Size = System::Drawing::Size(192, 26);
 			this->textBox17->TabIndex = 38;
 			this->textBox17->Text = L"dEn_c";
 			// 
 			// numericUpDown1
 			// 
-			this->numericUpDown1->Location = System::Drawing::Point(103, 53);
+			this->numericUpDown1->Location = System::Drawing::Point(84, 44);
+			this->numericUpDown1->Margin = System::Windows::Forms::Padding(2);
 			this->numericUpDown1->Name = L"numericUpDown1";
-			this->numericUpDown1->Size = System::Drawing::Size(62, 29);
+			this->numericUpDown1->Size = System::Drawing::Size(51, 26);
 			this->numericUpDown1->TabIndex = 39;
 			this->numericUpDown1->ValueChanged += gcnew System::EventHandler(this, &MyForm::numericUpDown1_ValueChanged);
 			// 
 			// label19
 			// 
 			this->label19->AutoSize = true;
-			this->label19->Location = System::Drawing::Point(59, 25);
+			this->label19->Location = System::Drawing::Point(48, 21);
+			this->label19->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label19->Name = L"label19";
-			this->label19->Size = System::Drawing::Size(68, 25);
+			this->label19->Size = System::Drawing::Size(56, 20);
 			this->label19->TabIndex = 40;
 			this->label19->Text = L"States";
 			// 
 			// label20
 			// 
 			this->label20->AutoSize = true;
-			this->label20->Location = System::Drawing::Point(16, 53);
+			this->label20->Location = System::Drawing::Point(13, 44);
+			this->label20->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label20->Name = L"label20";
-			this->label20->Size = System::Drawing::Size(81, 25);
+			this->label20->Size = System::Drawing::Size(65, 20);
 			this->label20->TabIndex = 41;
 			this->label20->Text = L"Number";
 			// 
 			// textBox18
 			// 
-			this->textBox18->Location = System::Drawing::Point(46, 88);
+			this->textBox18->Location = System::Drawing::Point(38, 73);
+			this->textBox18->Margin = System::Windows::Forms::Padding(2);
 			this->textBox18->Name = L"textBox18";
-			this->textBox18->Size = System::Drawing::Size(119, 29);
+			this->textBox18->Size = System::Drawing::Size(98, 26);
 			this->textBox18->TabIndex = 42;
 			this->textBox18->Visible = false;
 			// 
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(19, 91);
+			this->label21->Location = System::Drawing::Point(16, 76);
+			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label21->Name = L"label21";
-			this->label21->Size = System::Drawing::Size(23, 25);
+			this->label21->Size = System::Drawing::Size(18, 20);
 			this->label21->TabIndex = 43;
 			this->label21->Text = L"1";
 			this->label21->Visible = false;
@@ -771,72 +817,80 @@ private: System::ComponentModel::IContainer^ components;
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(19, 126);
+			this->label22->Location = System::Drawing::Point(16, 105);
+			this->label22->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label22->Name = L"label22";
-			this->label22->Size = System::Drawing::Size(23, 25);
+			this->label22->Size = System::Drawing::Size(18, 20);
 			this->label22->TabIndex = 45;
 			this->label22->Text = L"2";
 			this->label22->Visible = false;
 			// 
 			// textBox19
 			// 
-			this->textBox19->Location = System::Drawing::Point(46, 123);
+			this->textBox19->Location = System::Drawing::Point(38, 102);
+			this->textBox19->Margin = System::Windows::Forms::Padding(2);
 			this->textBox19->Name = L"textBox19";
-			this->textBox19->Size = System::Drawing::Size(119, 29);
+			this->textBox19->Size = System::Drawing::Size(98, 26);
 			this->textBox19->TabIndex = 44;
 			this->textBox19->Visible = false;
 			// 
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(19, 161);
+			this->label23->Location = System::Drawing::Point(16, 134);
+			this->label23->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label23->Name = L"label23";
-			this->label23->Size = System::Drawing::Size(23, 25);
+			this->label23->Size = System::Drawing::Size(18, 20);
 			this->label23->TabIndex = 47;
 			this->label23->Text = L"3";
 			this->label23->Visible = false;
 			// 
 			// textBox20
 			// 
-			this->textBox20->Location = System::Drawing::Point(46, 158);
+			this->textBox20->Location = System::Drawing::Point(38, 132);
+			this->textBox20->Margin = System::Windows::Forms::Padding(2);
 			this->textBox20->Name = L"textBox20";
-			this->textBox20->Size = System::Drawing::Size(119, 29);
+			this->textBox20->Size = System::Drawing::Size(98, 26);
 			this->textBox20->TabIndex = 46;
 			this->textBox20->Visible = false;
 			// 
 			// label24
 			// 
 			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(19, 196);
+			this->label24->Location = System::Drawing::Point(16, 163);
+			this->label24->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label24->Name = L"label24";
-			this->label24->Size = System::Drawing::Size(23, 25);
+			this->label24->Size = System::Drawing::Size(18, 20);
 			this->label24->TabIndex = 49;
 			this->label24->Text = L"4";
 			this->label24->Visible = false;
 			// 
 			// textBox21
 			// 
-			this->textBox21->Location = System::Drawing::Point(46, 193);
+			this->textBox21->Location = System::Drawing::Point(38, 161);
+			this->textBox21->Margin = System::Windows::Forms::Padding(2);
 			this->textBox21->Name = L"textBox21";
-			this->textBox21->Size = System::Drawing::Size(119, 29);
+			this->textBox21->Size = System::Drawing::Size(98, 26);
 			this->textBox21->TabIndex = 48;
 			this->textBox21->Visible = false;
 			// 
 			// label25
 			// 
 			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(19, 231);
+			this->label25->Location = System::Drawing::Point(16, 192);
+			this->label25->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label25->Name = L"label25";
-			this->label25->Size = System::Drawing::Size(23, 25);
+			this->label25->Size = System::Drawing::Size(18, 20);
 			this->label25->TabIndex = 51;
 			this->label25->Text = L"5";
 			this->label25->Visible = false;
 			// 
 			// textBox22
 			// 
-			this->textBox22->Location = System::Drawing::Point(46, 228);
+			this->textBox22->Location = System::Drawing::Point(38, 190);
+			this->textBox22->Margin = System::Windows::Forms::Padding(2);
 			this->textBox22->Name = L"textBox22";
-			this->textBox22->Size = System::Drawing::Size(119, 29);
+			this->textBox22->Size = System::Drawing::Size(98, 26);
 			this->textBox22->TabIndex = 50;
 			this->textBox22->Visible = false;
 			// 
@@ -844,9 +898,10 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->radioButton1->AutoSize = true;
 			this->radioButton1->Checked = true;
-			this->radioButton1->Location = System::Drawing::Point(531, 788);
+			this->radioButton1->Location = System::Drawing::Point(434, 657);
+			this->radioButton1->Margin = System::Windows::Forms::Padding(2);
 			this->radioButton1->Name = L"radioButton1";
-			this->radioButton1->Size = System::Drawing::Size(148, 29);
+			this->radioButton1->Size = System::Drawing::Size(124, 24);
 			this->radioButton1->TabIndex = 52;
 			this->radioButton1->TabStop = true;
 			this->radioButton1->Text = L"More Sprites";
@@ -856,9 +911,10 @@ private: System::ComponentModel::IContainer^ components;
 			// radioButton2
 			// 
 			this->radioButton2->AutoSize = true;
-			this->radioButton2->Location = System::Drawing::Point(531, 833);
+			this->radioButton2->Location = System::Drawing::Point(434, 694);
+			this->radioButton2->Margin = System::Windows::Forms::Padding(2);
 			this->radioButton2->Name = L"radioButton2";
-			this->radioButton2->Size = System::Drawing::Size(174, 29);
+			this->radioButton2->Size = System::Drawing::Size(147, 24);
 			this->radioButton2->TabIndex = 53;
 			this->radioButton2->Text = L"Replace Sprites";
 			this->radioButton2->UseVisualStyleBackColor = true;
@@ -869,9 +925,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox1->AutoSize = true;
 			this->checkBox1->Checked = true;
 			this->checkBox1->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox1->Location = System::Drawing::Point(1014, 125);
+			this->checkBox1->Location = System::Drawing::Point(830, 104);
+			this->checkBox1->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox1->Name = L"checkBox1";
-			this->checkBox1->Size = System::Drawing::Size(101, 29);
+			this->checkBox1->Size = System::Drawing::Size(86, 24);
 			this->checkBox1->TabIndex = 55;
 			this->checkBox1->Text = L"Fireball";
 			this->checkBox1->UseVisualStyleBackColor = true;
@@ -882,9 +939,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox2->AutoSize = true;
 			this->checkBox2->Checked = true;
 			this->checkBox2->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox2->Location = System::Drawing::Point(1014, 160);
+			this->checkBox2->Location = System::Drawing::Point(830, 133);
+			this->checkBox2->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox2->Name = L"checkBox2";
-			this->checkBox2->Size = System::Drawing::Size(94, 29);
+			this->checkBox2->Size = System::Drawing::Size(81, 24);
 			this->checkBox2->TabIndex = 56;
 			this->checkBox2->Text = L"Iceball";
 			this->checkBox2->UseVisualStyleBackColor = true;
@@ -895,9 +953,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox3->AutoSize = true;
 			this->checkBox3->Checked = true;
 			this->checkBox3->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox3->Location = System::Drawing::Point(1014, 195);
+			this->checkBox3->Location = System::Drawing::Point(830, 162);
+			this->checkBox3->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox3->Name = L"checkBox3";
-			this->checkBox3->Size = System::Drawing::Size(74, 29);
+			this->checkBox3->Size = System::Drawing::Size(65, 24);
 			this->checkBox3->TabIndex = 57;
 			this->checkBox3->Text = L"Star";
 			this->checkBox3->UseVisualStyleBackColor = true;
@@ -908,9 +967,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox4->AutoSize = true;
 			this->checkBox4->Checked = true;
 			this->checkBox4->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox4->Location = System::Drawing::Point(1014, 230);
+			this->checkBox4->Location = System::Drawing::Point(830, 192);
+			this->checkBox4->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox4->Name = L"checkBox4";
-			this->checkBox4->Size = System::Drawing::Size(71, 29);
+			this->checkBox4->Size = System::Drawing::Size(62, 24);
 			this->checkBox4->TabIndex = 58;
 			this->checkBox4->Text = L"\?\?\?";
 			this->checkBox4->UseVisualStyleBackColor = true;
@@ -921,9 +981,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox5->AutoSize = true;
 			this->checkBox5->Checked = true;
 			this->checkBox5->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox5->Location = System::Drawing::Point(1014, 265);
+			this->checkBox5->Location = System::Drawing::Point(830, 221);
+			this->checkBox5->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox5->Name = L"checkBox5";
-			this->checkBox5->Size = System::Drawing::Size(82, 29);
+			this->checkBox5->Size = System::Drawing::Size(70, 24);
 			this->checkBox5->TabIndex = 59;
 			this->checkBox5->Text = L"Slide";
 			this->checkBox5->UseVisualStyleBackColor = true;
@@ -934,9 +995,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox6->AutoSize = true;
 			this->checkBox6->Checked = true;
 			this->checkBox6->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox6->Location = System::Drawing::Point(1014, 300);
+			this->checkBox6->Location = System::Drawing::Point(830, 250);
+			this->checkBox6->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox6->Name = L"checkBox6";
-			this->checkBox6->Size = System::Drawing::Size(71, 29);
+			this->checkBox6->Size = System::Drawing::Size(62, 24);
 			this->checkBox6->TabIndex = 60;
 			this->checkBox6->Text = L"\?\?\?";
 			this->checkBox6->UseVisualStyleBackColor = true;
@@ -947,9 +1009,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox7->AutoSize = true;
 			this->checkBox7->Checked = true;
 			this->checkBox7->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox7->Location = System::Drawing::Point(1014, 335);
+			this->checkBox7->Location = System::Drawing::Point(830, 279);
+			this->checkBox7->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox7->Name = L"checkBox7";
-			this->checkBox7->Size = System::Drawing::Size(165, 29);
+			this->checkBox7->Size = System::Drawing::Size(139, 24);
 			this->checkBox7->TabIndex = 61;
 			this->checkBox7->Text = L"Ground Pound";
 			this->checkBox7->UseVisualStyleBackColor = true;
@@ -960,9 +1023,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox8->AutoSize = true;
 			this->checkBox8->Checked = true;
 			this->checkBox8->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox8->Location = System::Drawing::Point(1014, 370);
+			this->checkBox8->Location = System::Drawing::Point(830, 308);
+			this->checkBox8->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox8->Name = L"checkBox8";
-			this->checkBox8->Size = System::Drawing::Size(152, 29);
+			this->checkBox8->Size = System::Drawing::Size(130, 24);
 			this->checkBox8->TabIndex = 68;
 			this->checkBox8->Text = L"Hitting Fence";
 			this->checkBox8->UseVisualStyleBackColor = true;
@@ -973,9 +1037,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox9->AutoSize = true;
 			this->checkBox9->Checked = true;
 			this->checkBox9->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox9->Location = System::Drawing::Point(1014, 405);
+			this->checkBox9->Location = System::Drawing::Point(830, 337);
+			this->checkBox9->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox9->Name = L"checkBox9";
-			this->checkBox9->Size = System::Drawing::Size(158, 29);
+			this->checkBox9->Size = System::Drawing::Size(133, 24);
 			this->checkBox9->TabIndex = 67;
 			this->checkBox9->Text = L"Rolling Object";
 			this->checkBox9->UseVisualStyleBackColor = true;
@@ -986,9 +1051,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox10->AutoSize = true;
 			this->checkBox10->Checked = true;
 			this->checkBox10->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox10->Location = System::Drawing::Point(1014, 440);
+			this->checkBox10->Location = System::Drawing::Point(830, 367);
+			this->checkBox10->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox10->Name = L"checkBox10";
-			this->checkBox10->Size = System::Drawing::Size(159, 29);
+			this->checkBox10->Size = System::Drawing::Size(132, 24);
 			this->checkBox10->TabIndex = 66;
 			this->checkBox10->Text = L"Penguin Slide";
 			this->checkBox10->UseVisualStyleBackColor = true;
@@ -999,9 +1065,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox11->AutoSize = true;
 			this->checkBox11->Checked = true;
 			this->checkBox11->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox11->Location = System::Drawing::Point(1215, 90);
+			this->checkBox11->Location = System::Drawing::Point(994, 75);
+			this->checkBox11->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox11->Name = L"checkBox11";
-			this->checkBox11->Size = System::Drawing::Size(78, 29);
+			this->checkBox11->Size = System::Drawing::Size(67, 24);
 			this->checkBox11->TabIndex = 65;
 			this->checkBox11->Text = L"Spin";
 			this->checkBox11->UseVisualStyleBackColor = true;
@@ -1012,9 +1079,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox12->AutoSize = true;
 			this->checkBox12->Checked = true;
 			this->checkBox12->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox12->Location = System::Drawing::Point(1215, 125);
+			this->checkBox12->Location = System::Drawing::Point(994, 104);
+			this->checkBox12->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox12->Name = L"checkBox12";
-			this->checkBox12->Size = System::Drawing::Size(71, 29);
+			this->checkBox12->Size = System::Drawing::Size(62, 24);
 			this->checkBox12->TabIndex = 64;
 			this->checkBox12->Text = L"\?\?\?";
 			this->checkBox12->UseVisualStyleBackColor = true;
@@ -1025,9 +1093,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox13->AutoSize = true;
 			this->checkBox13->Checked = true;
 			this->checkBox13->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox13->Location = System::Drawing::Point(1215, 160);
+			this->checkBox13->Location = System::Drawing::Point(994, 133);
+			this->checkBox13->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox13->Name = L"checkBox13";
-			this->checkBox13->Size = System::Drawing::Size(152, 29);
+			this->checkBox13->Size = System::Drawing::Size(127, 24);
 			this->checkBox13->TabIndex = 63;
 			this->checkBox13->Text = L"Propeller Drill";
 			this->checkBox13->UseVisualStyleBackColor = true;
@@ -1038,9 +1107,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox14->AutoSize = true;
 			this->checkBox14->Checked = true;
 			this->checkBox14->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox14->Location = System::Drawing::Point(1215, 195);
+			this->checkBox14->Location = System::Drawing::Point(994, 162);
+			this->checkBox14->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox14->Name = L"checkBox14";
-			this->checkBox14->Size = System::Drawing::Size(161, 29);
+			this->checkBox14->Size = System::Drawing::Size(134, 24);
 			this->checkBox14->TabIndex = 62;
 			this->checkBox14->Text = L"Fire Explosion";
 			this->checkBox14->UseVisualStyleBackColor = true;
@@ -1051,9 +1121,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox15->AutoSize = true;
 			this->checkBox15->Checked = true;
 			this->checkBox15->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox15->Location = System::Drawing::Point(1215, 230);
+			this->checkBox15->Location = System::Drawing::Point(994, 192);
+			this->checkBox15->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox15->Name = L"checkBox15";
-			this->checkBox15->Size = System::Drawing::Size(121, 29);
+			this->checkBox15->Size = System::Drawing::Size(104, 24);
 			this->checkBox15->TabIndex = 75;
 			this->checkBox15->Text = L"Yoshi Eat";
 			this->checkBox15->UseVisualStyleBackColor = true;
@@ -1064,9 +1135,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox16->AutoSize = true;
 			this->checkBox16->Checked = true;
 			this->checkBox16->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox16->Location = System::Drawing::Point(1215, 265);
+			this->checkBox16->Location = System::Drawing::Point(994, 221);
+			this->checkBox16->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox16->Name = L"checkBox16";
-			this->checkBox16->Size = System::Drawing::Size(147, 29);
+			this->checkBox16->Size = System::Drawing::Size(124, 24);
 			this->checkBox16->TabIndex = 74;
 			this->checkBox16->Text = L"Yoshi Mouth";
 			this->checkBox16->UseVisualStyleBackColor = true;
@@ -1077,9 +1149,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox17->AutoSize = true;
 			this->checkBox17->Checked = true;
 			this->checkBox17->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox17->Location = System::Drawing::Point(1215, 300);
+			this->checkBox17->Location = System::Drawing::Point(994, 250);
+			this->checkBox17->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox17->Name = L"checkBox17";
-			this->checkBox17->Size = System::Drawing::Size(108, 29);
+			this->checkBox17->Size = System::Drawing::Size(91, 24);
 			this->checkBox17->TabIndex = 73;
 			this->checkBox17->Text = L"Cannon";
 			this->checkBox17->UseVisualStyleBackColor = true;
@@ -1090,9 +1163,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox18->AutoSize = true;
 			this->checkBox18->Checked = true;
 			this->checkBox18->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox18->Location = System::Drawing::Point(1215, 335);
+			this->checkBox18->Location = System::Drawing::Point(994, 279);
+			this->checkBox18->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox18->Name = L"checkBox18";
-			this->checkBox18->Size = System::Drawing::Size(138, 29);
+			this->checkBox18->Size = System::Drawing::Size(118, 24);
 			this->checkBox18->TabIndex = 72;
 			this->checkBox18->Text = L"Spin Lift Up";
 			this->checkBox18->UseVisualStyleBackColor = true;
@@ -1103,9 +1177,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox19->AutoSize = true;
 			this->checkBox19->Checked = true;
 			this->checkBox19->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox19->Location = System::Drawing::Point(1215, 370);
+			this->checkBox19->Location = System::Drawing::Point(994, 308);
+			this->checkBox19->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox19->Name = L"checkBox19";
-			this->checkBox19->Size = System::Drawing::Size(112, 29);
+			this->checkBox19->Size = System::Drawing::Size(96, 24);
 			this->checkBox19->TabIndex = 71;
 			this->checkBox19->Text = L"Hammer";
 			this->checkBox19->UseVisualStyleBackColor = true;
@@ -1116,9 +1191,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox20->AutoSize = true;
 			this->checkBox20->Checked = true;
 			this->checkBox20->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox20->Location = System::Drawing::Point(1215, 405);
+			this->checkBox20->Location = System::Drawing::Point(994, 337);
+			this->checkBox20->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox20->Name = L"checkBox20";
-			this->checkBox20->Size = System::Drawing::Size(125, 29);
+			this->checkBox20->Size = System::Drawing::Size(106, 24);
 			this->checkBox20->TabIndex = 70;
 			this->checkBox20->Text = L"Yoshi Fire";
 			this->checkBox20->UseVisualStyleBackColor = true;
@@ -1129,9 +1205,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox21->AutoSize = true;
 			this->checkBox21->Checked = true;
 			this->checkBox21->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox21->Location = System::Drawing::Point(1215, 440);
+			this->checkBox21->Location = System::Drawing::Point(994, 367);
+			this->checkBox21->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox21->Name = L"checkBox21";
-			this->checkBox21->Size = System::Drawing::Size(118, 29);
+			this->checkBox21->Size = System::Drawing::Size(101, 24);
 			this->checkBox21->TabIndex = 69;
 			this->checkBox21->Text = L"Yoshi Ice";
 			this->checkBox21->UseVisualStyleBackColor = true;
@@ -1142,9 +1219,10 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox22->AutoSize = true;
 			this->checkBox22->Checked = true;
 			this->checkBox22->CheckState = System::Windows::Forms::CheckState::Checked;
-			this->checkBox22->Location = System::Drawing::Point(1014, 90);
+			this->checkBox22->Location = System::Drawing::Point(830, 75);
+			this->checkBox22->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox22->Name = L"checkBox22";
-			this->checkBox22->Size = System::Drawing::Size(71, 29);
+			this->checkBox22->Size = System::Drawing::Size(62, 24);
 			this->checkBox22->TabIndex = 76;
 			this->checkBox22->Text = L"\?\?\?";
 			this->checkBox22->UseVisualStyleBackColor = true;
@@ -1153,9 +1231,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox23
 			// 
 			this->checkBox23->AutoSize = true;
-			this->checkBox23->Location = System::Drawing::Point(25, 43);
+			this->checkBox23->Location = System::Drawing::Point(20, 36);
+			this->checkBox23->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox23->Name = L"checkBox23";
-			this->checkBox23->Size = System::Drawing::Size(132, 29);
+			this->checkBox23->Size = System::Drawing::Size(111, 24);
 			this->checkBox23->TabIndex = 77;
 			this->checkBox23->Text = L"Has Model";
 			this->checkBox23->UseVisualStyleBackColor = true;
@@ -1163,26 +1242,29 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox23
 			// 
-			this->textBox23->Location = System::Drawing::Point(157, 79);
+			this->textBox23->Location = System::Drawing::Point(128, 66);
+			this->textBox23->Margin = System::Windows::Forms::Padding(2);
 			this->textBox23->Name = L"textBox23";
-			this->textBox23->Size = System::Drawing::Size(121, 29);
+			this->textBox23->Size = System::Drawing::Size(100, 26);
 			this->textBox23->TabIndex = 78;
 			this->textBox23->Visible = false;
 			// 
 			// textBox24
 			// 
-			this->textBox24->Location = System::Drawing::Point(157, 114);
+			this->textBox24->Location = System::Drawing::Point(128, 95);
+			this->textBox24->Margin = System::Windows::Forms::Padding(2);
 			this->textBox24->Name = L"textBox24";
-			this->textBox24->Size = System::Drawing::Size(121, 29);
+			this->textBox24->Size = System::Drawing::Size(100, 26);
 			this->textBox24->TabIndex = 79;
 			this->textBox24->Visible = false;
 			// 
 			// label27
 			// 
 			this->label27->AutoSize = true;
-			this->label27->Location = System::Drawing::Point(38, 82);
+			this->label27->Location = System::Drawing::Point(31, 68);
+			this->label27->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label27->Name = L"label27";
-			this->label27->Size = System::Drawing::Size(113, 25);
+			this->label27->Size = System::Drawing::Size(90, 20);
 			this->label27->TabIndex = 80;
 			this->label27->Text = L"ARC-Name";
 			this->label27->Visible = false;
@@ -1190,9 +1272,10 @@ private: System::ComponentModel::IContainer^ components;
 			// label28
 			// 
 			this->label28->AutoSize = true;
-			this->label28->Location = System::Drawing::Point(14, 117);
+			this->label28->Location = System::Drawing::Point(11, 97);
+			this->label28->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label28->Name = L"label28";
-			this->label28->Size = System::Drawing::Size(137, 25);
+			this->label28->Size = System::Drawing::Size(113, 20);
 			this->label28->TabIndex = 81;
 			this->label28->Text = L"BRRES-Name";
 			this->label28->Visible = false;
@@ -1200,27 +1283,31 @@ private: System::ComponentModel::IContainer^ components;
 			// label29
 			// 
 			this->label29->AutoSize = true;
-			this->label29->Location = System::Drawing::Point(27, 152);
+			this->label29->Location = System::Drawing::Point(22, 127);
+			this->label29->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label29->Name = L"label29";
-			this->label29->Size = System::Drawing::Size(124, 25);
+			this->label29->Size = System::Drawing::Size(99, 20);
 			this->label29->TabIndex = 82;
 			this->label29->Text = L"MDL0-Name";
 			this->label29->Visible = false;
 			// 
 			// textBox25
 			// 
-			this->textBox25->Location = System::Drawing::Point(157, 149);
+			this->textBox25->Location = System::Drawing::Point(128, 124);
+			this->textBox25->Margin = System::Windows::Forms::Padding(2);
 			this->textBox25->Name = L"textBox25";
-			this->textBox25->Size = System::Drawing::Size(121, 29);
+			this->textBox25->Size = System::Drawing::Size(100, 26);
 			this->textBox25->TabIndex = 83;
 			this->textBox25->Visible = false;
 			// 
 			// groupBox1
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
-			this->groupBox1->Location = System::Drawing::Point(464, 58);
+			this->groupBox1->Location = System::Drawing::Point(380, 48);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(415, 534);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox1->Size = System::Drawing::Size(340, 445);
 			this->groupBox1->TabIndex = 84;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Only More Sprites";
@@ -1230,18 +1317,21 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox2->Controls->Add(this->button2);
 			this->groupBox2->Controls->Add(this->label26);
 			this->groupBox2->Controls->Add(this->textBox26);
-			this->groupBox2->Location = System::Drawing::Point(981, 58);
+			this->groupBox2->Location = System::Drawing::Point(803, 48);
+			this->groupBox2->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox2->Name = L"groupBox2";
-			this->groupBox2->Size = System::Drawing::Size(421, 534);
+			this->groupBox2->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox2->Size = System::Drawing::Size(344, 445);
 			this->groupBox2->TabIndex = 85;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Collisions";
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(171, 483);
+			this->button2->Location = System::Drawing::Point(140, 402);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 40);
+			this->button2->Size = System::Drawing::Size(61, 33);
 			this->button2->TabIndex = 2;
 			this->button2->Text = L"Copy";
 			this->button2->UseVisualStyleBackColor = true;
@@ -1250,24 +1340,28 @@ private: System::ComponentModel::IContainer^ components;
 			// label26
 			// 
 			this->label26->AutoSize = true;
-			this->label26->Location = System::Drawing::Point(166, 414);
+			this->label26->Location = System::Drawing::Point(136, 345);
+			this->label26->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label26->Name = L"label26";
-			this->label26->Size = System::Drawing::Size(80, 25);
+			this->label26->Size = System::Drawing::Size(66, 20);
 			this->label26->TabIndex = 1;
 			this->label26->Text = L"Bitfield2";
 			// 
 			// textBox26
 			// 
-			this->textBox26->Location = System::Drawing::Point(132, 442);
+			this->textBox26->Location = System::Drawing::Point(108, 368);
+			this->textBox26->Margin = System::Windows::Forms::Padding(2);
 			this->textBox26->Name = L"textBox26";
-			this->textBox26->Size = System::Drawing::Size(153, 29);
+			this->textBox26->Size = System::Drawing::Size(126, 26);
 			this->textBox26->TabIndex = 0;
 			// 
 			// groupBox3
 			// 
-			this->groupBox3->Location = System::Drawing::Point(69, 58);
+			this->groupBox3->Location = System::Drawing::Point(56, 48);
+			this->groupBox3->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox3->Name = L"groupBox3";
-			this->groupBox3->Size = System::Drawing::Size(279, 534);
+			this->groupBox3->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox3->Size = System::Drawing::Size(228, 445);
 			this->groupBox3->TabIndex = 86;
 			this->groupBox3->TabStop = false;
 			this->groupBox3->Text = L"Basic Settings";
@@ -1305,9 +1399,11 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox4->Controls->Add(this->label24);
 			this->groupBox4->Controls->Add(this->textBox22);
 			this->groupBox4->Controls->Add(this->label25);
-			this->groupBox4->Location = System::Drawing::Point(69, 608);
+			this->groupBox4->Location = System::Drawing::Point(56, 507);
+			this->groupBox4->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox4->Name = L"groupBox4";
-			this->groupBox4->Size = System::Drawing::Size(417, 291);
+			this->groupBox4->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox4->Size = System::Drawing::Size(341, 242);
 			this->groupBox4->TabIndex = 87;
 			this->groupBox4->TabStop = false;
 			this->groupBox4->Text = L"Extra Settings";
@@ -1315,126 +1411,147 @@ private: System::ComponentModel::IContainer^ components;
 			// label37
 			// 
 			this->label37->AutoSize = true;
-			this->label37->Location = System::Drawing::Point(332, 218);
+			this->label37->Enabled = false;
+			this->label37->Location = System::Drawing::Point(272, 182);
+			this->label37->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label37->Name = L"label37";
-			this->label37->Size = System::Drawing::Size(74, 25);
+			this->label37->Size = System::Drawing::Size(59, 20);
 			this->label37->TabIndex = 57;
 			this->label37->Text = L"ScaleZ";
 			// 
 			// label38
 			// 
 			this->label38->AutoSize = true;
-			this->label38->Location = System::Drawing::Point(256, 218);
+			this->label38->Enabled = false;
+			this->label38->Location = System::Drawing::Point(209, 182);
+			this->label38->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label38->Name = L"label38";
-			this->label38->Size = System::Drawing::Size(75, 25);
+			this->label38->Size = System::Drawing::Size(60, 20);
 			this->label38->TabIndex = 56;
 			this->label38->Text = L"ScaleY";
 			// 
 			// label39
 			// 
 			this->label39->AutoSize = true;
-			this->label39->Location = System::Drawing::Point(185, 218);
+			this->label39->Enabled = false;
+			this->label39->Location = System::Drawing::Point(151, 182);
+			this->label39->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label39->Name = L"label39";
-			this->label39->Size = System::Drawing::Size(76, 25);
+			this->label39->Size = System::Drawing::Size(60, 20);
 			this->label39->TabIndex = 55;
 			this->label39->Text = L"ScaleX";
 			// 
 			// textBox32
 			// 
 			this->textBox32->Enabled = false;
-			this->textBox32->Location = System::Drawing::Point(337, 246);
+			this->textBox32->Location = System::Drawing::Point(276, 205);
+			this->textBox32->Margin = System::Windows::Forms::Padding(2);
 			this->textBox32->Name = L"textBox32";
-			this->textBox32->Size = System::Drawing::Size(69, 29);
+			this->textBox32->Size = System::Drawing::Size(57, 26);
 			this->textBox32->TabIndex = 54;
 			this->textBox32->Text = L"1.0";
 			// 
 			// textBox33
 			// 
 			this->textBox33->Enabled = false;
-			this->textBox33->Location = System::Drawing::Point(262, 246);
+			this->textBox33->Location = System::Drawing::Point(214, 205);
+			this->textBox33->Margin = System::Windows::Forms::Padding(2);
 			this->textBox33->Name = L"textBox33";
-			this->textBox33->Size = System::Drawing::Size(70, 29);
+			this->textBox33->Size = System::Drawing::Size(58, 26);
 			this->textBox33->TabIndex = 53;
 			this->textBox33->Text = L"1.0";
 			// 
 			// textBox34
 			// 
 			this->textBox34->Enabled = false;
-			this->textBox34->Location = System::Drawing::Point(190, 246);
+			this->textBox34->Location = System::Drawing::Point(155, 205);
+			this->textBox34->Margin = System::Windows::Forms::Padding(2);
 			this->textBox34->Name = L"textBox34";
-			this->textBox34->Size = System::Drawing::Size(66, 29);
+			this->textBox34->Size = System::Drawing::Size(55, 26);
 			this->textBox34->TabIndex = 52;
 			this->textBox34->Text = L"1.0";
 			// 
 			// label36
 			// 
 			this->label36->AutoSize = true;
-			this->label36->Location = System::Drawing::Point(356, 151);
+			this->label36->Enabled = false;
+			this->label36->Location = System::Drawing::Point(291, 126);
+			this->label36->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label36->Name = L"label36";
-			this->label36->Size = System::Drawing::Size(54, 25);
+			this->label36->Size = System::Drawing::Size(44, 20);
 			this->label36->TabIndex = 11;
 			this->label36->Text = L"yDtE";
 			// 
 			// label35
 			// 
 			this->label35->AutoSize = true;
-			this->label35->Location = System::Drawing::Point(296, 151);
+			this->label35->Enabled = false;
+			this->label35->Location = System::Drawing::Point(242, 126);
+			this->label35->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label35->Name = L"label35";
-			this->label35->Size = System::Drawing::Size(54, 25);
+			this->label35->Size = System::Drawing::Size(44, 20);
 			this->label35->TabIndex = 10;
 			this->label35->Text = L"xDtE";
 			// 
 			// label34
 			// 
 			this->label34->AutoSize = true;
-			this->label34->Location = System::Drawing::Point(239, 151);
+			this->label34->Enabled = false;
+			this->label34->Location = System::Drawing::Point(196, 126);
+			this->label34->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label34->Name = L"label34";
-			this->label34->Size = System::Drawing::Size(56, 25);
+			this->label34->Size = System::Drawing::Size(44, 20);
 			this->label34->TabIndex = 9;
 			this->label34->Text = L"yDtC";
 			// 
 			// label33
 			// 
 			this->label33->AutoSize = true;
-			this->label33->Location = System::Drawing::Point(185, 151);
+			this->label33->Enabled = false;
+			this->label33->Location = System::Drawing::Point(151, 126);
+			this->label33->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label33->Name = L"label33";
-			this->label33->Size = System::Drawing::Size(56, 25);
+			this->label33->Size = System::Drawing::Size(44, 20);
 			this->label33->TabIndex = 8;
 			this->label33->Text = L"xDtC";
 			// 
 			// textBox31
 			// 
 			this->textBox31->Enabled = false;
-			this->textBox31->Location = System::Drawing::Point(361, 179);
+			this->textBox31->Location = System::Drawing::Point(295, 149);
+			this->textBox31->Margin = System::Windows::Forms::Padding(2);
 			this->textBox31->Name = L"textBox31";
-			this->textBox31->Size = System::Drawing::Size(50, 29);
+			this->textBox31->Size = System::Drawing::Size(42, 26);
 			this->textBox31->TabIndex = 7;
 			this->textBox31->Text = L"0.0";
 			// 
 			// textBox30
 			// 
 			this->textBox30->Enabled = false;
-			this->textBox30->Location = System::Drawing::Point(301, 179);
+			this->textBox30->Location = System::Drawing::Point(246, 149);
+			this->textBox30->Margin = System::Windows::Forms::Padding(2);
 			this->textBox30->Name = L"textBox30";
-			this->textBox30->Size = System::Drawing::Size(50, 29);
+			this->textBox30->Size = System::Drawing::Size(42, 26);
 			this->textBox30->TabIndex = 6;
 			this->textBox30->Text = L"0.0";
 			// 
 			// textBox29
 			// 
 			this->textBox29->Enabled = false;
-			this->textBox29->Location = System::Drawing::Point(244, 179);
+			this->textBox29->Location = System::Drawing::Point(200, 149);
+			this->textBox29->Margin = System::Windows::Forms::Padding(2);
 			this->textBox29->Name = L"textBox29";
-			this->textBox29->Size = System::Drawing::Size(50, 29);
+			this->textBox29->Size = System::Drawing::Size(42, 26);
 			this->textBox29->TabIndex = 5;
 			this->textBox29->Text = L"0.0";
 			// 
 			// textBox28
 			// 
 			this->textBox28->Enabled = false;
-			this->textBox28->Location = System::Drawing::Point(188, 179);
+			this->textBox28->Location = System::Drawing::Point(154, 149);
+			this->textBox28->Margin = System::Windows::Forms::Padding(2);
 			this->textBox28->Name = L"textBox28";
-			this->textBox28->Size = System::Drawing::Size(50, 29);
+			this->textBox28->Size = System::Drawing::Size(42, 26);
 			this->textBox28->TabIndex = 4;
 			this->textBox28->Text = L"0.0";
 			// 
@@ -1446,18 +1563,21 @@ private: System::ComponentModel::IContainer^ components;
 				L"Enemy", L"Boss", L"Player", L"Item", L"Map",
 					L"MapObj"
 			});
-			this->comboBox2->Location = System::Drawing::Point(190, 110);
+			this->comboBox2->Location = System::Drawing::Point(155, 92);
+			this->comboBox2->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(216, 32);
+			this->comboBox2->Size = System::Drawing::Size(177, 28);
 			this->comboBox2->TabIndex = 3;
 			this->comboBox2->Text = L"Player";
 			// 
 			// label32
 			// 
 			this->label32->AutoSize = true;
-			this->label32->Location = System::Drawing::Point(245, 82);
+			this->label32->Enabled = false;
+			this->label32->Location = System::Drawing::Point(200, 68);
+			this->label32->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label32->Name = L"label32";
-			this->label32->Size = System::Drawing::Size(93, 25);
+			this->label32->Size = System::Drawing::Size(75, 20);
 			this->label32->TabIndex = 2;
 			this->label32->Text = L"LightMap";
 			// 
@@ -1469,18 +1589,21 @@ private: System::ComponentModel::IContainer^ components;
 				L"Player/Yoshi A", L"Player/Yoshi B", L"Most general sprites",
 					L"Balloons", L"Collectibles/Coins", L"Player fireballs", L"Player iceballs"
 			});
-			this->comboBox1->Location = System::Drawing::Point(188, 41);
+			this->comboBox1->Location = System::Drawing::Point(154, 34);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(216, 32);
+			this->comboBox1->Size = System::Drawing::Size(177, 28);
 			this->comboBox1->TabIndex = 1;
 			this->comboBox1->Text = L"Most general sprites";
 			// 
 			// label31
 			// 
 			this->label31->AutoSize = true;
-			this->label31->Location = System::Drawing::Point(219, 14);
+			this->label31->Enabled = false;
+			this->label31->Location = System::Drawing::Point(179, 12);
+			this->label31->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label31->Name = L"label31";
-			this->label31->Size = System::Drawing::Size(143, 25);
+			this->label31->Size = System::Drawing::Size(115, 20);
 			this->label31->TabIndex = 0;
 			this->label31->Text = L"SpriteCategory";
 			// 
@@ -1496,27 +1619,31 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox5->Controls->Add(this->label28);
 			this->groupBox5->Controls->Add(this->textBox24);
 			this->groupBox5->Controls->Add(this->label27);
-			this->groupBox5->Location = System::Drawing::Point(732, 608);
+			this->groupBox5->Location = System::Drawing::Point(599, 507);
+			this->groupBox5->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox5->Name = L"groupBox5";
-			this->groupBox5->Size = System::Drawing::Size(300, 291);
+			this->groupBox5->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox5->Size = System::Drawing::Size(245, 242);
 			this->groupBox5->TabIndex = 88;
 			this->groupBox5->TabStop = false;
 			this->groupBox5->Text = L"Model Settings";
 			// 
 			// textBox27
 			// 
-			this->textBox27->Location = System::Drawing::Point(156, 246);
+			this->textBox27->Location = System::Drawing::Point(128, 205);
+			this->textBox27->Margin = System::Windows::Forms::Padding(2);
 			this->textBox27->Name = L"textBox27";
-			this->textBox27->Size = System::Drawing::Size(121, 29);
+			this->textBox27->Size = System::Drawing::Size(100, 26);
 			this->textBox27->TabIndex = 86;
 			this->textBox27->Visible = false;
 			// 
 			// label30
 			// 
 			this->label30->AutoSize = true;
-			this->label30->Location = System::Drawing::Point(20, 246);
+			this->label30->Location = System::Drawing::Point(16, 205);
+			this->label30->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label30->Name = L"label30";
-			this->label30->Size = System::Drawing::Size(130, 25);
+			this->label30->Size = System::Drawing::Size(106, 20);
 			this->label30->TabIndex = 85;
 			this->label30->Text = L"1st Animation";
 			this->label30->Visible = false;
@@ -1524,9 +1651,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox24
 			// 
 			this->checkBox24->AutoSize = true;
-			this->checkBox24->Location = System::Drawing::Point(25, 210);
+			this->checkBox24->Location = System::Drawing::Point(20, 175);
+			this->checkBox24->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox24->Name = L"checkBox24";
-			this->checkBox24->Size = System::Drawing::Size(223, 29);
+			this->checkBox24->Size = System::Drawing::Size(187, 24);
 			this->checkBox24->TabIndex = 84;
 			this->checkBox24->Text = L"Has CHR0 Animation";
 			this->checkBox24->UseVisualStyleBackColor = true;
@@ -1535,6 +1663,8 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// groupBox6
 			// 
+			this->groupBox6->Controls->Add(this->label40);
+			this->groupBox6->Controls->Add(this->textBox35);
 			this->groupBox6->Controls->Add(this->checkBox32);
 			this->groupBox6->Controls->Add(this->checkBox31);
 			this->groupBox6->Controls->Add(this->checkBox29);
@@ -1542,29 +1672,52 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox6->Controls->Add(this->checkBox27);
 			this->groupBox6->Controls->Add(this->checkBox26);
 			this->groupBox6->Controls->Add(this->checkBox25);
-			this->groupBox6->Location = System::Drawing::Point(1055, 608);
+			this->groupBox6->Location = System::Drawing::Point(863, 507);
+			this->groupBox6->Margin = System::Windows::Forms::Padding(2);
 			this->groupBox6->Name = L"groupBox6";
-			this->groupBox6->Size = System::Drawing::Size(347, 291);
+			this->groupBox6->Padding = System::Windows::Forms::Padding(2);
+			this->groupBox6->Size = System::Drawing::Size(284, 242);
 			this->groupBox6->TabIndex = 89;
 			this->groupBox6->TabStop = false;
 			this->groupBox6->Text = L"Headers";
 			// 
+			// label40
+			// 
+			this->label40->AutoSize = true;
+			this->label40->Location = System::Drawing::Point(16, 199);
+			this->label40->Name = L"label40";
+			this->label40->Size = System::Drawing::Size(74, 20);
+			this->label40->TabIndex = 9;
+			this->label40->Text = L"Filename";
+			this->label40->Visible = false;
+			// 
+			// textBox35
+			// 
+			this->textBox35->Location = System::Drawing::Point(96, 196);
+			this->textBox35->Name = L"textBox35";
+			this->textBox35->Size = System::Drawing::Size(116, 26);
+			this->textBox35->TabIndex = 8;
+			this->textBox35->Visible = false;
+			// 
 			// checkBox32
 			// 
 			this->checkBox32->AutoSize = true;
-			this->checkBox32->Location = System::Drawing::Point(25, 196);
+			this->checkBox32->Location = System::Drawing::Point(20, 163);
+			this->checkBox32->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox32->Name = L"checkBox32";
-			this->checkBox32->Size = System::Drawing::Size(231, 29);
+			this->checkBox32->Size = System::Drawing::Size(193, 24);
 			this->checkBox32->TabIndex = 7;
 			this->checkBox32->Text = L"Custom Sprite Header";
 			this->checkBox32->UseVisualStyleBackColor = true;
+			this->checkBox32->CheckedChanged += gcnew System::EventHandler(this, &MyForm::checkBox32_CheckedChanged);
 			// 
 			// checkBox31
 			// 
 			this->checkBox31->AutoSize = true;
-			this->checkBox31->Location = System::Drawing::Point(176, 113);
+			this->checkBox31->Location = System::Drawing::Point(144, 94);
+			this->checkBox31->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox31->Name = L"checkBox31";
-			this->checkBox31->Size = System::Drawing::Size(96, 29);
+			this->checkBox31->Size = System::Drawing::Size(82, 24);
 			this->checkBox31->TabIndex = 6;
 			this->checkBox31->Text = L"boss.h";
 			this->checkBox31->UseVisualStyleBackColor = true;
@@ -1572,9 +1725,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox29
 			// 
 			this->checkBox29->AutoSize = true;
-			this->checkBox29->Location = System::Drawing::Point(176, 78);
+			this->checkBox29->Location = System::Drawing::Point(144, 65);
+			this->checkBox29->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox29->Name = L"checkBox29";
-			this->checkBox29->Size = System::Drawing::Size(102, 29);
+			this->checkBox29->Size = System::Drawing::Size(88, 24);
 			this->checkBox29->TabIndex = 4;
 			this->checkBox29->Text = L"stage.h";
 			this->checkBox29->UseVisualStyleBackColor = true;
@@ -1582,9 +1736,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox28
 			// 
 			this->checkBox28->AutoSize = true;
-			this->checkBox28->Location = System::Drawing::Point(176, 43);
+			this->checkBox28->Location = System::Drawing::Point(144, 36);
+			this->checkBox28->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox28->Name = L"checkBox28";
-			this->checkBox28->Size = System::Drawing::Size(79, 29);
+			this->checkBox28->Size = System::Drawing::Size(68, 24);
 			this->checkBox28->TabIndex = 3;
 			this->checkBox28->Text = L"sfx.h";
 			this->checkBox28->UseVisualStyleBackColor = true;
@@ -1592,9 +1747,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox27
 			// 
 			this->checkBox27->AutoSize = true;
-			this->checkBox27->Location = System::Drawing::Point(25, 113);
+			this->checkBox27->Location = System::Drawing::Point(20, 94);
+			this->checkBox27->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox27->Name = L"checkBox27";
-			this->checkBox27->Size = System::Drawing::Size(119, 29);
+			this->checkBox27->Size = System::Drawing::Size(100, 24);
 			this->checkBox27->TabIndex = 2;
 			this->checkBox27->Text = L"g3dhax.h";
 			this->checkBox27->UseVisualStyleBackColor = true;
@@ -1602,9 +1758,10 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox26
 			// 
 			this->checkBox26->AutoSize = true;
-			this->checkBox26->Location = System::Drawing::Point(25, 78);
+			this->checkBox26->Location = System::Drawing::Point(20, 65);
+			this->checkBox26->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox26->Name = L"checkBox26";
-			this->checkBox26->Size = System::Drawing::Size(103, 29);
+			this->checkBox26->Size = System::Drawing::Size(88, 24);
 			this->checkBox26->TabIndex = 1;
 			this->checkBox26->Text = L"game.h";
 			this->checkBox26->UseVisualStyleBackColor = true;
@@ -1612,18 +1769,19 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox25
 			// 
 			this->checkBox25->AutoSize = true;
-			this->checkBox25->Location = System::Drawing::Point(25, 43);
+			this->checkBox25->Location = System::Drawing::Point(20, 36);
+			this->checkBox25->Margin = System::Windows::Forms::Padding(2);
 			this->checkBox25->Name = L"checkBox25";
-			this->checkBox25->Size = System::Drawing::Size(129, 29);
+			this->checkBox25->Size = System::Drawing::Size(109, 24);
 			this->checkBox25->TabIndex = 0;
 			this->checkBox25->Text = L"common.h";
 			this->checkBox25->UseVisualStyleBackColor = true;
 			// 
 			// MyForm
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(11, 24);
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1479, 946);
+			this->ClientSize = System::Drawing::Size(1210, 788);
 			this->Controls->Add(this->groupBox6);
 			this->Controls->Add(this->checkBox22);
 			this->Controls->Add(this->checkBox15);
@@ -1693,6 +1851,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->Controls->Add(this->groupBox4);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"NewSpriteCreator";
@@ -1804,7 +1963,7 @@ private: System::ComponentModel::IContainer^ components;
 		}
 		if (checkBox32->Checked)
 		{
-			customspriteh = "#include \"" + name + ".h\"\n";
+			customspriteh = "#include \"" + textBox35->Text + "\"\n";
 		}
 
 			
@@ -2507,20 +2666,24 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 	if (radioButton1->Checked)
 	{
 		basicclass = "class " + classname + " : public " + inheritanceclass +
-			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static dActor_c* build();\n\n	//void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	" +
-			"//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat8_FencePunch(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat7_GroundPound(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat7_GroundPoundYoshi(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCatA_PenguinMario(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat11_PipeCannon(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat9_RollingObject(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat1_Fireball_E_Explosion(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat2_IceBall_15_YoshiIce(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat13_Hammer(ActivePhysics *apThis, ActivePhysics *apOther); \n	" +
-			"//bool collisionCat14_YoshiFire(ActivePhysics *apThis, ActivePhysics *apOther);\n\n";
+			" {\npublic:\n\n	int onCreate();\n	int onExecute();\n	int onDelete();\n	int onDraw();\n\n	" + umminbaseicclas + "\n	" + baasurinbasicclass + "\n\n	static dActor_c* build();\n\n	void playerCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n	void spriteCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n	void yoshiCollision(ActivePhysics *apThis, ActivePhysics *apOther);\n\n	";
+
+
+		if (checkBox3->Checked)
+			basicclass = basicclass + "//bool collisionCat3_StarPower(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		/*if ()
+		basicclass = basicclass + "//bool collisionCat5_Mario(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCatD_Drill(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat8_FencePunch(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat7_GroundPound(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat7_GroundPoundYoshi(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCatA_PenguinMario(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat11_PipeCannon(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat9_RollingObject(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat1_Fireball_E_Explosion(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat2_IceBall_15_YoshiIce(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat13_Hammer(ActivePhysics *apThis, ActivePhysics *apOther); \n	";
+		basicclass = basicclass + "//bool collisionCat14_YoshiFire(ActivePhysics *apThis, ActivePhysics *apOther); \n	";*/
 	}
 	else
 	{
@@ -2873,6 +3036,22 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 		textBox2->Enabled = false;
 
 		checkBox26->Checked = true;
+
+		label2->Enabled = false;
+		label3->Enabled = false;
+		label6->Enabled = false;
+		label8->Enabled = false;
+		label9->Enabled = false;
+		label10->Enabled = false;
+		label11->Enabled = false;
+		label12->Enabled = false;
+		label13->Enabled = false;
+		label14->Enabled = false;
+		label15->Enabled = false;
+		label16->Enabled = false;
+		label17->Enabled = false;
+
+		groupBox1->Enabled = false;
 	}
 	else
 	{
@@ -2894,6 +3073,22 @@ private: System::Void radioButton2_CheckedChanged(System::Object^ sender, System
 
 
 		checkBox26->Checked = false;
+
+		label2->Enabled = true;
+		label3->Enabled = true;
+		label6->Enabled = true;
+		label8->Enabled = true;
+		label9->Enabled = true;
+		label10->Enabled = true;
+		label11->Enabled = true;
+		label12->Enabled = true;
+		label13->Enabled = true;
+		label14->Enabled = true;
+		label15->Enabled = true;
+		label16->Enabled = true;
+		label17->Enabled = true;
+
+		groupBox1->Enabled = true;
 	}
 }
 private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
@@ -2916,6 +3111,23 @@ private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System
 		textBox2->Enabled = false;
 
 		checkBox26->Checked = false;
+
+
+		label2->Enabled = false;
+		label3->Enabled = false;
+		label6->Enabled = false;
+		label8->Enabled = false;
+		label9->Enabled = false;
+		label10->Enabled = false;
+		label11->Enabled = false;
+		label12->Enabled = false;
+		label13->Enabled = false;
+		label14->Enabled = false;
+		label15->Enabled = false;
+		label16->Enabled = false;
+		label17->Enabled = false;
+
+		groupBox1->Enabled = false;
 	}
 	else
 	{
@@ -2937,6 +3149,22 @@ private: System::Void radioButton1_CheckedChanged(System::Object^ sender, System
 
 
 		checkBox26->Checked = false;
+
+		label2->Enabled = true;
+		label3->Enabled = true;
+		label6->Enabled = true;
+		label8->Enabled = true;
+		label9->Enabled = true;
+		label10->Enabled = true;
+		label11->Enabled = true;
+		label12->Enabled = true;
+		label13->Enabled = true;
+		label14->Enabled = true;
+		label15->Enabled = true;
+		label16->Enabled = true;
+		label17->Enabled = true;
+
+		groupBox1->Enabled = true;
 	}
 }
 private: System::Void documentationToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -3027,7 +3255,10 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 	checkBox29->Checked = false;
 	checkBox31->Checked = false;
 	checkBox32->Checked = false;
-
+	
+	textBox35->Text = "";
+	
+	
 	label7->Text = "No code generated yet!";
 
 }
@@ -3041,6 +3272,7 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 	array<String^>^ collisions = gcnew array<String^>(22);
 	String^ hasmodelyesno;
 	String^ haschryesno;
+	String^ hname;
 
 	//Includes
 	String^ ch = "";
@@ -3158,6 +3390,14 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 	{
 		haschryesno = "no";
 	}
+	if (checkBox32->Checked)
+	{
+		hname = textBox35->Text;
+	}
+	else
+	{
+		hname = "";
+	}
 
 
 	array<String^>^ data = { textBox5->Text, textBox1->Text, textBox2->Text, textBox3->Text, textBox4->Text, textBox6->Text, textBox7->Text,
@@ -3166,7 +3406,7 @@ private: System::Void saveProjectAsToolStripMenuItem_Click(System::Object^ sende
 		collisions[3], collisions[4], collisions[5], collisions[6], collisions[7], collisions[8], collisions[9], collisions[10], collisions[11], collisions[12], collisions[13], 
 		collisions[14], collisions[15], collisions[16], collisions[17], collisions[18], collisions[19], collisions[20], collisions[21],
 		hasmodelyesno, textBox23->Text, textBox24->Text, textBox25->Text, comboBox1->Text, comboBox2->Text, haschryesno, textBox27->Text,
-		ch, gh, g3dh, sfxh, sh, bh, csh, textBox28->Text, textBox29->Text, textBox30->Text, textBox31->Text, textBox32->Text, textBox33->Text, textBox34->Text };
+		ch, gh, g3dh, sfxh, sh, bh, csh, textBox28->Text, textBox29->Text, textBox30->Text, textBox31->Text, textBox32->Text, textBox33->Text, textBox34->Text, hname };
 	
 
 	System::IO::StreamWriter^ sw;
@@ -3215,8 +3455,8 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		System::IO::StreamReader^ sr;
 
 		sr = System::IO::File::OpenText(path);
-		array<String^>^ datas = gcnew array<String^>(68);
-		for (int count = 0; count < 68; count++)
+		array<String^>^ datas = gcnew array<String^>(69);
+		for (int count = 0; count < 69; count++)
 		{
 			datas[count] = sr->ReadLine();
 		}
@@ -3286,6 +3526,8 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		label30->Visible = false;
 		textBox27->Visible = false;
 		textBox27->Text = "";
+
+		textBox35->Text = "";
 
 
 
@@ -3424,6 +3666,7 @@ private: System::Void openToolStripMenuItem_Click(System::Object^ sender, System
 		textBox23->Text = datas[47];
 		textBox24->Text = datas[48];
 		textBox25->Text = datas[49];
+		textBox35->Text = datas[68];
 
 		array<char>^ binarycollision = gcnew array<char>(22);
 		unsigned int fullbinary = 0xFFC00000;
@@ -3628,6 +3871,16 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 		comboBox1->Enabled = true;
 		comboBox2->Enabled = true;
 
+		label31->Enabled = true;
+		label32->Enabled = true;
+		label33->Enabled = true;
+		label34->Enabled = true;
+		label35->Enabled = true;
+		label36->Enabled = true;
+		label37->Enabled = true;
+		label38->Enabled = true;
+		label39->Enabled = true;
+
 
 		if (checkBox24->Checked)
 		{
@@ -3664,6 +3917,16 @@ private: System::Void checkBox23_CheckedChanged(System::Object^ sender, System::
 
 		comboBox1->Enabled = false;
 		comboBox2->Enabled = false;
+
+		label31->Enabled = false;
+		label32->Enabled = false;
+		label33->Enabled = false;
+		label34->Enabled = false;
+		label35->Enabled = false;
+		label36->Enabled = false;
+		label37->Enabled = false;
+		label38->Enabled = false;
+		label39->Enabled = false;
 	}
 }
 
@@ -6366,6 +6629,19 @@ private: System::Void checkBox24_CheckedChanged(System::Object^ sender, System::
 		textBox27->Visible = false;
 	}
 
+}
+private: System::Void checkBox32_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (checkBox32->Checked)
+	{
+		label40->Visible = true;
+		textBox35->Visible = true;
+	}
+
+	else
+	{
+		label40->Visible = false;
+		textBox35->Visible = false;
+	}
 }
 };
 }
