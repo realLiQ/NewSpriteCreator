@@ -796,7 +796,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox18
 			// 
-			this->textBox18->Location = System::Drawing::Point(38, 73);
+			this->textBox18->Location = System::Drawing::Point(37, 82);
 			this->textBox18->Margin = System::Windows::Forms::Padding(2);
 			this->textBox18->Name = L"textBox18";
 			this->textBox18->Size = System::Drawing::Size(98, 26);
@@ -806,7 +806,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label21
 			// 
 			this->label21->AutoSize = true;
-			this->label21->Location = System::Drawing::Point(16, 76);
+			this->label21->Location = System::Drawing::Point(15, 85);
 			this->label21->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label21->Name = L"label21";
 			this->label21->Size = System::Drawing::Size(18, 20);
@@ -817,7 +817,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label22
 			// 
 			this->label22->AutoSize = true;
-			this->label22->Location = System::Drawing::Point(16, 105);
+			this->label22->Location = System::Drawing::Point(15, 114);
 			this->label22->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label22->Name = L"label22";
 			this->label22->Size = System::Drawing::Size(18, 20);
@@ -827,7 +827,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox19
 			// 
-			this->textBox19->Location = System::Drawing::Point(38, 102);
+			this->textBox19->Location = System::Drawing::Point(37, 111);
 			this->textBox19->Margin = System::Windows::Forms::Padding(2);
 			this->textBox19->Name = L"textBox19";
 			this->textBox19->Size = System::Drawing::Size(98, 26);
@@ -837,7 +837,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label23
 			// 
 			this->label23->AutoSize = true;
-			this->label23->Location = System::Drawing::Point(16, 134);
+			this->label23->Location = System::Drawing::Point(15, 143);
 			this->label23->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label23->Name = L"label23";
 			this->label23->Size = System::Drawing::Size(18, 20);
@@ -847,7 +847,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox20
 			// 
-			this->textBox20->Location = System::Drawing::Point(38, 132);
+			this->textBox20->Location = System::Drawing::Point(37, 140);
 			this->textBox20->Margin = System::Windows::Forms::Padding(2);
 			this->textBox20->Name = L"textBox20";
 			this->textBox20->Size = System::Drawing::Size(98, 26);
@@ -857,7 +857,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label24
 			// 
 			this->label24->AutoSize = true;
-			this->label24->Location = System::Drawing::Point(16, 163);
+			this->label24->Location = System::Drawing::Point(15, 172);
 			this->label24->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label24->Name = L"label24";
 			this->label24->Size = System::Drawing::Size(18, 20);
@@ -867,7 +867,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox21
 			// 
-			this->textBox21->Location = System::Drawing::Point(38, 161);
+			this->textBox21->Location = System::Drawing::Point(37, 169);
 			this->textBox21->Margin = System::Windows::Forms::Padding(2);
 			this->textBox21->Name = L"textBox21";
 			this->textBox21->Size = System::Drawing::Size(98, 26);
@@ -877,7 +877,7 @@ private: System::ComponentModel::IContainer^ components;
 			// label25
 			// 
 			this->label25->AutoSize = true;
-			this->label25->Location = System::Drawing::Point(16, 192);
+			this->label25->Location = System::Drawing::Point(15, 201);
 			this->label25->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label25->Name = L"label25";
 			this->label25->Size = System::Drawing::Size(18, 20);
@@ -887,7 +887,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// textBox22
 			// 
-			this->textBox22->Location = System::Drawing::Point(38, 190);
+			this->textBox22->Location = System::Drawing::Point(37, 198);
 			this->textBox22->Margin = System::Windows::Forms::Padding(2);
 			this->textBox22->Name = L"textBox22";
 			this->textBox22->Size = System::Drawing::Size(98, 26);
@@ -2322,7 +2322,7 @@ private: System::ComponentModel::IContainer^ components;
 
 		String^ wholecode;
 		if (radioButton1->Checked == true)
-			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", &" + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 		else if (radioButton2->Checked == true)
 			wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
@@ -2342,13 +2342,23 @@ private: System::Void infoToolStripMenuItem_Click(System::Object^ sender, System
 	}
 	if (useminor2)
 	{
-		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_MINOR2 + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
-		MessageBox::Show(msg, "About");
+		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + "." + VERSION_MINOR2 + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021-2022\n\nWould you like to join the discord server?";
+		auto result = MessageBox::Show(msg, "About", MessageBoxButtons::YesNo);
+		if (result == System::Windows::Forms::DialogResult::Yes)
+		{
+			String^ target = "https://discord.gg/4s72Nnm";
+			System::Diagnostics::Process::Start(target); //Open Website
+		}
 	}
 	else
 	{
-		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021\nhttps://discord.gg/4s72Nnm";
-		MessageBox::Show(msg, "About");
+		String^ msg = "NewSpriteCreator-GUI v" + VERSION_MAJOR + "." + VERSION_MINOR + betatext + "\nCoded by LiQ\n\n©New Super Mario Lost Worlds Team - 2021-2022\n\nWould you like to join the discord server?";
+		auto result = MessageBox::Show(msg, "About", MessageBoxButtons::YesNo);
+		if (result == System::Windows::Forms::DialogResult::Yes)
+		{
+			String^ target = "https://discord.gg/4s72Nnm";
+			System::Diagnostics::Process::Start(target); //Open Website
+		}
 	}
 }
 
@@ -2804,7 +2814,7 @@ private: System::Void saveAsToolStripMenuItem_Click(System::Object^ sender, Syst
 
 	String^ wholecode;
 	if (radioButton1->Checked == true)
-		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", " + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
+		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\ndActor_c* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n" + "const SpriteData " + name + "SpriteData = \n{ ProfileId::" + profileid + ", " + xoffset + ", " + yoffset + ", " + xDtC + ", " + yDtC + ", " + xDtE + ", " + yDtE + ", " + _1C + ", " + _1E + ", " + _20 + ", " + _22 + ", " + flags + " };\n\n" + "Profile " + name + "Profile(&" + classname + "::build, SpriteId::" + spriteid + ", &" + name + "SpriteData, ProfileId::" + profileid + ", ProfileId::" + profileid + ", \"" + name + "\", " + arcnamelistname + ");\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
 
 	else if (radioButton2->Checked == true)
 		wholecode = includes + arc + basicclass + hasmodelvar + states + endclass + createstates + updatemodelmatricesfunc + baasurfunction + "\n" + classname + "* " + classname + "::build() {\n	void *buffer = AllocFromGameHeap1(sizeof(" + classname + "));\n	return new(buffer) " + classname + ";\n}\n\n\n" + "int " + classname + "::onCreate() {\n" + loadmodel + baasurset + createfunc + "\n\n	this->onExecute();\n\n	return true;\n}\n\n" + "int " + classname + "::onExecute() {\n" + executefunc + "	return true;" + "\n}\n\n" + "int " + classname + "::onDelete() {\n	return true;\n}\n\n" + "int " + classname + "::onDraw() {\n" + drawfunc + "	return true;" + "\n}" + statefunctions;
