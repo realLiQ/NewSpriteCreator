@@ -1,0 +1,172 @@
+#pragma once
+#include <string>
+#include <cliext/list>
+
+namespace NewSpriteCreatorGUI {
+
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections::Generic;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+
+	/// <summary>
+	/// Zusammenfassung für yaml
+	/// </summary>
+	public ref class yaml : public System::Windows::Forms::Form
+	{
+	public:
+		yaml(void)
+		{
+			InitializeComponent();
+			//
+			//TODO: Konstruktorcode hier hinzufügen.
+			//
+		}
+
+	protected:
+		/// <summary>
+		/// Verwendete Ressourcen bereinigen.
+		/// </summary>
+		~yaml()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
+	private: System::Windows::Forms::Button^ b_create;
+
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ filename;
+	private: System::Windows::Forms::DomainUpDown^ domainUpDown1;
+
+	protected:
+
+	protected:
+
+	private:
+		/// <summary>
+		/// Erforderliche Designervariable.
+		/// </summary>
+		System::ComponentModel::Container^ components;
+
+#pragma region Windows Form Designer generated code
+		/// <summary>
+		/// Erforderliche Methode für die Designerunterstützung.
+		/// Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+		/// </summary>
+		void InitializeComponent(void)
+		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(yaml::typeid));
+			this->b_create = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->filename = (gcnew System::Windows::Forms::TextBox());
+			this->domainUpDown1 = (gcnew System::Windows::Forms::DomainUpDown());
+			this->SuspendLayout();
+			// 
+			// b_create
+			// 
+			this->b_create->Location = System::Drawing::Point(71, 187);
+			this->b_create->Name = L"b_create";
+			this->b_create->Size = System::Drawing::Size(150, 60);
+			this->b_create->TabIndex = 0;
+			this->b_create->Text = L"Create YAML";
+			this->b_create->UseVisualStyleBackColor = true;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Location = System::Drawing::Point(93, 26);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(107, 20);
+			this->label1->TabIndex = 2;
+			this->label1->Text = L"SpriteNumber";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Location = System::Drawing::Point(105, 95);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(74, 20);
+			this->label2->TabIndex = 4;
+			this->label2->Text = L"Filename";
+			// 
+			// filename
+			// 
+			this->filename->Location = System::Drawing::Point(71, 118);
+			this->filename->Name = L"filename";
+			this->filename->Size = System::Drawing::Size(150, 26);
+			this->filename->TabIndex = 3;
+			// 
+			// domainUpDown1
+			// 
+			this->domainUpDown1->Location = System::Drawing::Point(97, 49);
+			this->domainUpDown1->Name = L"domainUpDown1";
+			this->domainUpDown1->Size = System::Drawing::Size(103, 26);
+			this->domainUpDown1->TabIndex = 5;
+			this->domainUpDown1->Text = L"0";
+			this->domainUpDown1->TextAlign = System::Windows::Forms::HorizontalAlignment::Center;
+			// 
+			// yaml
+			// 
+			this->AutoScaleDimensions = System::Drawing::SizeF(9, 20);
+			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->ClientSize = System::Drawing::Size(297, 290);
+			this->Controls->Add(this->domainUpDown1);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->filename);
+			this->Controls->Add(this->label1);
+			this->Controls->Add(this->b_create);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximizeBox = false;
+			this->MinimizeBox = false;
+			this->Name = L"yaml";
+			this->Text = L"YAML Creator";
+			this->Load += gcnew System::EventHandler(this, &yaml::yaml_Load);
+			this->ResumeLayout(false);
+			this->PerformLayout();
+
+		}
+#pragma endregion
+	public: void test() {
+		array<String^>^ data = { "0x804296E8", "0x8098C220", "0x8098D428", "0x8098DCF0", "0x8098BCB8", "0x8098D4B8", "0x8098D3D0", "0x8098C278", "0x8098CD18", "0x8098C990", "0x8098B0D0", "0x8098B660", "0x80323168", "0x8032567C", "0x80326A50", "0x8098FEA0", "0x8098FEAC", "0x804296A0", "0x8098A8E8", "0x8098A230", "0x8097BCC0", "0x8097DB00", "0x80954010", "0x809544A8", "0x80956E4C",
+			"0x80957230", "0x80954F5C", "0x80964AE0", "0x80964028", "0x80977D38", "0x809615B8", "0x80966030", "0x8096603C", "0x80956468", "0x809568D8", "0x80951610", "0x80951878", "0x809519D8", "0x8098A360", "0x80953500", "0x8095CCD8", "0x809622F8", "0x80979648", "0x80979378", "0x80979288", "0x80979918", "0x80979468", "0x80979198", "0x80979828", "0x80979738",
+			"0x80979558", "0x80AF7DD0", "0x80B02318", "0x80AFA9C8", "0x80AFDCB0", "0x80B02AF8", "0x80AFBF00", "0x80B0C150", "0x80B07488", "0x80ADAFC8", "0x80AF0E08", "0x80B095F0", "0x80B095FC", "0x80B09608", "0x80959E58", "0x80959E64", "0x80959E70", "0x80959E7C", "0x80959E88", "0x80959E94", "0x80959EA0", "0x80ADEC90", "0x80AEEB28", "0x80AEEB34", "0x80AEEB40",
+			"0x80AEEB58", "0x80AEEB64", "0x80ADCA08", "0x80ADCA14", "0x80ADCA20", "0x80ADEF88", "0x80AE8158", "0x80AE8164", "0x80AF3570", "0x80AF357C", "0x80AE8790", "0x80AF3A38", "0x80B0B850", "0x80AE90D8", "0x80B0BD28", "0x80AD8C70", "0x80AE7A80", "0x80AE6EF8", "0x80AE76A8", "0x80AE72D0", "0x80AE6B48", "0x80AE6020", "0x80AE6790", "0x80AE63D8", "0x80AF3180",
+			"0x80AF2A80", "0x80AF2D50", "0x80AF27A8", "0x80B0DA58", "0x80324AA8", "0x80324060", "0x80959C30", "0x80959A10", "0x80953CE0", "0x80AEE178", "0x80AE8DA8", "0x80ADE298", "0x80AED820", "0x80AEF9F0", "0x80AF90F8", "0x8095CDB8", "0x80AEE408", "0x8096E908", "0x80955A58", "0x80ADEA00", "0x80B05E10", "0x8097CEE8", "0x8097CD28", "0x8097CE08", "0x80AD6078",
+			"0x80972660", "0x80AE8B08", "0x80AF65D0", "0x80AF65DC", "0x80AF65E8", "0x80AF65F4", "0x80AD74F8", "0x8097ED30", "0x80ADDB20", "0x80B01A40", "0x80AFB8F0", "0x80AFCF88", "0x80AEBDA0", "0x80B0D2D0", "0x80AE5498", "0x8096A030", "0x80ADA578", "0x80AFA400", "0x80ADA998", "0x80AE0608", "0x80B07920", "0x80B082F0", "0x80B07D58", "0x80AED4E0", "0x80AEAF80",
+			"0x80AD67A8", "0x80AEC030", "0x80AEB8E8", "0x80951530", "0x80B0A500", "0x80AD6B38", "0x80AF8718", "0x80B03D70", "0x8097D450", "0x80B03600", "0x80B03624", "0x80B0360C", "0x80B03618", "0x80AF54A0", "0x80AF54AC", "0x80AF5B38", "0x80B060A0", "0x80B0D748", "0x80B10340", "0x80B1034C", "0x80AFD490", "0x80AFD830", "0x80952998", "0x8095D018", "0x80AEDC90",
+			"0x80AD7EC0", "0x80B0ABD0", "0x80B0ABDC", "0x80AE5A70", "0x80AD9AE8", "0x80AD9D98", "0x80AD9838", "0x80AD9588", "0x80B09E40", "0x80B09A48", "0x80AEC4E8", "0x80AEC918", "0x80ADA048", "0x80B10BA0", "0x80B0E230", "0x80B0E8B0", "0x80AF4378", "0x80AF0950", "0x80B0D3B0", "0x80AE9478", "0x80B7C790", "0x80B08630", "0x8097F250", "0x80B088C0", "0x8097BAD0",
+			"0x80AF03D0", "0x80B0FBC0", "0x80951410", "0x80958D68", "0x80958C88", "0x80958B58", "0x80971BB0", "0x8097E138", "0x809789C8", "0x80978E90", "0x80955978", "0x80951EB0", "0x80961C00", "0x8097B4D8", "0x8097B1C0", "0x8097B2C8", "0x8097B3D0", "0x8095BB28", "0x8095B858", "0x8095B948", "0x8095BA38", "0x80323620", "0x80B00A98", "0x80B01E68", "0x80AF5FC0",
+			"0x80962900", "0x80971578", "0x80AD6308", "0x80AE7E50", "0x80B0A240", "0x80AFE430", "0x80B0C510", "0x80ADFAE8", "0x80AF7528", "0x809790B8", "0x809584B8", "0x80AFB640", "0x80AFB64C", "0x80AFB658", "0x80AFB664", "0x80B10E48", "0x80B81980", "0x80B87020", "0x80B7B6E8", "0x80B82840", "0x80B84E10", "0x80B85E28", "0x80B83AD8", "0x80B76B58", "0x80B79B60",
+			"0x80B7AB38", "0x80B75CA8", "0x80957440", "0x80B77600", "0x80B78EC8", "0x809747F8", "0x80B78148", "0x80B7DA08", "0x80B7F630", "0x80B7FD00", "0x8097EB38", "0x80963C20", "0x80965110", "0x80963408", "0x80962E98", "0x80963AB0", "0x80965738", "0x80957C80", "0x80972820", "0x80972CD0", "0x80974C60", "0x809759C8", "0x809742F0", "0x80976BB8", "0x809556C0",
+			"0x80955350", "0x80954288", "0x8096BE48", "0x8096BE54", "0x8097E9A8", "0x80959408", "0x8097E438", "0x809597A0", "0x809637A0", "0x80B0CAB8", "0x80B0CAC4", "0x80AF4C48", "0x80AF51B0", "0x80AF7830", "0x80AD5A60", "0x80AFC4E8", "0x80AF8AF0", "0x80AD7A50", "0x8097C478", "0x80B05808", "0x8097F4B8", "0x8095E450", "0x8095E9B4", "0x8095F118", "0x8095FDD0",
+			"0x8095AA00", "0x8095AEB0", "0x8095B148", "0x8095B4D8", "0x80953700", "0x80B80328", "0x80B80A38", "0x80B81278", "0x80960568", "0x809608A4", "0x80960898", "0x8095F924", "0x80960F38", "0x80977878", "0x80964768", "0x80323288", "0x8097E840", "0x8097E760", "0x8097EF20", "0x80951D18", "0x8095DDC0", "0x80970DB8", "0x80989900", "0x80AEF2D0", "0x8097E250",
+			"0x80AE01A0", "0x80AFC910", "0x80B0B090", "0x80AE1458", "0x8095E108", "0x80989D08", "0x80B0F320", "0x80B0F688", "0x8095BC18", "0x80970FA0", "0x80B06360", "0x80B0636C", "0x80B06968", "0x80B03050", "0x80AEFDD8", "0x8097F730", "0x80B0DFA0", "0x80AF8318", "0x80AF1F80", "0x8095E360", "0x809623D8", "0x809626D8", "0x80ADF7B8", "0x80AE0A08", "0x80AFACC8",
+			"0x80958178", "0x8096F220", "0x8096F690", "0x80AF2210", "0x80970368", "0x8096FB98", "0x8096FBA8", "0x80970950", "0x80970960", "0x809775A0", "0x809775B0", "0x80977170", "0x8096FF4C", "0x80961F40", "0x80955C50", "0x80ADF428", "0x8097F598", "0x80950FF0", "0x8097A9B0", "0x80B06BF8", "0x8097B0D0", "0x80AFA738", "0x8097BF48", "0x80AEA4D0", "0x8095C660",
+			"0x8096C150", "0x80951F90", "0x80952550", "0x80AF7148", "0x80B0EFD8", "0x80AEA0B8", "0x80976538", "0x809761C8", "0x8097CC48", "0x80952E10", "0x809530F0", "0x80952D30", "0x8097F0E0", "0x80B0B440", "0x8097F348", "0x80971090", "0x8097D5C0", "0x8096EB78", "0x8096EB84", "0x8096C9C8", "0x8098AA20", "0x80AE17F8", "0x8097DE38", "0x8097DD78", "0x80975EF0",
+			"0x8097C9B8", "0x80AE1B28", "0x80AE3390", "0x80AE3A60", "0x80AE2CC8", "0x80AE40D8", "0x80AE4DD0", "0x80ADD1A0", "0x80AE4758", "0x80B053D8", "0x80AECD48", "0x80324288", "0x8096B250", "0x80978570", "0x80323B60", "0x80326960", "0x8097B5E0", "0x80978228", "0x809531D0", "0x80971E90", "0x80971F70", "0x80B065F8", "0x80979C78", "0x80979F18", "0x80979E08",
+			"0x80955D40", "0x8096A5D0", "0x8096B110", "0x8096A710", "0x80970E98", "0x809620F0", "0x80969E78", "0x809684F8", "0x80967A38", "0x80967810", "0x8096781C", "0x80AFEEC0", "0x80B003E0", "0x80AFF390", "0x80AFF39C", "0x80AFF3A8", "0x80AFF3B4", "0x80AFF3C0", "0x80AFF3CC", "0x80AF9C00", "0x8096AE08", "0x8096A860", "0x809669E8", "0x80B01538", "0x80B00EB0",
+			"0x8096AB50", "0x80B01290", "0x8097E5A0", "0x8097E680", "0x8095D370", "0x8095D560", "0x8095D468", "0x80968990", "0x80969438", "0x80966FE0", "0x80968030", "0x8096A440", "0x809667D8", "0x80967F40", "0x80967C50", "0x80968240", "0x80AF95A8", "0x80B0C808", "0x80ADFDE0", "0x80AE1088", "0x80AF6CDC", "0x80AF6CD0", "0x8096A138", "0x80967628", "0x8096B928",
+			"0x80977008", "0x809716E8", "0x8096B6F8", "0x80964F30", "0x8097D0A8", "0x8097D248", "0x80AF96F8", "0x80967430", "0x809671E0", "0x80968B98", "0x80AF8E40", "0x8096A228", "0x80B04A90", "0x80B043F0", "0x80B04838", "0x80B03EE0", "0x8095C0F8", "0x80AED108", "0x80AED330", "0x80AF48F0", "0x80B04FE0", "0x80AD6F90", "0x80AF3ED0", "0x80AEEB4C", "0x80AD9060",
+			"0x80B090E0", "0x80AFB390", "0x809733B8", "0x80969A28", "0x80969CF8", "0x80B07030", "0x80968DA8", "0x809690F0", "0x80B0A940", "0x8096803C", "0x80958088", "0x80AE9D40", "0x80AFE748", "0x80AFE754", "0x80AFE760", "0x80AFE76C", "0x80972168", "0x80AFE778", "0x80AFE784", "0x80ADCDE8", "0x80ADC0B0", "0x80ADC4A0", "0x80959248", "0x80958E48", "0x80B0FE60",
+			"0x8096C740", "0x8096C820", "0x8096C3B8", "0x80969620", "0x80B00680", "0x80AE2600", "0x8097A498", "0x80ADB440", "0x80ADB44C", "0x80980B38", "0x80981038", "0x80967548", "0x8095DBC0", "0x8095D828", "0x80B106D8", "0x80B02730", "0x80B0273C", "0x80971CD8", "0x80AD88F8", "0x80AEA9F8", "0x80958868", "0x8097AC38", "0x8097A1F0", "0x8097A6B8", "0x80979A08",
+			"0x80958768", "0x80952EF0", "0x8095D0F8", "0x80AD82B0", "0x80980090", "0x8097FE80", "0x80AF6CE8", "0x80ADAC28", "0x8097D950", "0x80ADB898", "0x80980DD8", "0x809722D8", "0x80ADE5C8", "0x80ADBCDC", "0x80ADBCE8", "0x8095C2C8", "0x80980CC8", "0x80AF1B68", "0x8097CFC8", "0x80955EE8", "0x80962DB8", "0x80962B20", "0x80976AC0", "0x809769C8", "0x80976860",
+			"0x8097C1A8", "0x8097F9C0", "0x80974168", "0x8098A728", "0x8098A808", "0x80975808", "0x809758E8", "0x80975568", "0x80975728", "0x80975648", "0x80966CF8", "0x80975430", "0x80966EA8", "0x80968700", "0x8096BB30", "0x80978BE0", "0x80980200", "0x809719F8", "0x80971A04", "0x80B0EC30", "0x80323DF8", "0x80950B00", "0x80950B0C", "0x80950B18", "0x80950B24",
+			"0x80950B30", "0x80950B3C", "0x809808B0", "0x80ADD890", "0x80324D78", "0x8098FDA8", "0x809803A8", "0x809803B4", "0x80980620", "0x8095A4B8", "0x8095A7A8", "0x8095A1B8", "0x8095CA80", "0x8097AF18", "0x809527C8", "0x80B7F1A8", "0x8097C2E0", "0x8097A070", "0x8097BDA0", "0x80952B98", "0x80429540", "0x8098A98C", "0x8098EEC8", "0x80984710", "0x80987F5C",
+			"0x80981BD4", "0x80982284", "0x80986334", "0x80984BF4", "0x809834F0", "0x8098369C", "0x80985434", "0x80985C8C", "0x80985704", "0x80983B64", "0x80983D34", "0x80983A6C", "0x80983E3C", "0x809826B4", "0x809857B0", "0x80986144", "0x80982D1C", "0x80982A1C", "0x809821AC", "0x80984258", "0x8098687C", "0x80986F58", "0x80987544", "0x809876C0", "0x80986B48",
+			"0x809870D8", "0x809873D0", "0x80987258", "0x80986D64", "0x80981A3C", "0x8098872C", "0x809894B4", "0x80988934", "0x809878C0", "0x809883B4", "0x80988DDC", "0x8098586C", "0x80984A24", "0x8098640C", "0x80987BD8", "0x80982F34", "0x80983190", "0x809832B0", "0x80987A64", "0x80989794", "0x80988574", "0x80981960", "0x80988B60", "0x80982530", "0x8098550C",
+			"0x8098408C", "0x80984B10", "0x80981CA0", "0x80981E0C", "0x809838E4", "0x80984E94", "0x809864DC", "0x80983F40", "0x80982844", "0x80982B08", "0x80982FD4", "0x80986074", "0x809845F8", "0x80985E1C", "0x8098E278", "0x8098E948", "0x8093FE28", "0x8093F810", "0x809412C0", "0x8094B0E0", "0x8094F788", "0x809501B0", "0x80942B38", "0x80981290", "0x80943160",
+			"0x8094E418", "0x80949450", "0x80950768", "0x80941960", "0x8076B470", "0x8098EFDC", "0x803275E0", "0x80322B18", "0x80327668", "0x8098AA88", "0x80327D24", "0x8098B9F8", "0x8094D8D8", "0x8094C050", "0x8094D1E8", "0x803225FC", "0x80940C40", "0x8094BBFC", "0x80945418", "0x803229E8", "0x80429538", "0x8094EC40", "0x80944E70", "0x80947630", "0x80941D18",
+			"0x80943610", "0x80940388", "0x80945DF8", "0x80946728", "0x80948BF8", "0x80948030", "0x80948640", "0x80947B60", "0x80948B10", "0x80945A20", "0x8093E8E8", "0x8093F3B0", "0x8093E448", "0x8093E280", "0x8094A378", "0x8093FFE8", "0x8076B300", "0x809427B0", "0x8094F0D8", "0x80950428", "0x80942400", "0x80945560", "0x80958A78", "0x809656E0", "0x80429658" };
+	}
+
+	private: System::Void yaml_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+};
+}

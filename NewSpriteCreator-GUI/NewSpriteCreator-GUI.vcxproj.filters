@@ -18,6 +18,18 @@
     <ClCompile Include="MyForm.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="yaml.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="states.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="header.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="preview.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -28,6 +40,18 @@
     </ClInclude>
     <ClInclude Include="version.h">
       <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="yaml.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="states.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="header.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="preview.h">
+      <Filter>Quelldateien</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

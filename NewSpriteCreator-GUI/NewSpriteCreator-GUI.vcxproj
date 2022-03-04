@@ -119,6 +119,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -126,18 +127,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="header.cpp" />
     <ClCompile Include="MyForm.cpp" />
+    <ClCompile Include="preview.cpp" />
+    <ClCompile Include="states.cpp" />
+    <ClCompile Include="yaml.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="header.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="preview.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="states.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="version.h" />
+    <ClInclude Include="yaml.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="header.resx">
+      <DependentUpon>header.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MyForm.resx">
       <DependentUpon>MyForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="preview.resx">
+      <DependentUpon>preview.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="states.resx">
+      <DependentUpon>states.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yaml.resx">
+      <DependentUpon>yaml.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
