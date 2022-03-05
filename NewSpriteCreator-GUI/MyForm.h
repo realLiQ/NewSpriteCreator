@@ -4,6 +4,7 @@
 #include "states.h"
 #include "header.h"
 #include "preview.h"
+#include "settingsvar.h"
 #include <iostream>
 #include <sstream>
 #include <msclr\marshal_cppstd.h>
@@ -207,6 +208,7 @@ private: System::Windows::Forms::Button^ button6;
 private: System::Windows::Forms::Button^ button7;
 private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::Button^ button8;
+private: System::Windows::Forms::ToolStripMenuItem^ spriteDataGeneratorToolStripMenuItem;
 
 
 
@@ -260,6 +262,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->yAMLCreatorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->spriteDataGeneratorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->previewCodeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exampleToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -542,18 +545,28 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// toolsToolStripMenuItem
 			// 
-			this->toolsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->yAMLCreatorToolStripMenuItem });
+			this->toolsToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->spriteDataGeneratorToolStripMenuItem,
+					this->yAMLCreatorToolStripMenuItem
+			});
 			this->toolsToolStripMenuItem->Name = L"toolsToolStripMenuItem";
 			this->toolsToolStripMenuItem->Size = System::Drawing::Size(69, 29);
 			this->toolsToolStripMenuItem->Text = L"Tools";
-			this->toolsToolStripMenuItem->Visible = false;
 			// 
 			// yAMLCreatorToolStripMenuItem
 			// 
 			this->yAMLCreatorToolStripMenuItem->Name = L"yAMLCreatorToolStripMenuItem";
-			this->yAMLCreatorToolStripMenuItem->Size = System::Drawing::Size(222, 34);
+			this->yAMLCreatorToolStripMenuItem->Size = System::Drawing::Size(270, 34);
 			this->yAMLCreatorToolStripMenuItem->Text = L"YAML Creator";
+			this->yAMLCreatorToolStripMenuItem->Visible = false;
 			this->yAMLCreatorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::yAMLCreatorToolStripMenuItem_Click);
+			// 
+			// spriteDataGeneratorToolStripMenuItem
+			// 
+			this->spriteDataGeneratorToolStripMenuItem->Name = L"spriteDataGeneratorToolStripMenuItem";
+			this->spriteDataGeneratorToolStripMenuItem->Size = System::Drawing::Size(270, 34);
+			this->spriteDataGeneratorToolStripMenuItem->Text = L"SpriteDataCreator";
+			this->spriteDataGeneratorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::spriteDataGeneratorToolStripMenuItem_Click);
 			// 
 			// previewCodeToolStripMenuItem
 			// 
@@ -3161,8 +3174,8 @@ private: System::Void newToolStripMenuItem_Click(System::Object^ sender, System:
 	comboBox1->Text = "Most general sprites";
 	comboBox2->Text = "Player";
 	checkBox24->Checked = false;
-	label30->Visible = false;
-	textBox27->Visible = false;
+	label30->Enabled = false;
+	textBox27->Enabled = false;
 	textBox27->Text = "";
 
 	textBox28->Text = "0.0";
@@ -7370,6 +7383,10 @@ private: System::Void button8_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e) {
 	previewusage = 4;
 	previewCodeToolStripMenuItem_Click(sender, e);
+}
+private: System::Void spriteDataGeneratorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+	Form^ settingsvarform = gcnew settingsvar;
+	settingsvarform->Show();
 }
 };
 }

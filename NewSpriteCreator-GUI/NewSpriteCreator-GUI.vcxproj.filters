@@ -30,6 +30,9 @@
     <ClCompile Include="preview.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
+    <ClCompile Include="settingsvar.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MyForm.h">
@@ -51,6 +54,9 @@
       <Filter>Quelldateien</Filter>
     </ClInclude>
     <ClInclude Include="preview.h">
+      <Filter>Quelldateien</Filter>
+    </ClInclude>
+    <ClInclude Include="settingsvar.h">
       <Filter>Quelldateien</Filter>
     </ClInclude>
   </ItemGroup>

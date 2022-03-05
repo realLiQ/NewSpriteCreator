@@ -130,6 +130,7 @@
     <ClCompile Include="header.cpp" />
     <ClCompile Include="MyForm.cpp" />
     <ClCompile Include="preview.cpp" />
+    <ClCompile Include="settingsvar.cpp" />
     <ClCompile Include="states.cpp" />
     <ClCompile Include="yaml.cpp" />
   </ItemGroup>
@@ -144,6 +145,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="resource.h" />
+    <ClInclude Include="settingsvar.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="states.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -161,6 +165,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="preview.resx">
       <DependentUpon>preview.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="settingsvar.resx">
+      <DependentUpon>settingsvar.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="states.resx">
       <DependentUpon>states.h</DependentUpon>
