@@ -42,6 +42,7 @@ namespace NewSpriteCreatorGUI {
 				delete components;
 			}
 		}
+	public: bool dontrefreshcheckbox = false;
 	public: static int previewusage = 0;
 	public: static bool wasOpenedWithFile = false;
 	public: static String^ pathtostartfile = "";
@@ -209,6 +210,7 @@ private: System::Windows::Forms::Button^ button7;
 private: System::Windows::Forms::Button^ button9;
 private: System::Windows::Forms::Button^ button8;
 private: System::Windows::Forms::ToolStripMenuItem^ spriteDataGeneratorToolStripMenuItem;
+private: System::Windows::Forms::Button^ button10;
 
 
 
@@ -261,8 +263,8 @@ private: System::ComponentModel::IContainer^ components;
 			this->saveProjectAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->saveAsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolsToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->yAMLCreatorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->spriteDataGeneratorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->yAMLCreatorToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->previewCodeToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->helpToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->exampleToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -318,6 +320,7 @@ private: System::ComponentModel::IContainer^ components;
 			this->checkBox22 = (gcnew System::Windows::Forms::CheckBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
+			this->button10 = (gcnew System::Windows::Forms::Button());
 			this->button7 = (gcnew System::Windows::Forms::Button());
 			this->checkBox33 = (gcnew System::Windows::Forms::CheckBox());
 			this->button5 = (gcnew System::Windows::Forms::Button());
@@ -553,20 +556,20 @@ private: System::ComponentModel::IContainer^ components;
 			this->toolsToolStripMenuItem->Size = System::Drawing::Size(69, 29);
 			this->toolsToolStripMenuItem->Text = L"Tools";
 			// 
-			// yAMLCreatorToolStripMenuItem
-			// 
-			this->yAMLCreatorToolStripMenuItem->Name = L"yAMLCreatorToolStripMenuItem";
-			this->yAMLCreatorToolStripMenuItem->Size = System::Drawing::Size(270, 34);
-			this->yAMLCreatorToolStripMenuItem->Text = L"YAML Creator";
-			this->yAMLCreatorToolStripMenuItem->Visible = false;
-			this->yAMLCreatorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::yAMLCreatorToolStripMenuItem_Click);
-			// 
 			// spriteDataGeneratorToolStripMenuItem
 			// 
 			this->spriteDataGeneratorToolStripMenuItem->Name = L"spriteDataGeneratorToolStripMenuItem";
-			this->spriteDataGeneratorToolStripMenuItem->Size = System::Drawing::Size(270, 34);
+			this->spriteDataGeneratorToolStripMenuItem->Size = System::Drawing::Size(255, 34);
 			this->spriteDataGeneratorToolStripMenuItem->Text = L"SpriteDataCreator";
 			this->spriteDataGeneratorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::spriteDataGeneratorToolStripMenuItem_Click);
+			// 
+			// yAMLCreatorToolStripMenuItem
+			// 
+			this->yAMLCreatorToolStripMenuItem->Name = L"yAMLCreatorToolStripMenuItem";
+			this->yAMLCreatorToolStripMenuItem->Size = System::Drawing::Size(255, 34);
+			this->yAMLCreatorToolStripMenuItem->Text = L"YAML Creator";
+			this->yAMLCreatorToolStripMenuItem->Visible = false;
+			this->yAMLCreatorToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::yAMLCreatorToolStripMenuItem_Click);
 			// 
 			// previewCodeToolStripMenuItem
 			// 
@@ -1205,6 +1208,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			// groupBox2
 			// 
+			this->groupBox2->Controls->Add(this->button10);
 			this->groupBox2->Controls->Add(this->button7);
 			this->groupBox2->Controls->Add(this->checkBox33);
 			this->groupBox2->Controls->Add(this->button5);
@@ -1231,6 +1235,17 @@ private: System::ComponentModel::IContainer^ components;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"Active Physics";
 			// 
+			// button10
+			// 
+			this->button10->Enabled = false;
+			this->button10->Location = System::Drawing::Point(142, 348);
+			this->button10->Name = L"button10";
+			this->button10->Size = System::Drawing::Size(85, 90);
+			this->button10->TabIndex = 89;
+			this->button10->Text = L"Refesh Bitfield";
+			this->button10->UseVisualStyleBackColor = true;
+			this->button10->Click += gcnew System::EventHandler(this, &MyForm::button10_Click);
+			// 
 			// button7
 			// 
 			this->button7->Enabled = false;
@@ -1247,7 +1262,7 @@ private: System::ComponentModel::IContainer^ components;
 			// checkBox33
 			// 
 			this->checkBox33->AutoSize = true;
-			this->checkBox33->Location = System::Drawing::Point(374, 396);
+			this->checkBox33->Location = System::Drawing::Point(392, 414);
 			this->checkBox33->Name = L"checkBox33";
 			this->checkBox33->Size = System::Drawing::Size(164, 24);
 			this->checkBox33->TabIndex = 12;
@@ -1280,7 +1295,7 @@ private: System::ComponentModel::IContainer^ components;
 			// button2
 			// 
 			this->button2->Enabled = false;
-			this->button2->Location = System::Drawing::Point(221, 405);
+			this->button2->Location = System::Drawing::Point(263, 405);
 			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(61, 33);
@@ -1293,7 +1308,7 @@ private: System::ComponentModel::IContainer^ components;
 			// 
 			this->label26->AutoSize = true;
 			this->label26->Enabled = false;
-			this->label26->Location = System::Drawing::Point(217, 348);
+			this->label26->Location = System::Drawing::Point(259, 348);
 			this->label26->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label26->Name = L"label26";
 			this->label26->Size = System::Drawing::Size(66, 20);
@@ -1303,11 +1318,12 @@ private: System::ComponentModel::IContainer^ components;
 			// textBox26
 			// 
 			this->textBox26->Enabled = false;
-			this->textBox26->Location = System::Drawing::Point(189, 371);
+			this->textBox26->Location = System::Drawing::Point(231, 371);
 			this->textBox26->Margin = System::Windows::Forms::Padding(2);
 			this->textBox26->Name = L"textBox26";
 			this->textBox26->Size = System::Drawing::Size(126, 26);
 			this->textBox26->TabIndex = 0;
+			this->textBox26->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox26_TextChanged);
 			// 
 			// label33
 			// 
@@ -3974,2647 +3990,42 @@ public: void refresh()
 
 
 private: System::Void checkBox22_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	//states test;
-	//textBox5->Text = test.statesarr[0]->ToString();
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
 
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
 }
 private: System::Void checkBox1_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
+	
 }
 private: System::Void checkBox2_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
+	
 }
 private: System::Void checkBox3_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
 
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
 
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
 }
 private: System::Void checkBox4_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
+	
 }
 private: System::Void checkBox5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
 
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
 }
 private: System::Void checkBox6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
 
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
 }
-private: System::Void checkBox7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-			if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-			if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-			if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
-private: System::Void checkBox21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
-	array<char>^ binarycollision = gcnew array<char>(22);
-	unsigned int fullbinary = 0xFFC00000;
-
-		if (checkBox22->Checked)
-			binarycollision[0] = 1;
-		else
-			binarycollision[0] = 0;
-		if (checkBox1->Checked)
-			binarycollision[1] = 1;
-		else
-			binarycollision[1] = 0;
-		if (checkBox2->Checked)
-			binarycollision[2] = 1;
-		else
-			binarycollision[2] = 0;
-		if (checkBox3->Checked)
-			binarycollision[3] = 1;
-		else
-			binarycollision[3] = 0;
-		if (checkBox4->Checked)
-			binarycollision[4] = 1;
-		else
-			binarycollision[4] = 0;
-		if (checkBox5->Checked)
-			binarycollision[5] = 1;
-		else
-			binarycollision[5] = 0;
-		if (checkBox6->Checked)
-			binarycollision[6] = 1;
-		else
-			binarycollision[6] = 0;
-		if (checkBox7->Checked)
-			binarycollision[7] = 1;
-		else
-			binarycollision[7] = 0;
-		if (checkBox8->Checked)
-			binarycollision[8] = 1;
-		else
-			binarycollision[8] = 0;
-		if (checkBox9->Checked)
-			binarycollision[9] = 1;
-		else
-			binarycollision[9] = 0;
-		if (checkBox10->Checked)
-			binarycollision[10] = 1;
-		else
-			binarycollision[10] = 0;
-		if (checkBox11->Checked)
-			binarycollision[11] = 1;
-		else
-			binarycollision[11] = 0;
-		if (checkBox12->Checked)
-			binarycollision[12] = 1;
-		else
-			binarycollision[12] = 0;
-		if (checkBox13->Checked)
-			binarycollision[13] = 1;
-		else
-			binarycollision[13] = 0;
-		if (checkBox14->Checked)
-			binarycollision[14] = 1;
-		else
-			binarycollision[14] = 0;
-		if (checkBox15->Checked)
-			binarycollision[15] = 1;
-		else
-			binarycollision[15] = 0;
-		if (checkBox16->Checked)
-			binarycollision[16] = 1;
-		else
-			binarycollision[16] = 0;
-		if (checkBox17->Checked)
-			binarycollision[17] = 1;
-		else
-			binarycollision[17] = 0;
-		if (checkBox18->Checked)
-			binarycollision[18] = 1;
-		else
-			binarycollision[18] = 0;
-		if (checkBox19->Checked)
-			binarycollision[19] = 1;
-		else
-			binarycollision[19] = 0;
-		if (checkBox20->Checked)
-			binarycollision[20] = 1;
-		else
-			binarycollision[20] = 0;
-		if (checkBox21->Checked)
-			binarycollision[21] = 1;
-		else
-			binarycollision[21] = 0;
-
-	fullbinary |= binarycollision[0];
-	fullbinary |= binarycollision[1] << 1;
-	fullbinary |= binarycollision[2] << 2;
-	fullbinary |= binarycollision[3] << 3;
-	fullbinary |= binarycollision[4] << 4;
-	fullbinary |= binarycollision[5] << 5;
-	fullbinary |= binarycollision[6] << 6;
-	fullbinary |= binarycollision[7] << 7;
-	fullbinary |= binarycollision[8] << 8;
-	fullbinary |= binarycollision[9] << 9;
-	fullbinary |= binarycollision[10] << 10;
-	fullbinary |= binarycollision[11] << 11;
-	fullbinary |= binarycollision[12] << 12;
-	fullbinary |= binarycollision[13] << 13;
-	fullbinary |= binarycollision[14] << 14;
-	fullbinary |= binarycollision[15] << 15;
-	fullbinary |= binarycollision[16] << 16;
-	fullbinary |= binarycollision[17] << 17;
-	fullbinary |= binarycollision[18] << 18;
-	fullbinary |= binarycollision[19] << 19;
-	fullbinary |= binarycollision[20] << 20;
-	fullbinary |= binarycollision[21] << 21;
-
-	String^ hexnum = fullbinary.ToString("X");
-
-	textBox26->Text = "0x" + hexnum;
-}
+private: System::Void checkBox7_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox8_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox9_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox10_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox11_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox12_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox13_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox14_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox15_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox16_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox17_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox18_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox19_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox20_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
+private: System::Void checkBox21_CheckedChanged(System::Object^ sender, System::EventArgs^ e) { }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 
 	System::Windows::Forms::Clipboard::SetText(textBox26->Text);
@@ -7318,6 +4729,8 @@ private: System::Void checkBox33_CheckedChanged(System::Object^ sender, System::
 		textBox26->Enabled = true;
 
 		button7->Enabled = true;
+
+		button10->Enabled = true;
 	}
 	else
 	{
@@ -7366,6 +4779,8 @@ private: System::Void checkBox33_CheckedChanged(System::Object^ sender, System::
 		textBox26->Enabled = false;
 
 		button7->Enabled = false;
+
+		button10->Enabled = false;
 	}
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -7387,6 +4802,224 @@ private: System::Void button9_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void spriteDataGeneratorToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	Form^ settingsvarform = gcnew settingsvar;
 	settingsvarform->Show();
+}
+
+public: String^ hex2binary(String^ hexvalue) { String^ binaryval = "";  binaryval = Convert::ToString(Convert::ToInt32(hexvalue, 16), 2);  return binaryval; }
+
+private: System::Void textBox26_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ binstr = hex2binary(textBox26->Text);
+	if (binstr->Length < 32)
+		return;
+	array<Char>^ arr = binstr->ToCharArray();
+	arr->Reverse(arr);
+	if (arr[0] == '1')
+		checkBox22->Checked = true;
+	else
+		checkBox22->Checked = false;
+	if (arr[1] == '1')
+		checkBox1->Checked = true;
+	else
+		checkBox1->Checked = false;
+	if (arr[2] == '1')
+		checkBox2->Checked = true;
+	else
+		checkBox2->Checked = false;
+	if (arr[3] == '1')
+		checkBox3->Checked = true;
+	else
+		checkBox3->Checked = false;
+	if (arr[4] == '1')
+		checkBox4->Checked = true;
+	else
+		checkBox4->Checked = false;
+	if (arr[5] == '1')
+		checkBox5->Checked = true;
+	else
+		checkBox5->Checked = false;
+	if (arr[6] == '1')
+		checkBox6->Checked = true;
+	else
+		checkBox6->Checked = false;
+	if (arr[7] == '1')
+		checkBox7->Checked = true;
+	else
+		checkBox7->Checked = false;
+	if (arr[8] == '1')
+		checkBox8->Checked = true;
+	else
+		checkBox8->Checked = false;
+	if (arr[9] == '1')
+		checkBox9->Checked = true;
+	else
+		checkBox9->Checked = false;
+	if (arr[10] == '1')
+		checkBox10->Checked = true;
+	else
+		checkBox10->Checked = false;
+	if (arr[11] == '1')
+		checkBox11->Checked = true;
+	else
+		checkBox11->Checked = false;
+	if (arr[12] == '1')
+		checkBox12->Checked = true;
+	else
+		checkBox12->Checked = false;
+	if (arr[13] == '1')
+		checkBox13->Checked = true;
+	else
+		checkBox13->Checked = false;
+	if (arr[14] == '1')
+		checkBox14->Checked = true;
+	else
+		checkBox14->Checked = false;
+	if (arr[15] == '1')
+		checkBox15->Checked = true;
+	else
+		checkBox15->Checked = false;
+	if (arr[16] == '1')
+		checkBox16->Checked = true;
+	else
+		checkBox16->Checked = false;
+	if (arr[17] == '1')
+		checkBox17->Checked = true;
+	else
+		checkBox17->Checked = false;
+	if (arr[18] == '1')
+		checkBox18->Checked = true;
+	else
+		checkBox18->Checked = false;
+	if (arr[19] == '1')
+		checkBox19->Checked = true;
+	else
+		checkBox19->Checked = false;
+	if (arr[20] == '1')
+		checkBox20->Checked = true;
+	else
+		checkBox20->Checked = false;
+	if (arr[21] == '1')
+		checkBox21->Checked = true;
+	else
+		checkBox21->Checked = false;
+}
+private: System::Void button10_Click(System::Object^ sender, System::EventArgs^ e) {
+	array<char>^ binarycollision = gcnew array<char>(22);
+	unsigned int fullbinary = 0xFFC00000;
+
+	if (checkBox22->Checked)
+		binarycollision[0] = 1;
+	else
+		binarycollision[0] = 0;
+	if (checkBox1->Checked)
+		binarycollision[1] = 1;
+	else
+		binarycollision[1] = 0;
+	if (checkBox2->Checked)
+		binarycollision[2] = 1;
+	else
+		binarycollision[2] = 0;
+	if (checkBox3->Checked)
+		binarycollision[3] = 1;
+	else
+		binarycollision[3] = 0;
+	if (checkBox4->Checked)
+		binarycollision[4] = 1;
+	else
+		binarycollision[4] = 0;
+	if (checkBox5->Checked)
+		binarycollision[5] = 1;
+	else
+		binarycollision[5] = 0;
+	if (checkBox6->Checked)
+		binarycollision[6] = 1;
+	else
+		binarycollision[6] = 0;
+	if (checkBox7->Checked)
+		binarycollision[7] = 1;
+	else
+		binarycollision[7] = 0;
+	if (checkBox8->Checked)
+		binarycollision[8] = 1;
+	else
+		binarycollision[8] = 0;
+	if (checkBox9->Checked)
+		binarycollision[9] = 1;
+	else
+		binarycollision[9] = 0;
+	if (checkBox10->Checked)
+		binarycollision[10] = 1;
+	else
+		binarycollision[10] = 0;
+	if (checkBox11->Checked)
+		binarycollision[11] = 1;
+	else
+		binarycollision[11] = 0;
+	if (checkBox12->Checked)
+		binarycollision[12] = 1;
+	else
+		binarycollision[12] = 0;
+	if (checkBox13->Checked)
+		binarycollision[13] = 1;
+	else
+		binarycollision[13] = 0;
+	if (checkBox14->Checked)
+		binarycollision[14] = 1;
+	else
+		binarycollision[14] = 0;
+	if (checkBox15->Checked)
+		binarycollision[15] = 1;
+	else
+		binarycollision[15] = 0;
+	if (checkBox16->Checked)
+		binarycollision[16] = 1;
+	else
+		binarycollision[16] = 0;
+	if (checkBox17->Checked)
+		binarycollision[17] = 1;
+	else
+		binarycollision[17] = 0;
+	if (checkBox18->Checked)
+		binarycollision[18] = 1;
+	else
+		binarycollision[18] = 0;
+	if (checkBox19->Checked)
+		binarycollision[19] = 1;
+	else
+		binarycollision[19] = 0;
+	if (checkBox20->Checked)
+		binarycollision[20] = 1;
+	else
+		binarycollision[20] = 0;
+	if (checkBox21->Checked)
+		binarycollision[21] = 1;
+	else
+		binarycollision[21] = 0;
+
+	fullbinary |= binarycollision[0];
+	fullbinary |= binarycollision[1] << 1;
+	fullbinary |= binarycollision[2] << 2;
+	fullbinary |= binarycollision[3] << 3;
+	fullbinary |= binarycollision[4] << 4;
+	fullbinary |= binarycollision[5] << 5;
+	fullbinary |= binarycollision[6] << 6;
+	fullbinary |= binarycollision[7] << 7;
+	fullbinary |= binarycollision[8] << 8;
+	fullbinary |= binarycollision[9] << 9;
+	fullbinary |= binarycollision[10] << 10;
+	fullbinary |= binarycollision[11] << 11;
+	fullbinary |= binarycollision[12] << 12;
+	fullbinary |= binarycollision[13] << 13;
+	fullbinary |= binarycollision[14] << 14;
+	fullbinary |= binarycollision[15] << 15;
+	fullbinary |= binarycollision[16] << 16;
+	fullbinary |= binarycollision[17] << 17;
+	fullbinary |= binarycollision[18] << 18;
+	fullbinary |= binarycollision[19] << 19;
+	fullbinary |= binarycollision[20] << 20;
+	fullbinary |= binarycollision[21] << 21;
+
+	String^ hexnum = fullbinary.ToString("X");
+
+	textBox26->Text = "0x" + hexnum;
 }
 };
 }
